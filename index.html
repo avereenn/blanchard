@@ -2,14 +2,88 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Start Template for Skillbox.</title>
+    <title>Blanchard. Художественная галерея</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="theme-color" content="#">
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1 class="header__title sr-only">Blanchard. Художественная галерея</h1>
+      <div class="header__top">
+        <a href="#" class="header__logo-link">
+          <picture>
+            <source media="(max-width: 500px)" srcset="img/320/blanchard-logo.svg">
+            <source media="(max-width: 1440px)" srcset="img/1024/blanchard-logo.svg">
+            <img class="header__logo-img" src="img/blanchard-logo.svg" alt="Blanchard. Художественная галерея">
+          </picture>
+        </a>
+        <div class="header__menu">
+          <button class="header__burger"><span class="burger"></span></button>
+          <nav class="header__nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"><a href="#about-us" class="header-nav__link">О нас</a></li>
+              <li class="header-nav__item"><a href="#gallery" class="header-nav__link">Галерея</a></li>
+              <li class="header-nav__item"><a href="#catalog" class="header-nav__link">Каталог</a></li>
+              <li class="header-nav__item"><a href="#events" class="header-nav__link">События</a></li>
+              <li class="header-nav__item"><a href="#showcase" class="header-nav__link">Издания</a></li>
+              <li class="header-nav__item"><a href="#projects" class="header-nav__link">Проекты</a></li>
+              <li class="header-nav__item"><a href="#contacts" class="header-nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="header__sign-in">Войти</a>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <select class="header__select header-select" name="realism" id="realism">
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Верроккьо</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Леонардо</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Фридрих</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Тинторетто</a></option>
+        </select>
+        <select class="header__select header-select" name="impressionism" id="impressionism">
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Ренуар</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Мане</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Сислей</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Моне</a></option>
+        </select>
+        <select class="header__select header-select" name="post-impressionism" id="post-impressionism">
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Сёра</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Гоген</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Сезанн</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Ван Гог</a></option>
+        </select>
+        <select class="header__select header-select" name="avant-garde" id="avant-garde">
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Пикассо</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Малевич</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Маринетти</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Кандинский</a></option>
+        </select>
+        <select class="header__select header-select" name="futurism" id="futurism">
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Балла</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Северини</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Прателла</a></option>
+          <option value="" class="header-select__opt"><a href="#" class="header-select__link">Карра</a></option>
+        </select>
+        <form class="header__search-form" action="#" method="GET">
+          <button type="submit" class="search-form__submit"></button>
+          <label class="search-form__label sr-only" for="search-field">Поиск</label>
+          <input class="search-form__input" type="search" name="search" id="search-field">
+        </form>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero"></section>
+      <section class="about-us"></section>
+      <section class="gallery"></section>
+      <section class="catalog"></section>
+      <section class="events"></section>
+      <section class="showcase"></section>
+      <section class="projects"></section>
+      <section class="contacts"></section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
 </html>
