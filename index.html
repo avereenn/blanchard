@@ -10,10 +10,10 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header container">
     <h1 class="header__title sr-only">Blanchard. Художественная галерея</h1>
     <div class="header__top">
-      <a href="#" class="header__logo-link">
+      <a class="header__logo-link" href="#">
         <picture>
           <source media="(max-width: 500px)" srcset="img/320/blanchard-logo.svg">
           <source media="(max-width: 1440px)" srcset="img/1024/blanchard-logo.svg">
@@ -22,58 +22,70 @@
       </a>
       <div class="header__menu">
         <button class="header__burger" title="Открыть меню"><span class="burger"></span></button>
-        <nav class="header__nav">
+        <nav class="header__nav header-nav">
           <ul class="header-nav__list">
-            <li class="header-nav__item"><a href="#about-us" class="header-nav__link">О нас</a></li>
-            <li class="header-nav__item"><a href="#gallery" class="header-nav__link">Галерея</a></li>
-            <li class="header-nav__item"><a href="#catalog" class="header-nav__link">Каталог</a></li>
-            <li class="header-nav__item"><a href="#events" class="header-nav__link">События</a></li>
-            <li class="header-nav__item"><a href="#editions" class="header-nav__link">Издания</a></li>
-            <li class="header-nav__item"><a href="#projects" class="header-nav__link">Проекты</a></li>
-            <li class="header-nav__item"><a href="#contacts" class="header-nav__link">Контакты</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#about-us">О нас</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#gallery">Галерея</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#catalog">Каталог</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#events">События</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#editions">Издания</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#projects">Проекты</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
-        <a href="#" class="header__sign-in">Войти</a>
+        <a class="header__sign-in" href="#">Войти</a>
       </div>
     </div>
     <div class="header__bottom">
-      <select class="header__select header-select" name="realism" id="realism">
-        <option class="header-select__opt" value="Верроккьо">Верроккьо
-        </option>
-        <option class="header-select__opt" value="Леонардо">Леонардо
-        </option>
-        <option class="header-select__opt" value="Фридрих">Фридрих</option>
-        <option class="header-select__opt" value="Тинторетто">Тинторетто
-        </option>
-      </select>
-      <select class="header__select header-select" name="impressionism" id="impressionism">
-        <option class="header-select__opt" value="Ренуар">Ренуар</option>
-        <option class="header-select__opt" value="Мане">Мане</option>
-        <option class="header-select__opt" value="Сислей">Сислей</option>
-        <option class="header-select__opt" value="Моне">Моне</option>
-      </select>
-      <select class="header__select header-select" name="post-impressionism" id="post-impressionism">
-        <option class="header-select__opt" value="Сёра">Сёра</option>
-        <option class="header-select__opt" value="Гоген">Гоген</option>
-        <option class="header-select__opt" value="Сезанн">Сезанн</option>
-        <option class="header-select__opt" value="Ван Гог">Ван Гог</option>
-      </select>
-      <select class="header__select header-select" name="avant-garde" id="avant-garde">
-        <option class="header-select__opt" value="Пикассо">Пикассо</option>
-        <option class="header-select__opt" value="Малевич">Малевич</option>
-        <option class="header-select__opt" value="Маринетти">Маринетти
-        </option>
-        <option class="header-select__opt" value="Кандинский">Кандинский
-        </option>
-      </select>
-      <select class="header__select header-select" name="futurism" id="futurism">
-        <option class="header-select__opt" value="Балла">Балла</option>
-        <option class="header-select__opt" value="Северини">Северини
-        </option>
-        <option class="header-select__opt" value="Прателла">Прателла
-        </option>
-        <option class="header-select__opt" value="Карра">Карра</option>
-      </select>
+      <ul class="header__select-list">
+        <li class="header__select-item">
+          <select class="header__select header-select" name="realism" id="realism">
+            <option class="header-select__opt" value="Верроккьо">Верроккьо
+            </option>
+            <option class="header-select__opt" value="Леонардо">Леонардо
+            </option>
+            <option class="header-select__opt" value="Фридрих">Фридрих</option>
+            <option class="header-select__opt" value="Тинторетто">Тинторетто
+            </option>
+          </select>
+        </li>
+        <li class="header__select-item">
+          <select class="header__select header-select" name="impressionism" id="impressionism">
+            <option class="header-select__opt" value="Ренуар">Ренуар</option>
+            <option class="header-select__opt" value="Мане">Мане</option>
+            <option class="header-select__opt" value="Сислей">Сислей</option>
+            <option class="header-select__opt" value="Моне">Моне</option>
+          </select>
+        </li>
+        <li class="header__select-item">
+          <select class="header__select header-select" name="post-impressionism" id="post-impressionism">
+            <option class="header-select__opt" value="Сёра">Сёра</option>
+            <option class="header-select__opt" value="Гоген">Гоген</option>
+            <option class="header-select__opt" value="Сезанн">Сезанн</option>
+            <option class="header-select__opt" value="Ван Гог">Ван Гог</option>
+          </select>
+        </li>
+        <li class="header__select-item">
+          <select class="header__select header-select" name="avant-garde" id="avant-garde">
+            <option class="header-select__opt" value="Пикассо">Пикассо</option>
+            <option class="header-select__opt" value="Малевич">Малевич</option>
+            <option class="header-select__opt" value="Маринетти">Маринетти
+            </option>
+            <option class="header-select__opt" value="Кандинский">Кандинский
+            </option>
+          </select>
+        </li>
+        <li class="header__select-item">
+          <select class="header__select header-select" name="futurism" id="futurism">
+            <option class="header-select__opt" value="Балла">Балла</option>
+            <option class="header-select__opt" value="Северини">Северини
+            </option>
+            <option class="header-select__opt" value="Прателла">Прателла
+            </option>
+            <option class="header-select__opt" value="Карра">Карра</option>
+          </select>
+        </li>
+      </ul>
       <form class="header__search-form" action="#" method="GET">
         <button type="submit" class="search-form__submit" title="Найти"></button>
         <label class="search-form__label sr-only" for="search-field">Поиск</label>
@@ -81,10 +93,10 @@
       </form>
     </div>
   </header>
-  <main class="main">
+  <main class="main container">
     <section class="hero">
-      <div class="hero__slider">
-        <ul class="hero-slider__list">
+      <div class="hero__slider slider">
+        <ul class="hero-slider__list slider__list">
           <li class="hero-slider__item">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/hero/hero-img-1.webp">
@@ -120,7 +132,7 @@
           Мы вынуждены отталкиваться от того, что реализация намеченных
           плановых заданий создаёт предпосылки для новых предложений.
         </p>
-        <a href="#contacts" class="hero__subscribe-link">Подписаться на рассылку</a>
+        <a class="hero__subscribe-link" href="#contacts">Подписаться на рассылку</a>
       </div>
     </section>
     <section class="about-us">
@@ -138,313 +150,318 @@
     </section>
     <section class="gallery">
       <h2 class="gallery__title title">Галерея</h2>
-      <div class="gallery__panel">
-        <div class="gallery__filter">
-          <label for="gallery-filter" class="gallery__filter-label">Фильтровать по:</label>
-          <select name="filter" id="gallery-filter" class="gallery__filter-select">
-            <option value="author">Автор</option>
-            <option value="trend">Направление</option>
-            <option value="technique">Техника</option>
-          </select>
+      <div class="gallery__wrapper">
+        <div class="gallery__panel">
+          <div class="gallery__filter">
+            <label for="gallery-filter" class="gallery__filter-label">Фильтровать по:</label>
+            <select name="filter" id="gallery-filter" class="gallery__filter-select">
+              <option value="author">Автор</option>
+              <option value="trend">Направление</option>
+              <option value="technique">Техника</option>
+            </select>
+          </div>
+          <div class="gallery__info">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
+            скачиваний авторизуйтесь, либо воспользуйтесь лицензией.</div>
         </div>
-        <div class="gallery__info">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
-          скачиваний авторизуйтесь, либо воспользуйтесь лицензией.</div>
-      </div>
-      <div class="gallery__slider gallery-slider">
-        <div class="gallery-slider__btns slider__btns">
-          <button class="gallery-slider__btn slider__btn"></button>
-          <span class="gallery-slider__pages slider__pages">1/3</span>
-          <button class="gallery-slider__btn_next slider__btn_next"></button>
+        <div class="gallery__slider gallery-slider slider">
+          <div class="gallery-slider__btns slider__btns">
+            <button class="gallery-slider__btn slider__btn"></button>
+            <span class="gallery-slider__pages slider__pages">1/3</span>
+            <button class="gallery-slider__btn_next slider__btn_next"></button>
+          </div>
+          <ul class="gallery-slider__list slider__list">
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-1.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-1.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-1.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-1.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-1.png" alt="фрукты и цветы">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-2.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-2.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-2.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-2.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-2.png" alt="женщина с гроздью винограда">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-3.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-3.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-3.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-3.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-3.png"
+                  alt="сидящая женщина в шляпе и шубе">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-4.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-4.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-4.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-4.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-4.png" alt="семья играет в саду">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-5.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-5.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-5.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-5.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-5.png"
+                  alt="женщины отдыхают возле колонны">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-6.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-6.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-6.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-6.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-6.png"
+                  alt="мужчина лежит на коленях женщины">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-7.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-7.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-7.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-7.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-7.png"
+                  alt="мужчина поднимается по ступенькам на фоне бухты">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-8.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-8.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-8.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-8.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-8.png" alt="рассвет в бухте">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-9.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-9.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-9.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-9.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-9.png" alt="женщины сидят под деревьями">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-10.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-10.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-10.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-10.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-10.png"
+                  alt="люди празднуют среди растительности">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-11.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-11.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-11.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-11.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-11.png"
+                  alt="люди с собакой сидят у озера со скалами">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-12.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-12.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-12.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-12.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-12.png"
+                  alt="женщина в белом с красной накидкой">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-13.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-13.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-13.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-13.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-13.png" alt="силуэт жешщины с граблями">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-14.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-14.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-14.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-14.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-14.png"
+                  alt="абстрактная фигура напоминающая человеческий силуэт">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-15.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-15.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-15.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-15.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-15.png"
+                  alt="абстракция из геометрических фигур">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-16.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-16.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-16.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-16.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-16.png"
+                  alt="абстракция из геометрических фигур">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-17.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-17.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-17.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-17.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-17.png" alt="люди держат предметы">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-18.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-18.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-18.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-18.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-18.png"
+                  alt="силуэт человека в фартуке с топором">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-19.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-19.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-19.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-19.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-19.png"
+                  alt="абстракция из геометрических фигур">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-20.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-20.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-20.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-20.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-20.png" alt="угловатый силуэт человека">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-21.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-21.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-21.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-21.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-21.png"
+                  alt="два абстрактных силуэта людей без лиц">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-22.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-22.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-22.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-22.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-22.png"
+                  alt="абстракция из геометрических фигур">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-23.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-23.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-23.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-23.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-23.png"
+                  alt="абстракция из геометрических фигур">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-24.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-24.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-24.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-24.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-24.png"
+                  alt="угловатые силуэты трёх женщин">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-25.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-25.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-25.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-25.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-25.png"
+                  alt="силуэт женщины с граблями на фоне поля">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-26.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-26.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-26.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-26.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-26.png"
+                  alt="абстракция из геометрических фигур">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-27.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-27.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-27.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-27.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-27.png" alt="абстракция">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-28.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-28.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-28.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-28.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-28.png"
+                  alt="деревья, за ними идёт мужчина на фоне здания">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-29.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-29.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-29.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-29.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-29.png"
+                  alt="четыре разноцветных силуэта людей">
+              </picture>
+            </li>
+            <li class="gallery-slider__item">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/images/img-30.webp">
+                <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-30.webp">
+                <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-30.webp">
+                <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-30.webp">
+                <img class="gallery-slider__img" src="img/gallery/images/img-30.png" alt="силуэты женщины и ребёнка">
+              </picture>
+            </li>
+          </ul>
         </div>
-        <ul class="gallery-slider__list">
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-1.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-1.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-1.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-1.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-1.png" alt="фрукты и цветы">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-2.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-2.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-2.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-2.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-2.png" alt="женщина с гроздью винограда">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-3.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-3.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-3.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-3.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-3.png" alt="сидящая женщина в шляпе и шубе">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-4.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-4.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-4.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-4.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-4.png" alt="семья играет в саду">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-5.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-5.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-5.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-5.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-5.png" alt="женщины отдыхают возле колонны">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-6.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-6.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-6.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-6.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-6.png"
-                alt="мужчина лежит на коленях женщины">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-7.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-7.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-7.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-7.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-7.png"
-                alt="мужчина поднимается по ступенькам на фоне бухты">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-8.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-8.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-8.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-8.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-8.png" alt="рассвет в бухте">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-9.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-9.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-9.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-9.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-9.png" alt="женщины сидят под деревьями">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-10.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-10.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-10.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-10.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-10.png"
-                alt="люди празднуют среди растительности">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-11.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-11.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-11.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-11.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-11.png"
-                alt="люди с собакой сидят у озера со скалами">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-12.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-12.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-12.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-12.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-12.png"
-                alt="женщина в белом с красной накидкой">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-13.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-13.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-13.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-13.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-13.png" alt="силуэт жешщины с граблями">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-14.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-14.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-14.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-14.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-14.png"
-                alt="абстрактная фигура напоминающая человеческий силуэт">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-15.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-15.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-15.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-15.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-15.png"
-                alt="абстракция из геометрических фигур">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-16.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-16.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-16.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-16.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-16.png"
-                alt="абстракция из геометрических фигур">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-17.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-17.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-17.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-17.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-17.png" alt="люди держат предметы">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-18.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-18.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-18.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-18.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-18.png"
-                alt="силуэт человека в фартуке с топором">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-19.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-19.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-19.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-19.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-19.png"
-                alt="абстракция из геометрических фигур">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-20.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-20.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-20.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-20.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-20.png" alt="угловатый силуэт человека">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-21.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-21.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-21.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-21.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-21.png"
-                alt="два абстрактных силуэта людей без лиц">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-22.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-22.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-22.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-22.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-22.png"
-                alt="абстракция из геометрических фигур">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-23.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-23.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-23.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-23.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-23.png"
-                alt="абстракция из геометрических фигур">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-24.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-24.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-24.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-24.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-24.png" alt="угловатые силуэты трёх женщин">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-25.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-25.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-25.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-25.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-25.png"
-                alt="силуэт женщины с граблями на фоне поля">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-26.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-26.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-26.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-26.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-26.png"
-                alt="абстракция из геометрических фигур">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-27.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-27.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-27.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-27.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-27.png" alt="абстракция">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-28.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-28.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-28.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-28.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-28.png"
-                alt="деревья, за ними идёт мужчина на фоне здания">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-29.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-29.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-29.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-29.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-29.png"
-                alt="четыре разноцветных силуэта людей">
-            </picture>
-          </li>
-          <li class="gallery-slider__item">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/gallery/images/img-30.webp">
-              <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-30.webp">
-              <source media="(max-width: 1024px)" srcset="img/768/gallery/images/img-30.webp">
-              <source media="(max-width: 1440px)" srcset="img/1024/gallery/images/img-30.webp">
-              <img class="gallery-slider__img" src="img/gallery/images/img-30.png" alt="силуэты женщины и ребёнка">
-            </picture>
-          </li>
-        </ul>
       </div>
     </section>
     <section class="catalog">
@@ -473,7 +490,9 @@
             <article class="catalog__painter-info painter-info">
               <figure class="painter-info__figure">
                 <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
-                <figcaption class="painter-info__title"><h3>Доменико Гирландайо</h3></figcaption>
+                <figcaption class="painter-info__title">
+                  <h3>Доменико Гирландайо</h3>
+                </figcaption>
               </figure>
               <p class="painter-info__info">
                 <span class="painter-info__years">2 июня 1448 — 11 января 1494.</span>
@@ -698,198 +717,200 @@
     </section>
     <section class="editions">
       <h2 class="editions__title title">Издания</h2>
-      <form class="editions__filter editions-filter" action="#" method="GET">
-        <fieldset class="editions-filter__fieldset">
-          <h3 class="editions-filter__title">Категории</h3>
-          <ul class="editions-filter__list">
-            <li class="editions-filter__item">
-              <label for="best-sellers" class="editions-filter__label">Бестселлеры
-                <input type="checkbox" name="best-sellers" id="best-sellers" class="editions-filter__checkbox">
-              </label>
+      <div class="editions__wrapper">
+        <form class="editions__filter editions-filter" action="#" method="GET">
+          <fieldset class="editions-filter__fieldset">
+            <h3 class="editions-filter__title">Категории</h3>
+            <ul class="editions-filter__list">
+              <li class="editions-filter__item">
+                <label for="best-sellers" class="editions-filter__label">Бестселлеры
+                  <input type="checkbox" name="best-sellers" id="best-sellers" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="art" class="editions-filter__label">Искусство
+                  <input type="checkbox" name="art" id="art" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="architecture" class="editions-filter__label">Архитектура
+                  <input type="checkbox" name="architecture" id="architecture" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="design" class="editions-filter__label">Дизайн
+                  <input type="checkbox" name="design" id="design" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="fashion" class="editions-filter__label">Мода
+                  <input type="checkbox" name="fashion" id="fashion" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="for-kids" class="editions-filter__label">Детям
+                  <input type="checkbox" name="for-kids" id="for-kids" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="literature" class="editions-filter__label">Художественная литература
+                  <input type="checkbox" name="literature" id="literature" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="publicism" class="editions-filter__label">Публицистика
+                  <input type="checkbox" name="publicism" id="publicism" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="guides" class="editions-filter__label">Путеводители
+                  <input type="checkbox" name="guides" id="guides" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="philosophy" class="editions-filter__label">Философия
+                  <input type="checkbox" name="philosophy" id="philosophy" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="education" class="editions-filter__label">Учебная литература
+                  <input type="checkbox" name="education" id="education" class="editions-filter__checkbox">
+                </label>
+              </li>
+              <li class="editions-filter__item">
+                <label for="press" class="editions-filter__label">Журналы и газеты
+                  <input type="checkbox" name="press" id="press" class="editions-filter__checkbox">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="editions-filter__fieldset">
+            <h3 class="editions-filter__title">Цена</h3>
+            <div class="editions-filter__price">
+              <label class="editions-filter__label" for="from-price">От</label>
+              <input class="editions-filter__price" id="from-price" name="from-price" type="number" placeholder="50">
+              <label for="to-price" class="editions-filter__label">до</label>
+              <input class="editions-filter__price" id="to-price" name="to-price" type="number" placeholder="25000">
+            </div>
+          </fieldset>
+        </form>
+        <div class="editions__slider editions-slider slider">
+          <div class="editions-slider__btns slider__btns">
+            <button class="editions-slider__btn slider__btn"></button>
+            <span class="editions-slider__pages slider__pages">1/3</span>
+            <button class="editions-slider__btn_next slider__btn_next"></button>
+          </div>
+          <ul class="editions-slider__list slider__list">
+            <li class="editions-slider__item">
+              <article class="editions-slider__product product">
+                <figure>
+                  <img class="product__img" src="img/editions/books/art-of-color.webp" alt="книга. Искусство цвета">
+                  <figcaption>
+                    <div class="product__name">
+                      <h3 class="product__title">Искусство цвета</h3>
+                      <span class="product__author">Иттен, Иоханнес</span>
+                    </div>
+                    <div class="product__price">620 руб</div>
+                  </figcaption>
+                </figure>
+                <a class="product__order-link" href="#">Заказать</a>
+              </article>
             </li>
-            <li class="editions-filter__item">
-              <label for="art" class="editions-filter__label">Искусство
-                <input type="checkbox" name="art" id="art" class="editions-filter__checkbox">
-              </label>
+            <li class="editions-slider__item">
+              <article class="editions-slider__product product">
+                <figure>
+                  <img class="product__img" src="img/editions/books/typography.webp" alt="книга. Типографика">
+                  <figcaption>
+                    <div class="product__name">
+                      <h3 class="product__title">Типографика</h3>
+                      <span class="product__author">Рудер, Эмиль</span>
+                    </div>
+                    <div class="product__price">2450 руб</div>
+                  </figcaption>
+                </figure>
+                <a class="product__order-link" href="#">Заказать</a>
+              </article>
             </li>
-            <li class="editions-filter__item">
-              <label for="architecture" class="editions-filter__label">Архитектура
-                <input type="checkbox" name="architecture" id="architecture" class="editions-filter__checkbox">
-              </label>
+            <li class="editions-slider__item">
+              <article class="editions-slider__product product">
+                <figure>
+                  <img class="product__img" src="img/editions/books/book-about-letters.webp" alt="Книга про буквы">
+                  <figcaption>
+                    <div class="product__name">
+                      <h3 class="product__title">Книга про буквы</h3>
+                      <span class="product__author">Гордон, Юрий</span>
+                    </div>
+                    <div class="product__price">2200 руб</div>
+                  </figcaption>
+                </figure>
+                <a class="product__order-link" href="#">Заказать</a>
+              </article>
             </li>
-            <li class="editions-filter__item">
-              <label for="design" class="editions-filter__label">Дизайн
-                <input type="checkbox" name="design" id="design" class="editions-filter__checkbox">
-              </label>
+            <li class="editions-slider__item">
+              <article class="editions-slider__product product">
+                <figure>
+                  <img class="product__img" src="img/editions/books/ilyin.webp" alt="книга. Николай Ильин">
+                  <figcaption>
+                    <div class="product__name">
+                      <h3 class="product__title">Николай Ильин</h3>
+                      <span class="product__author">Кричевский, Владимир</span>
+                    </div>
+                    <div class="product__price">1100 руб</div>
+                  </figcaption>
+                </figure>
+                <a class="product__order-link" href="#">Заказать</a>
+              </article>
             </li>
-            <li class="editions-filter__item">
-              <label for="fashion" class="editions-filter__label">Мода
-                <input type="checkbox" name="fashion" id="fashion" class="editions-filter__checkbox">
-              </label>
+            <li class="editions-slider__item">
+              <article class="editions-slider__product product">
+                <figure>
+                  <img class="product__img" src="img/editions/books/modular-grids.webp"
+                    alt="книга. Модульные сетки в графическом дизайне">
+                  <figcaption>
+                    <div class="product__name">
+                      <h3 class="product__title">Модульные сетки в граф...</h3>
+                      <span class="product__author">Мюллер-Брокманн, Йозеф</span>
+                    </div>
+                    <div class="product__price">1450 руб</div>
+                  </figcaption>
+                </figure>
+                <a class="product__order-link" href="#">Заказать</a>
+              </article>
             </li>
-            <li class="editions-filter__item">
-              <label for="for-kids" class="editions-filter__label">Детям
-                <input type="checkbox" name="for-kids" id="for-kids" class="editions-filter__checkbox">
-              </label>
+            <li class="editions-slider__item">
+              <article class="editions-slider__product product">
+                <figure>
+                  <img class="product__img" src="img/editions/books/evolution.webp"
+                    alt="книга. Эволюция графических стилей">
+                  <figcaption>
+                    <div class="product__name">
+                      <h3 class="product__title">Эволюция графических ст...</h3>
+                      <span class="product__author">Хеллер, Чваст</span>
+                    </div>
+                    <div class="product__price">3200 руб</div>
+                  </figcaption>
+                </figure>
+                <a class="product__order-link" href="#">Заказать</a>
+              </article>
             </li>
-            <li class="editions-filter__item">
-              <label for="literature" class="editions-filter__label">Художественная литература
-                <input type="checkbox" name="literature" id="literature" class="editions-filter__checkbox">
-              </label>
-            </li>
-            <li class="editions-filter__item">
-              <label for="publicism" class="editions-filter__label">Публицистика
-                <input type="checkbox" name="publicism" id="publicism" class="editions-filter__checkbox">
-              </label>
-            </li>
-            <li class="editions-filter__item">
-              <label for="guides" class="editions-filter__label">Путеводители
-                <input type="checkbox" name="guides" id="guides" class="editions-filter__checkbox">
-              </label>
-            </li>
-            <li class="editions-filter__item">
-              <label for="philosophy" class="editions-filter__label">Философия
-                <input type="checkbox" name="philosophy" id="philosophy" class="editions-filter__checkbox">
-              </label>
-            </li>
-            <li class="editions-filter__item">
-              <label for="education" class="editions-filter__label">Учебная литература
-                <input type="checkbox" name="education" id="education" class="editions-filter__checkbox">
-              </label>
-            </li>
-            <li class="editions-filter__item">
-              <label for="press" class="editions-filter__label">Журналы и газеты
-                <input type="checkbox" name="press" id="press" class="editions-filter__checkbox">
-              </label>
+            <li class="editions-slider__item">
+              <article class="editions-slider__product product">
+                <figure>
+                  <img class="product__img" src="img/editions/books/visual-perception.webp"
+                    alt="книга. Искусство и визуальное восприятие">
+                  <figcaption>
+                    <div class="product__name">
+                      <h3 class="product__title">Искусство и визуальное в...</h3>
+                      <span class="product__author">Арнхейм, Рудольф</span>
+                    </div>
+                    <div class="product__price">2200 руб</div>
+                  </figcaption>
+                </figure>
+                <a class="product__order-link" href="#">Заказать</a>
+              </article>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="editions-filter__fieldset">
-          <h3 class="editions-filter__title">Цена</h3>
-          <div class="editions-filter__price">
-            <label class="editions-filter__label" for="from-price">От</label>
-            <input class="editions-filter__price" id="from-price" name="from-price" type="number" placeholder="50">
-            <label for="to-price" class="editions-filter__label">до</label>
-            <input class="editions-filter__price" id="to-price" name="to-price" type="number" placeholder="25000">
-          </div>
-        </fieldset>
-      </form>
-      <div class="editions__slider editions-slider">
-        <div class="editions-slider__btns slider__btns">
-          <button class="editions-slider__btn slider__btn"></button>
-          <span class="editions-slider__pages slider__pages">1/3</span>
-          <button class="editions-slider__btn_next slider__btn_next"></button>
         </div>
-        <ul class="editions-slider__list">
-          <li class="editions-slider__item">
-            <article class="editions-slider__product product">
-              <figure>
-                <img class="product__img" src="img/editions/books/art-of-color.webp" alt="книга. Искусство цвета">
-                <figcaption>
-                  <div class="product__name">
-                    <h3 class="product__title">Искусство цвета</h3>
-                    <span class="product__author">Иттен, Иоханнес</span>
-                  </div>
-                  <div class="product__price">620 руб</div>
-                </figcaption>
-              </figure>
-              <a class="product__order-link" href="#">Заказать</a>
-            </article>
-          </li>
-          <li class="editions-slider__item">
-            <article class="editions-slider__product product">
-              <figure>
-                <img class="product__img" src="img/editions/books/typography.webp" alt="книга. Типографика">
-                <figcaption>
-                  <div class="product__name">
-                    <h3 class="product__title">Типографика</h3>
-                    <span class="product__author">Рудер, Эмиль</span>
-                  </div>
-                  <div class="product__price">2450 руб</div>
-                </figcaption>
-              </figure>
-              <a class="product__order-link" href="#">Заказать</a>
-            </article>
-          </li>
-          <li class="editions-slider__item">
-            <article class="editions-slider__product product">
-              <figure>
-                <img class="product__img" src="img/editions/books/book-about-letters.webp" alt="Книга про буквы">
-                <figcaption>
-                  <div class="product__name">
-                    <h3 class="product__title">Книга про буквы</h3>
-                    <span class="product__author">Гордон, Юрий</span>
-                  </div>
-                  <div class="product__price">2200 руб</div>
-                </figcaption>
-              </figure>
-              <a class="product__order-link" href="#">Заказать</a>
-            </article>
-          </li>
-          <li class="editions-slider__item">
-            <article class="editions-slider__product product">
-              <figure>
-                <img class="product__img" src="img/editions/books/ilyin.webp" alt="книга. Николай Ильин">
-                <figcaption>
-                  <div class="product__name">
-                    <h3 class="product__title">Николай Ильин</h3>
-                    <span class="product__author">Кричевский, Владимир</span>
-                  </div>
-                  <div class="product__price">1100 руб</div>
-                </figcaption>
-              </figure>
-              <a class="product__order-link" href="#">Заказать</a>
-            </article>
-          </li>
-          <li class="editions-slider__item">
-            <article class="editions-slider__product product">
-              <figure>
-                <img class="product__img" src="img/editions/books/modular-grids.webp"
-                  alt="книга. Модульные сетки в графическом дизайне">
-                <figcaption>
-                  <div class="product__name">
-                    <h3 class="product__title">Модульные сетки в граф...</h3>
-                    <span class="product__author">Мюллер-Брокманн, Йозеф</span>
-                  </div>
-                  <div class="product__price">1450 руб</div>
-                </figcaption>
-              </figure>
-              <a class="product__order-link" href="#">Заказать</a>
-            </article>
-          </li>
-          <li class="editions-slider__item">
-            <article class="editions-slider__product product">
-              <figure>
-                <img class="product__img" src="img/editions/books/evolution.webp"
-                  alt="книга. Эволюция графических стилей">
-                <figcaption>
-                  <div class="product__name">
-                    <h3 class="product__title">Эволюция графических ст...</h3>
-                    <span class="product__author">Хеллер, Чваст</span>
-                  </div>
-                  <div class="product__price">3200 руб</div>
-                </figcaption>
-              </figure>
-              <a class="product__order-link" href="#">Заказать</a>
-            </article>
-          </li>
-          <li class="editions-slider__item">
-            <article class="editions-slider__product product">
-              <figure>
-                <img class="product__img" src="img/editions/books/visual-perception.webp"
-                  alt="книга. Искусство и визуальное восприятие">
-                <figcaption>
-                  <div class="product__name">
-                    <h3 class="product__title">Искусство и визуальное в...</h3>
-                    <span class="product__author">Арнхейм, Рудольф</span>
-                  </div>
-                  <div class="product__price">2200 руб</div>
-                </figcaption>
-              </figure>
-              <a class="product__order-link" href="#">Заказать</a>
-            </article>
-          </li>
-        </ul>
       </div>
     </section>
     <section class="projects">
@@ -905,7 +926,7 @@
             Пример современных тенденций - современная методология разработки
           </span>
         </span>
-         обеспечение нашей деятельности однозначно фиксирует
+        обеспечение нашей деятельности однозначно фиксирует
         необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
         оппозиции могут быть рассмотрены
         <span class="projects__tooltip-container">
@@ -924,68 +945,75 @@
         предпосылок. Банальные, но
         неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
         которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
-        Подробнее: <a href="#" class="projects__link">blanchard-art.ru/projects/about</a>
+        Подробнее: <a class="projects__link" href="#">blanchard-art.ru/projects/about</a>
       </p>
-      <div class="projects__slider projects-slider">
+      <div class="projects__partners">
         <h3 class="projects-slider__title">Партнёры проектов</h3>
-        <button class="projects-slider__btn slider__btn"></button>
-        <ul class="projects-slider__list">
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/fleelands.webp" alt="freelands foundation">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/ica.webp" alt="institute for contemporary art">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/workhouse.webp" alt="workhouse arts center">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/1849.webp" alt="1849 wine co.">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/hiscox.webp" alt="hiscox">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/camden.webp" alt="camden arts centre">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/stassen.webp" alt="stassen premium belgium cider">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/watts.webp" alt="watts gallery artists willage">
-          </li>
-          <li class="projects-slider__item">
-            <img class="projects__partner-img" src="img/projects/esad.webp" lang="fr" alt="école supérieure d'art et de design de valenciennes">
-          </li>
-        </ul>
-        <button class="editions-slider__btn_next slider__btn_next"></button>
+        <div class="projects__slider">
+          <button class="projects-slider__btn slider__btn"></button>
+          <div class="projects-slider__wrapper slider">
+            <ul class="projects-slider__list slider__list">
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/fleelands.webp" alt="freelands foundation">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/ica.webp" alt="institute for contemporary art">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/workhouse.webp" alt="workhouse arts center">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/1849.webp" alt="1849 wine co.">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/hiscox.webp" alt="hiscox">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/camden.webp" alt="camden arts centre">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/stassen.webp" alt="stassen premium belgium cider">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/watts.webp" alt="watts gallery artists willage">
+              </li>
+              <li class="projects-slider__item">
+                <img class="projects__partner-img" src="img/projects/esad.webp" lang="fr"
+                  alt="école supérieure d'art et de design de valenciennes">
+              </li>
+            </ul>
+          </div>
+          <button class="projects-slider__btn_next slider__btn_next"></button>
+        </div>
       </div>
     </section>
     <section class="contacts">
       <h2 class="contacts__title title">Контакты</h2>
-      <div class="contacts__info">
-        <address class="contacts__address">
-          <b>Шоурум №4</b><br>
-          Леонтьевский переулок, дом 5, строение 1
-        </address>
-        <form action="#" method="GET" class="contacts__callback">
-          <h3 class="contacts__small-title">Заказать обратный звонок</h3>
-          <label class="contacts-callback__label sr-only" for="name">Введите имя</label>
-          <input class="contacts-callback__input" type="text" name="name" id="name" placeholder="Имя*">
-          <label class="contacts-callback__label sr-only" for="phone">Введите телефон</label>
-          <input class="contacts-callback__input" type="tel" name="phone" id="phone" placeholder="Телефон*">
-          <button class="contacts-callback__submit" type="submit">Заказть</button>
-        </form>
-        <div class="contacts__one-click">
-          <h3 class="contacts__small-title">Связаться в один клик</h3>
-          <a class="contacts__sotial-link contacts__sotial-link_whatsapp" href="#"></a><br>
-          <a class="contacts__sotial-link contacts__sotial-link_telegrm" href="#"></a>
+      <div class="contacts__wrapper">
+        <div class="contacts__info">
+          <address class="contacts__address">
+            <b>Шоурум №4</b><br>
+            Леонтьевский переулок, дом 5, строение 1
+          </address>
+          <form class="contacts__callback contacts-callback" action="#" method="GET">
+            <h3 class="contacts__small-title">Заказать обратный звонок</h3>
+            <label class="contacts-callback__label sr-only" for="name">Введите имя</label>
+            <input class="contacts-callback__input" type="text" name="name" id="name" placeholder="Имя*">
+            <label class="contacts-callback__label sr-only" for="phone">Введите телефон</label>
+            <input class="contacts-callback__input" type="tel" name="phone" id="phone" placeholder="Телефон*">
+            <button class="contacts-callback__submit" type="submit">Заказть</button>
+          </form>
+          <div class="contacts__one-click">
+            <h3 class="contacts__small-title">Связаться в один клик</h3>
+            <a class="contacts__sotial-link contacts__sotial-link_whatsapp" href="#">wa</a>
+            <a class="contacts__sotial-link contacts__sotial-link_telegrm" href="#">tel</a>
+          </div>
         </div>
+        <div class="contacts__map"></div>
       </div>
-      <div class="contacts__map"></div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer container">
     <a class="footer__logo-link" href="#">
       <picture>
         <source media="(max-width: 1440px)" srcset="img/1024/blanchard-logo-footer.svg">
@@ -996,13 +1024,13 @@
     <div class="footer__sotial">
       <ul class="footer__sotial-list">
         <li class="footer__sotial-item">
-          <a class="footer__sotial-link footer__sotial-link_vk" href="#"></a>
+          <a class="footer__sotial-link footer__sotial-link_vk" href="#">vk</a>
         </li>
         <li class="footer__sotial-item">
-          <a class="footer__sotial-link footer__sotial-link_instagram" href="#"></a>
+          <a class="footer__sotial-link footer__sotial-link_instagram" href="#">inst</a>
         </li>
         <li class="footer__sotial-item">
-          <a class="footer__sotial-link footer__sotial-link_fb" href="#"></a>
+          <a class="footer__sotial-link footer__sotial-link_fb" href="#">fb</a>
         </li>
       </ul>
     </div>
