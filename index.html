@@ -5,92 +5,107 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blanchard. Художественная галерея</title>
+
+  <!--CHOICES-->
+  <link rel="stylesheet" href="js/choices/styles/base.min.css">
+  <link rel="stylesheet" href="js/choices/styles/choices.min.css">
+  <script src="js/choices/scripts/choices.min.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
-  <header class="header container">
+  <header class="header">
     <h1 class="header__title sr-only">Blanchard. Художественная галерея</h1>
     <div class="header__top">
-      <a class="header__logo-link" href="#">
-        <picture>
-          <source media="(max-width: 500px)" srcset="img/320/blanchard-logo.svg">
-          <source media="(max-width: 1440px)" srcset="img/1024/blanchard-logo.svg">
-          <img class="header__logo-img" src="img/blanchard-logo.svg" alt="Blanchard. Художественная галерея">
-        </picture>
-      </a>
-      <div class="header__menu">
-        <button class="header__burger" title="Открыть меню"><span class="burger"></span></button>
-        <nav class="header__nav header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item"><a class="header-nav__link" href="#about-us">О нас</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#gallery">Галерея</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#catalog">Каталог</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#events">События</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#editions">Издания</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#projects">Проекты</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-        <a class="header__sign-in" href="#">Войти</a>
+      <div class="header__container container">
+        <a class="header__logo-link" href="#">
+          <picture>
+            <source media="(max-width: 500px)" srcset="img/320/blanchard-logo.svg">
+            <source media="(max-width: 1440px)" srcset="img/1024/blanchard-logo.svg">
+            <img class="header__logo-img" src="img/blanchard-logo.svg" alt="Blanchard. Художественная галерея">
+          </picture>
+        </a>
+        <div class="header__menu">
+          <button class="header__burger" title="Открыть меню"><span class="burger"></span></button>
+          <nav class="header__nav header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"><a class="header-nav__link" href="#about-us">О нас</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#gallery">Галерея</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#catalog">Каталог</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#events">События</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#editions">Издания</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#projects">Проекты</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <a class="header__sign-in" href="#">Войти</a>
+        </div>
       </div>
     </div>
     <div class="header__bottom">
-      <ul class="header__select-list">
-        <li class="header__select-item">
-          <select class="header__select header-select" name="realism" id="realism">
-            <option class="header-select__opt" value="Верроккьо">Верроккьо
-            </option>
-            <option class="header-select__opt" value="Леонардо">Леонардо
-            </option>
-            <option class="header-select__opt" value="Фридрих">Фридрих</option>
-            <option class="header-select__opt" value="Тинторетто">Тинторетто
-            </option>
-          </select>
-        </li>
-        <li class="header__select-item">
-          <select class="header__select header-select" name="impressionism" id="impressionism">
-            <option class="header-select__opt" value="Ренуар">Ренуар</option>
-            <option class="header-select__opt" value="Мане">Мане</option>
-            <option class="header-select__opt" value="Сислей">Сислей</option>
-            <option class="header-select__opt" value="Моне">Моне</option>
-          </select>
-        </li>
-        <li class="header__select-item">
-          <select class="header__select header-select" name="post-impressionism" id="post-impressionism">
-            <option class="header-select__opt" value="Сёра">Сёра</option>
-            <option class="header-select__opt" value="Гоген">Гоген</option>
-            <option class="header-select__opt" value="Сезанн">Сезанн</option>
-            <option class="header-select__opt" value="Ван Гог">Ван Гог</option>
-          </select>
-        </li>
-        <li class="header__select-item">
-          <select class="header__select header-select" name="avant-garde" id="avant-garde">
-            <option class="header-select__opt" value="Пикассо">Пикассо</option>
-            <option class="header-select__opt" value="Малевич">Малевич</option>
-            <option class="header-select__opt" value="Маринетти">Маринетти
-            </option>
-            <option class="header-select__opt" value="Кандинский">Кандинский
-            </option>
-          </select>
-        </li>
-        <li class="header__select-item">
-          <select class="header__select header-select" name="futurism" id="futurism">
-            <option class="header-select__opt" value="Балла">Балла</option>
-            <option class="header-select__opt" value="Северини">Северини
-            </option>
-            <option class="header-select__opt" value="Прателла">Прателла
-            </option>
-            <option class="header-select__opt" value="Карра">Карра</option>
-          </select>
-        </li>
-      </ul>
-      <form class="header__search-form" action="#" method="GET">
-        <button type="submit" class="search-form__submit" title="Найти"></button>
-        <label class="search-form__label sr-only" for="search-field">Поиск</label>
-        <input class="search-form__input" type="search" name="search" id="search-field">
-      </form>
+      <div class="header__container container">
+        <ul class="header__select-list">
+          <li class="header__select-item">
+            <select class="header__select header-select js-select" name="realism" id="realism">
+              <option class="header-select__placeholder" value="">Реализм</option>
+              <option class="header-select__opt" value="Верроккьо">Верроккьо
+              </option>
+              <option class="header-select__opt" value="Леонардо">Леонардо
+              </option>
+              <option class="header-select__opt" value="Фридрих">Фридрих</option>
+              <option class="header-select__opt" value="Тинторетто">Тинторетто
+              </option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select class="header__select header-select js-select" name="impressionism" id="impressionism">
+              <option class="header-select__placeholder" value="">Импрессионизм</option>
+              <option class="header-select__opt" value="Ренуар">Ренуар</option>
+              <option class="header-select__opt" value="Мане">Мане</option>
+              <option class="header-select__opt" value="Сислей">Сислей</option>
+              <option class="header-select__opt" value="Моне">Моне</option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select class="header__select header-select js-select" name="post-impressionism" id="post-impressionism">
+              <option class="header-select__placeholder" value="">Постимпрессионизм</option>
+              <option class="header-select__opt" value="Сёра">Сёра</option>
+              <option class="header-select__opt" value="Гоген">Гоген</option>
+              <option class="header-select__opt" value="Сезанн">Сезанн</option>
+              <option class="header-select__opt" value="Ван Гог">Ван Гог</option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select class="header__select header-select js-select" name="avant-garde" id="avant-garde">
+              <option class="header-select__placeholder" value="">Авангард</option>
+              <option class="header-select__opt" value="Пикассо">Пикассо</option>
+              <option class="header-select__opt" value="Малевич">Малевич</option>
+              <option class="header-select__opt" value="Маринетти">Маринетти
+              </option>
+              <option class="header-select__opt" value="Кандинский">Кандинский
+              </option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select class="header__select header-select js-select" name="futurism" id="futurism">
+              <option class="header-select__placeholder" value="">Футуризм</option>
+              <option class="header-select__opt" value="Балла">Балла</option>
+              <option class="header-select__opt" value="Северини">Северини
+              </option>
+              <option class="header-select__opt" value="Прателла">Прателла
+              </option>
+              <option class="header-select__opt" value="Карра">Карра</option>
+            </select>
+          </li>
+        </ul>
+        <form class="header__search-form search-form" action="#" method="GET">
+          <button class="search-form__submit" type="submit" title="Найти"></button>
+          <label class="search-form__label sr-only" for="search-field">Поиск по сайту</label>
+          <input class="search-form__input" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+        </form>
+      </div>
     </div>
   </header>
   <main class="main container">
@@ -154,7 +169,7 @@
         <div class="gallery__panel">
           <div class="gallery__filter">
             <label for="gallery-filter" class="gallery__filter-label">Фильтровать по:</label>
-            <select name="filter" id="gallery-filter" class="gallery__filter-select">
+            <select class="gallery__filter-select js-select" name="filter" id="gallery-filter">
               <option value="author">Автор</option>
               <option value="trend">Направление</option>
               <option value="technique">Техника</option>

@@ -1,3 +1,33 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/OpenSans-Bold.ttf) format('ttf'),
+       url(../fonts/OpenSans-Bold.woff) format('woff'),
+       url(../fonts/OpenSans-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/OpenSans-SemiBold.ttf) format('ttf'),
+       url(../fonts/OpenSans-SemiBold.woff) format('woff'),
+       url(../fonts/OpenSans-SemiBold.woff2) format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/OpenSans-Regular.ttf) format('ttf'),
+       url(../fonts/OpenSans-Regular.woff) format('woff'),
+       url(../fonts/OpenSans-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -11,7 +41,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background-color: gray;
+  color: #333;
+  font: normal 16px/32px 'Open Sans', sans-serif;
 }
 
 img {
@@ -22,6 +53,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 a:focus {
@@ -51,9 +83,12 @@ ul {
 }
 
 .container {
+  width: 100%;
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 /*SLIDER*/
@@ -68,18 +103,28 @@ ul {
 
 /*HEADER*/
 .header__top {
+  background-color: #000;
+}
+
+.header__container {
   display: flex;
   align-items: center;
-  width: 100%;
-  background-color: #000;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .header__logo-link {
   margin-right: 180px;
+  line-height: 0;
+}
+
+.header__logo-img {
+  min-width: 173px;
 }
 
 .header__menu {
   display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -99,9 +144,32 @@ ul {
   margin-right: 62px;
 }
 
+.header-nav__link {
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.header__sign-in {
+  padding-left: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  background-image: url(../img/sign-in.svg);
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position-y: center;
+}
+
 .header__bottom {
-  display: flex;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header__bottom .header__container {
+  padding-top: 23px;
+  padding-bottom: 18px;
 }
 
 .header__select-list {
@@ -109,8 +177,90 @@ ul {
   margin-right: auto;
 }
 
+/*HEADER SELECTS*/
+
+.header__select-item .choices[data-type*=select-one] .choices__inner,
+.header__select-item .choices__list--single {
+  padding: 0;
+}
+
+.header__select-item .choices[data-type*=select-one] .choices__inner {
+  padding-right: 13px;
+  min-height: auto;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  background-color: transparent;
+  border: none;
+}
+
+.header__select-item .choices__placeholder {
+  opacity: 1;
+}
+
+.header__select-item .choices[data-type*=select-one]::after {
+  right: 0;
+  height: 7.07px;
+  width: 7.07px;
+  border-style: solid;
+  border-color: transparent transparent #fff #fff;
+  border-width: 1px;
+  transform: rotate(-45deg) translate(50%, -50%);
+  transition: transform .2s;
+}
+
+.header__select-item .choices__list--dropdown [class*=placeholder] {
+  display: none;
+}
+
 .header__select-item:not(:last-child) {
-  margin-right: 97px;
+  margin-right: 100px;
+}
+
+/*HEADER-SEARCH-FORM*/
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__submit {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.search-form__submit::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  display: block;
+  height: 2px;
+  width: 7px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
+.search-form__input {
+  width: 220px;
+  background-color: transparent;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+
+.search-form__input::placeholder {
+  color: #fff;
+  font: 18px/25px 'Open Sans', sans-serif;
+}
+
+.search-form__input:focus::placeholder {
+  opacity: 0;
 }
 
 /*HERO*/
