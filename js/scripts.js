@@ -6,5 +6,6 @@ selectElems.forEach((select) => {
   new Choices(select, {
     searchEnabled: false,
     itemSelectText: ``,
+    shouldSort: false,
   });
 });

@@ -103,6 +103,7 @@ ul {
 
 /*HEADER*/
 .header__top {
+  position: relative;
   background-color: #000;
 }
 
@@ -138,6 +139,7 @@ ul {
 
 .header-nav__list {
   display: flex;
+  line-height: 25px;
 }
 
 .header-nav__item:not(:last-child) {
@@ -147,7 +149,6 @@ ul {
 .header-nav__link {
   color: #fff;
   font-size: 18px;
-  line-height: 25px;
   font-weight: 600;
 }
 
@@ -164,20 +165,30 @@ ul {
 }
 
 .header__bottom {
+  position: absolute;
+  top: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 
 .header__bottom .header__container {
-  padding-top: 23px;
-  padding-bottom: 18px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .header__select-list {
   display: flex;
   margin-right: auto;
+  margin-left: -2px;
+  line-height: 25px;
 }
 
 /*HEADER SELECTS*/
+
+.header__select-item {
+  color: #fff;
+}
 
 .header__select-item .choices[data-type*=select-one] .choices__inner,
 .header__select-item .choices__list--single {
@@ -186,6 +197,8 @@ ul {
 
 .header__select-item .choices[data-type*=select-one] .choices__inner {
   padding-right: 13px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
   min-height: auto;
   color: #fff;
   font-size: 18px;
@@ -200,6 +213,7 @@ ul {
 }
 
 .header__select-item .choices[data-type*=select-one]::after {
+  top: 38px;
   right: 0;
   height: 7.07px;
   width: 7.07px;
@@ -218,10 +232,101 @@ ul {
   margin-right: 100px;
 }
 
+.header__select-item .choices__list--dropdown .choices__item--selectable {
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.header__select-item .choices__list--dropdown {
+  height: 300px;
+  width: 300px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+.header__select-item .choices__list--dropdown .choices__item--selectable {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__select-item .choices__list--dropdown .choices__item--selectable:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.header__select-item [data-value="tintoretto"] {
+  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+}
+
+.header__select-item [data-value="frederick"] {
+  background-image: url(../img/dropdowns/realism/frederick.jpg);
+}
+
+.header__select-item [data-value="leonardo"] {
+  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+}
+
+.header__select-item [data-value="verrocchio"] {
+  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+}
+
+.header__select-item [data-value="tintoretto"] {
+  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+}
+
+.header__select-item [data-value="frederick"] {
+  background-image: url(../img/dropdowns/realism/frederick.jpg);
+}
+
+.header__select-item [data-value="leonardo"] {
+  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+}
+
+.header__select-item [data-value="verrocchio"] {
+  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+}
+
+.header__select-item [data-value="tintoretto"] {
+  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+}
+
+.header__select-item [data-value="frederick"] {
+  background-image: url(../img/dropdowns/realism/frederick.jpg);
+}
+
+.header__select-item [data-value="leonardo"] {
+  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+}
+
+.header__select-item [data-value="verrocchio"] {
+  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+}
+
+.header__select-item [data-value="tintoretto"] {
+  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+}
+
+.header__select-item [data-value="frederick"] {
+  background-image: url(../img/dropdowns/realism/frederick.jpg);
+}
+
+.header__select-item [data-value="leonardo"] {
+  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+}
+
+.header__select-item [data-value="verrocchio"] {
+  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+}
+
+
 /*HEADER-SEARCH-FORM*/
 .search-form {
   display: flex;
   align-items: center;
+  padding-top: 2px;
 }
 
 .search-form__submit {
@@ -248,6 +353,10 @@ ul {
 
 .search-form__input {
   width: 220px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
   background-color: transparent;
   border-color: #fff;
   border-style: solid;
@@ -256,7 +365,7 @@ ul {
 
 .search-form__input::placeholder {
   color: #fff;
-  font: 18px/25px 'Open Sans', sans-serif;
+  font: 18px/20px 'Open Sans', sans-serif;
 }
 
 .search-form__input:focus::placeholder {
@@ -285,6 +394,7 @@ ul {
 }
 
 .hero__info {
+  padding-top: 100px;
   z-index: 1;
 }
 
