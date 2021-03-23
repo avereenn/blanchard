@@ -28,6 +28,13 @@
   font-display: swap;
 }
 
+:root {
+  --main-color-1: #7943a4;
+  --main-color-2: #9d5Cd0;
+  --main-color-3: #c283f3;
+  --main-light-color: #d1a9f0;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -119,8 +126,18 @@ ul {
   line-height: 0;
 }
 
+.header__logo-link:focus {
+  outline: var(--main-color-1) solid 1px;
+  outline-offset: 7px;
+}
+
 .header__logo-img {
   min-width: 173px;
+  transition: transform .2s ease-in;
+}
+
+.header__logo-img:hover {
+  transform: scale(1.2);
 }
 
 .header__menu {
@@ -153,15 +170,31 @@ ul {
 }
 
 .header__sign-in {
-  padding-left: 20px;
   color: #fff;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
-  background-image: url(../img/sign-in.svg);
-  background-repeat: no-repeat;
-  background-size: 13px;
-  background-position-y: center;
+}
+
+.header-nav__link:focus,
+.header__sign-in:focus {
+  outline: var(--main-color-1) solid 2px;
+  outline-offset: 6px;
+}
+
+.header-nav__link:hover,
+.header__sign-in:hover {
+  color: var(--main-color-3);
+}
+
+.header__sign-in:hover path,
+.header__sign-in:active path {
+  fill: currentColor;
+}
+
+.header-nav__link:active,
+.header__sign-in:active {
+  color: var(--main-color-1);
 }
 
 .header__bottom {
@@ -173,8 +206,8 @@ ul {
 }
 
 .header__bottom .header__container {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header__select-list {
@@ -197,10 +230,7 @@ ul {
 
 .header__select-item .choices[data-type*=select-one] .choices__inner {
   padding-right: 13px;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
   min-height: auto;
-  color: #fff;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -213,18 +243,36 @@ ul {
 }
 
 .header__select-item .choices[data-type*=select-one]::after {
-  top: 38px;
+  top: 50%;
   right: 0;
   height: 7.07px;
   width: 7.07px;
+  margin-top: 0;
   border-style: solid;
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent currentColor currentColor;
   border-width: 1px;
   transform: rotate(-45deg) translate(50%, -50%);
-  transition: transform .2s;
+  transition: transform .2s ease-in;
 }
 
-.header__select-item .choices__list--dropdown [class*=placeholder] {
+.header__select-item .choices[data-type*=select-one].is-open::after {
+  transform: rotate(135deg);
+}
+
+.header__select-item .choices[data-type*=select-one]:focus {
+  outline: var(--main-color-1) solid 2px;
+  outline-offset: 6px;
+}
+
+.header__select-item .choices[data-type*=select-one]:hover {
+  color: var(--main-color-2);
+}
+
+.header__select-item .choices[data-type*=select-one]:active {
+  color: var(--main-color-1);
+}
+
+.header__select-item .choices__list--dropdown .choices__item[class*=placeholder] {
   display: none;
 }
 
@@ -234,17 +282,36 @@ ul {
 
 .header__select-item .choices__list--dropdown .choices__item--selectable {
   padding: 10px 14px;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
 }
 
+.header__select-item .choices__list--dropdown .choices__item--selectable:hover,
+.header__select-item .choices__list--dropdown .choices__item--selectable.is-highlighted {
+  outline: var(--main-color-2) solid 2px;
+}
+
+.header__select-item .choices__list--dropdown .choices__item--selectable:active {
+  box-shadow: inset 0 0 0 20px rgba(194, 131, 243, .4);
+}
+
 .header__select-item .choices__list--dropdown {
+  position: absolute;
+  top: calc(100% + 22.5px);
   height: 300px;
+  max-height: 100vh;
   width: 300px;
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
+  overflow-y: auto;
+}
+
+.header__select-item .choices__list[role="listbox"] {
+  min-height: 1000px;
+  overflow: visible;
 }
 
 .header__select-item .choices__list--dropdown .choices__item--selectable {
@@ -258,69 +325,102 @@ ul {
 }
 
 .header__select-item [data-value="tintoretto"] {
-  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+  background-image: url(../img/dropdowns/realism/tintoretto.webp);
 }
 
 .header__select-item [data-value="frederick"] {
-  background-image: url(../img/dropdowns/realism/frederick.jpg);
+  background-image: url(../img/dropdowns/realism/frederick.webp);
 }
 
 .header__select-item [data-value="leonardo"] {
-  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+  background-image: url(../img/dropdowns/realism/leonardo.webp);
 }
 
 .header__select-item [data-value="verrocchio"] {
-  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+  background-image: url(../img/dropdowns/realism/verrocchio.webp);
 }
 
-.header__select-item [data-value="tintoretto"] {
-  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+.header__select-item [data-value="renoir"] {
+  background-image: url(../img/dropdowns/impressionism/renoir.webp);
 }
 
-.header__select-item [data-value="frederick"] {
-  background-image: url(../img/dropdowns/realism/frederick.jpg);
+.header__select-item [data-value="manet"] {
+  background-image: url(../img/dropdowns/impressionism/manet.webp);
 }
 
-.header__select-item [data-value="leonardo"] {
-  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+.header__select-item [data-value="sisley"] {
+  background-image: url(../img/dropdowns/impressionism/sisley.webp);
 }
 
-.header__select-item [data-value="verrocchio"] {
-  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+.header__select-item [data-value="monet"] {
+  background-image: url(../img/dropdowns/impressionism/monet.webp);
 }
 
-.header__select-item [data-value="tintoretto"] {
-  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+.header__select-item [data-value="seurat"] {
+  background-image: url(../img/dropdowns/post-impressionism/seurat.webp);
 }
 
-.header__select-item [data-value="frederick"] {
-  background-image: url(../img/dropdowns/realism/frederick.jpg);
+.header__select-item [data-value="gauguin"] {
+  background-image: url(../img/dropdowns/post-impressionism/gauguin.webp);
 }
 
-.header__select-item [data-value="leonardo"] {
-  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+.header__select-item [data-value="cezanne"] {
+  background-image: url(../img/dropdowns/post-impressionism/cezanne.webp);
 }
 
-.header__select-item [data-value="verrocchio"] {
-  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+.header__select-item [data-value="van-gogh"] {
+  background-image: url(../img/dropdowns/post-impressionism/van-gogh.webp);
 }
 
-.header__select-item [data-value="tintoretto"] {
-  background-image: url(../img/dropdowns/realism/tintoretto.jpg);
+.header__select-item [data-value="picasso"] {
+  background-image: url(../img/dropdowns/avant-garde/picasso.webp);
 }
 
-.header__select-item [data-value="frederick"] {
-  background-image: url(../img/dropdowns/realism/frederick.jpg);
+.header__select-item [data-value="malevich"] {
+  background-image: url(../img/dropdowns/avant-garde/malevich.webp);
 }
 
-.header__select-item [data-value="leonardo"] {
-  background-image: url(../img/dropdowns/realism/leonardo.jpg);
+.header__select-item [data-value="marinetti"] {
+  background-image: url(../img/dropdowns/avant-garde/marinetti.webp);
 }
 
-.header__select-item [data-value="verrocchio"] {
-  background-image: url(../img/dropdowns/realism/verrocchio.jpg);
+.header__select-item [data-value="kandinsky"] {
+  background-image: url(../img/dropdowns/avant-garde/kandinsky.webp);
 }
 
+.header__select-item [data-value="balla"] {
+  background-image: url(../img/dropdowns/futurism/balla.webp);
+}
+
+.header__select-item [data-value="severini"] {
+  background-image: url(../img/dropdowns/futurism/severini.webp);
+}
+
+.header__select-item [data-value="pratella"] {
+  background-image: url(../img/dropdowns/futurism/pratella.webp);
+}
+
+.header__select-item [data-value="carra"] {
+  background-image: url(../img/dropdowns/futurism/carra.webp);
+}
+
+/* SIMPLEBAR */
+.header__select-item .simplebar-track {
+  width: 2px;
+  margin-bottom: 40px;
+  margin-right: 19px;
+  margin-top: 40px;
+  background-color: #000;
+}
+
+.header__select-item .simplebar-scrollbar {
+  height: 10%;
+  background-color: #fff;
+}
+
+.header__select-item .choices__list--dropdown:hover .simplebar-scrollbar {
+  background-color: var(--main-color-2);
+}
 
 /*HEADER-SEARCH-FORM*/
 .search-form {

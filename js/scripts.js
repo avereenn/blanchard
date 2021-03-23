@@ -9,3 +9,9 @@ selectElems.forEach((select) => {
     shouldSort: false,
   });
 });
+
+const selectListElems = document.querySelectorAll(`.header__select-item .choices__list--dropdown`);
+
+selectListElems.forEach((list) => {
+  new SimpleBar(list);
+});
