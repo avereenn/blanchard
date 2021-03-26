@@ -21,13 +21,12 @@
 <body>
   <header class="header">
     <h1 class="header__title sr-only">Blanchard. Художественная галерея</h1>
-    <div class="header__top">
-      <div class="header__container container">
+    <div class="header__container container">
         <a class="header__logo-link" href="#">
           <img class="header__logo-img" src="img/blanchard-logo.svg" alt="Blanchard. Художественная галерея">
         </a>
+        <button class="header__burger" title="Открыть меню"><span class="burger"></span></button>
         <div class="header__menu">
-          <button class="header__burger" title="Открыть меню"><span class="burger"></span></button>
           <nav class="header__nav header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item"><a class="header-nav__link" href="#about-us">О нас</a></li>
@@ -48,9 +47,7 @@
             Войти
           </a>
         </div>
-      </div>
-      <div class="header__bottom">
-        <div class="header__container container">
+      <div class="header__bottom container">
           <ul class="header__select-list">
             <li class="header__select-item">
               <select class="header__select header-select js-select" name="realism" id="realism">
@@ -98,13 +95,14 @@
               </select>
             </li>
           </ul>
+          <button class="header__search-open search-form__submit" type="button" title="Открыть форму поиска"></button>
           <form class="header__search-form search-form" action="#" method="GET">
+
             <button class="search-form__submit" type="submit" title="Найти"></button>
             <label class="search-form__label sr-only" for="search-field">Поиск по сайту</label>
             <input class="search-form__input" type="search" name="search" id="search-field"
               placeholder="Поиск по сайту">
           </form>
-        </div>
       </div>
     </div>
   </header>
