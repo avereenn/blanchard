@@ -27,9 +27,8 @@ burgerBtnEl.addEventListener(`click`, function() {
 });
 
 searchOpenBtnEl.addEventListener(`click`, function() {
-  this.classList.add(`header__search-open_hidden`);
-  searchFormEl.classList.add(`search-form_show`);
-  searchFormEl.elements.search.focus();
+  this.classList.toggle(`header__search-open_active`);
+  searchFormEl.classList.toggle(`search-form_show`);
 });
 
 window.addEventListener(`click`, event => {
@@ -37,6 +36,6 @@ window.addEventListener(`click`, event => {
   event.target.closest(`.search-form_show`) ||
   event.target === searchOpenBtnEl) return;
 
-  searchOpenBtnEl.classList.remove(`header__search-open_hidden`);
+  searchOpenBtnEl.classList.remove(`header__search-open_active`);
   searchFormEl.classList.remove(`search-form_show`);
 });
