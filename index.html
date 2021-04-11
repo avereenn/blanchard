@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="css/simplebar/simplebar.css">
   <script src="js/simplebar/simplebar.min.js"></script>
 
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="css/swiper/swiper-bundle.min.css">
+  <script src="js/swiper/swiper-bundle.min.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scripts.js" defer></script>
 </head>
@@ -179,14 +183,14 @@
           <div class="gallery__info">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
             скачиваний <a class="link" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией.</div>
         </div>
-        <div class="gallery__slider gallery-slider slider">
+        <div class="gallery__slider gallery-slider swiper-container">
           <div class="gallery-slider__btns slider__btns">
-            <button class="gallery-slider__btn slider__btn"></button>
+            <button class="gallery-slider__btn gallery-slider__btn_prev slider__btn"></button>
             <span class="gallery-slider__pages slider__pages">1/3</span>
-            <button class="gallery-slider__btn_next slider__btn_next"></button>
+            <button class="gallery-slider__btn_next slider__btn slider__btn_next"></button>
           </div>
-          <ul class="gallery-slider__list slider__list">
-            <li class="gallery-slider__item">
+          <ul class="gallery-slider__list slider__list swiper-wrapper">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-1.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-1.webp">
@@ -195,7 +199,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-1.png" alt="фрукты и цветы">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-2.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-2.webp">
@@ -204,7 +208,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-2.png" alt="женщина с гроздью винограда">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-3.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-3.webp">
@@ -214,7 +218,7 @@
                   alt="сидящая женщина в шляпе и шубе">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-4.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-4.webp">
@@ -223,7 +227,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-4.png" alt="семья играет в саду">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-5.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-5.webp">
@@ -233,7 +237,7 @@
                   alt="женщины отдыхают возле колонны">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-6.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-6.webp">
@@ -243,7 +247,7 @@
                   alt="мужчина лежит на коленях женщины">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-7.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-7.webp">
@@ -253,7 +257,7 @@
                   alt="мужчина поднимается по ступенькам на фоне бухты">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-8.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-8.webp">
@@ -262,7 +266,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-8.png" alt="рассвет в бухте">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-9.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-9.webp">
@@ -271,7 +275,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-9.png" alt="женщины сидят под деревьями">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-10.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-10.webp">
@@ -281,7 +285,7 @@
                   alt="люди празднуют среди растительности">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-11.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-11.webp">
@@ -291,7 +295,7 @@
                   alt="люди с собакой сидят у озера со скалами">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-12.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-12.webp">
@@ -301,7 +305,7 @@
                   alt="женщина в белом с красной накидкой">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-13.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-13.webp">
@@ -310,7 +314,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-13.png" alt="силуэт жешщины с граблями">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-14.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-14.webp">
@@ -320,7 +324,7 @@
                   alt="абстрактная фигура напоминающая человеческий силуэт">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-15.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-15.webp">
@@ -330,7 +334,7 @@
                   alt="абстракция из геометрических фигур">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-16.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-16.webp">
@@ -340,7 +344,7 @@
                   alt="абстракция из геометрических фигур">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-17.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-17.webp">
@@ -349,7 +353,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-17.png" alt="люди держат предметы">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-18.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-18.webp">
@@ -359,7 +363,7 @@
                   alt="силуэт человека в фартуке с топором">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-19.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-19.webp">
@@ -369,7 +373,7 @@
                   alt="абстракция из геометрических фигур">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-20.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-20.webp">
@@ -378,7 +382,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-20.png" alt="угловатый силуэт человека">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-21.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-21.webp">
@@ -388,7 +392,7 @@
                   alt="два абстрактных силуэта людей без лиц">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-22.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-22.webp">
@@ -398,7 +402,7 @@
                   alt="абстракция из геометрических фигур">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-23.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-23.webp">
@@ -408,7 +412,7 @@
                   alt="абстракция из геометрических фигур">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-24.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-24.webp">
@@ -418,7 +422,7 @@
                   alt="угловатые силуэты трёх женщин">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-25.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-25.webp">
@@ -428,7 +432,7 @@
                   alt="силуэт женщины с граблями на фоне поля">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-26.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-26.webp">
@@ -438,7 +442,7 @@
                   alt="абстракция из геометрических фигур">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-27.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-27.webp">
@@ -447,7 +451,7 @@
                 <img class="gallery-slider__img" src="img/gallery/images/img-27.png" alt="абстракция">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-28.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-28.webp">
@@ -457,7 +461,7 @@
                   alt="деревья, за ними идёт мужчина на фоне здания">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-29.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-29.webp">
@@ -467,7 +471,7 @@
                   alt="четыре разноцветных силуэта людей">
               </picture>
             </li>
-            <li class="gallery-slider__item">
+            <li class="gallery-slider__item swiper-slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/gallery/images/img-30.webp">
                 <source media="(max-width: 500px)" srcset="img/320/gallery/images/img-30.webp">
@@ -811,7 +815,7 @@
             </div>
           </fieldset>
         </form>
-        <div class="editions__slider editions-slider slider">
+        <div class="editions__slider editions-slider swiper-container">
           <div class="editions-slider__btns slider__btns">
             <button class="editions-slider__btn slider__btn"></button>
             <span class="editions-slider__pages slider__pages">1/3</span>
@@ -966,7 +970,7 @@
       </p>
       <div class="projects__partners">
         <h3 class="projects-slider__title">Партнёры проектов</h3>
-        <div class="projects__slider">
+        <div class="projects__slider swiper-container">
           <button class="projects-slider__btn slider__btn"></button>
           <div class="projects-slider__wrapper slider">
             <ul class="projects-slider__list slider__list">

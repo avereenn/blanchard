@@ -39,3 +39,20 @@ window.addEventListener(`click`, event => {
   searchOpenBtnEl.classList.remove(`header__search-open_active`);
   searchFormEl.classList.remove(`search-form_show`);
 });
+
+new Swiper(`.swiper-container`, {
+
+  pagination: {
+    el: '.gallery-slider__pages',
+  },
+
+  slidesPerView: 3, // or 'auto'
+  slidesPerColumn: 2,
+  slidesPerGroup:3,
+  spaceBetween: 5,
+
+  navigation: {
+    nextEl: '.gallery-slider__btn_next',
+    prevEl: '.gallery-slider__btn_prev',
+  },
+});
