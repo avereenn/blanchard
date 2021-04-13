@@ -44,12 +44,13 @@ new Swiper(`.swiper-container`, {
 
   pagination: {
     el: '.gallery-slider__pages',
+    type: `fraction`,
   },
 
-  slidesPerView: 3, // or 'auto'
+  slidesPerView: 3,
   slidesPerColumn: 2,
-  slidesPerGroup:3,
-  spaceBetween: 5,
+  slidesPerGroup: 3,
+  spaceBetween: 50,
 
   navigation: {
     nextEl: '.gallery-slider__btn_next',

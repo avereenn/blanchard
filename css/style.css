@@ -179,6 +179,7 @@ ul {
   background-color: #ececec;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .slider__btn:disabled {
@@ -791,7 +792,7 @@ ul {
 /*GALLERY*/
 .gallery {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
   color: #fff;
   background-image: url(../img/gallery/gallery-bg.webp);
   background-position: top left;
@@ -921,13 +922,49 @@ ul {
   overflow-y: auto;
 }
 
+.gallery__info {
+  padding-right: 60px;
+  font-weight: 600;
+}
+
 /* GALLERY SLIDER */
+.gallery__slider {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
 .gallery-slider {
+  position: relative;
+  width: 1150px;
   height: 750px;
+}
+
+.gallery-slider__btns {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  padding-left: 3px;
+  transform: translateY(-100%);
+}
+
+.gallery-slider__pages {
+  margin-left: 14px;
+  margin-right: 14px;
 }
 
 .gallery-slider__item {
   flex: 0 0 33.333%;
+  height: 350px;
+}
+
+.gallery-slider__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-slider__item:nth-child(2n) {
+  margin-bottom: 0;
 }
 
 /*CATALOG*/
