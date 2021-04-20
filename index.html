@@ -171,7 +171,6 @@
       <div class="container">
         <h2 class="gallery__title title">Галерея</h2>
         <div class="gallery__wrapper">
-          <div class="gallery__panel">
             <div class="gallery__filter">
               <label for="gallery-filter" class="gallery__filter-label">Фильтровать по:</label>
               <select class="gallery__filter-select js-select" name="filter" id="gallery-filter">
@@ -180,10 +179,11 @@
                 <option value="technique">Техника</option>
               </select>
             </div>
-            <div class="gallery__info">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
-              скачиваний <a class="link" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией.</div>
-          </div>
-          <div class="gallery__slider">
+            <div class="gallery__info">
+              Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
+              скачиваний <a class="link" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+            </div>
+            <div class="gallery__slider">
             <div class="gallery-slider__btns slider__btns">
               <button class="gallery-slider__btn gallery-slider__btn_prev slider__btn"></button>
               <span class="gallery-slider__pages slider__pages">1/3</span>
@@ -552,8 +552,11 @@
                   <figure class="gallery-modal__figure">
                     <img src="" alt="" class="gallery-modal__img">
                     <figcaption class="gallery-modal__caption">
-                      <h3 class="gallery-modal__title">Казимир Малевич<br><span>"Женщина с граблями"</span></h3>
-                      <span class="gallery-modal__years">1931 - 1932</span>
+                      <h3 class="gallery-modal__title">
+                        <span class="gallery-modal__title-author">Казимир Малевич</span>
+                        <span  class="gallery-modal__title-picture">"Женщина с граблями"</span>
+                      </h3>
+                      <div class="gallery-modal__years">1931 - 1932</div>
                       <p class="gallery-modal__text">
                         Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её
                         создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и

@@ -50,21 +50,37 @@ window.addEventListener(`click`, event => {
 
 // GALLERY SWIPER
 new Swiper(`.swiper-container`, {
-  observe: true,
+
   pagination: {
     el: '.gallery-slider__pages',
     type: `fraction`,
   },
 
-  slidesPerView: 3,
-  slidesPerColumn: 2,
-  slidesPerGroup: 3,
-  spaceBetween: 50,
-
   navigation: {
     nextEl: '.gallery-slider__btn_next',
     prevEl: '.gallery-slider__btn_prev',
   },
+
+  slidesPerView: 1,
+  slidesPerColumn: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
+
+  breakpoints: {
+    1700: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
+    },
+
+    500: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+    },
+  }
 });
 
 // GALLERY MODAL
