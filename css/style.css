@@ -1296,7 +1296,7 @@ ul {
   }
 
   .gallery-slider {
-    width: 653px;
+    width: 800px;
     height: 616px;
   }
 
@@ -1419,6 +1419,7 @@ ul {
 
   .header__bottom .container {
     height: 100%;
+    padding: 0;
   }
 
   .header__bottom .container>*:not(.search-form) {
@@ -1498,6 +1499,7 @@ ul {
   /* GALLERY */
   .gallery {
     padding-top: 78px;
+    background-image: url(../img/1024/gallery/gallery-bg.webp);
   }
 
   .gallery__filter {
@@ -1590,6 +1592,39 @@ ul {
 
   .about-us__text {
     padding-left: 2px;
+  }
+
+  /* GALLERY */
+  .gallery {
+    padding-bottom: 68px;
+    background-image: url(../img/768/gallery/gallery-bg.webp);
+  }
+
+  .gallery__wrapper {
+    flex-direction: column;
+  }
+
+  .gallery__filter {
+    width: 42%;
+    margin-bottom: 165px;
+  }
+
+  .gallery-slider {
+    width: 100%;
+  }
+
+  .gallery-slider__btns {
+    padding-left: 0;
+  }
+
+  .gallery__slider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gallery__info {
+    position: relative;
+    max-width: 100%;
   }
 
 }
@@ -1713,11 +1748,6 @@ ul {
     opacity: 0;
   }
 
-  /* MAIN 320 */
-  body .main > * {
-    margin-bottom: 50px;
-  }
-
   /* HERO 320 */
   .hero {
     margin-bottom: 50px;
@@ -1755,11 +1785,55 @@ ul {
   }
 
   /* ABOUT 320 */
+  .about-us {
+    margin-bottom: 40px;
+  }
   .about-us__text {
     padding-left: 0;
     padding-right: 2px;
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
+  }
+
+  /* GALLERY 320 */
+  .gallery {
+    padding-top: 50px;
+    background-image: url(../img/320/gallery/gallery-bg.webp);
+  }
+
+  .gallery__title {
+    margin-bottom: 12px;
+  }
+
+  .gallery__filter {
+    width: 100%;
+    margin-bottom: 115px;
+  }
+
+  .gallery__filter .choices {
+    margin-top: 5px;
+  }
+
+  .gallery__slider {
+    margin-bottom: 57px;
+  }
+
+  .gallery-slider {
+    height: 375px;
+  }
+
+  .gallery-slider__btns {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .gallery-slider__pages {
+    line-height: 38px;
+  }
+
+  .gallery-slider__item {
+    height: 100%;
   }
 }

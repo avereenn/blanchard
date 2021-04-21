@@ -61,13 +61,9 @@ new Swiper(`.swiper-container`, {
     prevEl: '.gallery-slider__btn_prev',
   },
 
-  slidesPerView: 1,
-  slidesPerColumn: 1,
-  slidesPerGroup: 1,
-  spaceBetween: 0,
 
   breakpoints: {
-    1700: {
+    1440: {
       slidesPerView: 3,
       slidesPerColumn: 2,
       slidesPerGroup: 3,
@@ -79,6 +75,13 @@ new Swiper(`.swiper-container`, {
       slidesPerColumn: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
+    },
+
+    0: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 6,
     },
   }
 });
