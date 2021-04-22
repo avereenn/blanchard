@@ -96,10 +96,11 @@ gallerySliderListEl.addEventListener(`click`, event => {
   galleryModalEl.classList.add(`gallery-modal_open`);
   document.body.classList.add(`hold`);
   galleryModalImgEl.src = src;
+  document.getElementById(`bg-btn`).focus();
 });
 
 galleryModalEl.addEventListener(`click`, function(event) {
-  if(event.target !== event.currentTarget && !event.target.matches(`.gallery-modal__close`)) return;
+  if(!event.target.matches(`.gallery-modal__bg-btn`) && !event.target.matches(`.gallery-modal__close`)) return;
 
   this.classList.remove(`gallery-modal_open`);
   document.body.classList.remove(`hold`);
