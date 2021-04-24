@@ -87,6 +87,7 @@ new Swiper(`.swiper-container`, {
 });
 
 // GALLERY MODAL
+
 gallerySliderListEl.addEventListener(`click`, event => {
   event.preventDefault();
   const link = event.target.closest(`.gallery-slider__link`);
@@ -96,7 +97,7 @@ gallerySliderListEl.addEventListener(`click`, event => {
   galleryModalEl.classList.add(`gallery-modal_open`);
   document.body.classList.add(`hold`);
   galleryModalImgEl.src = src;
-  document.getElementById(`bg-btn`).focus();
+  document.querySelector(`#bg-btn`).focus();
 });
 
 galleryModalEl.addEventListener(`click`, function(event) {
