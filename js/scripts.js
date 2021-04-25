@@ -49,7 +49,8 @@ window.addEventListener(`click`, event => {
 });
 
 // GALLERY SWIPER
-new Swiper(`.swiper-container`, {
+const gallerySwiper = new Swiper(`.gallery-slider`, {
+  observer: true,
 
   pagination: {
     el: '.gallery-slider__pages',
@@ -61,14 +62,13 @@ new Swiper(`.swiper-container`, {
     prevEl: '.gallery-slider__btn_prev',
   },
 
+  slidesPerView: 1,
+  slidesPerColumn: 1,
+  slidesPerColumnFill: `row`,
+  slidesPerGroup: 1,
+  spaceBetween: 6,
 
   breakpoints: {
-    1440: {
-      slidesPerView: 3,
-      slidesPerColumn: 2,
-      slidesPerGroup: 3,
-      spaceBetween: 50,
-    },
 
     500: {
       slidesPerView: 2,
@@ -77,12 +77,13 @@ new Swiper(`.swiper-container`, {
       spaceBetween: 34,
     },
 
-    0: {
-      slidesPerView: 1,
-      slidesPerColumn: 1,
-      slidesPerGroup: 1,
-      spaceBetween: 6,
+    1440: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
     },
+
   }
 });
 
