@@ -65,7 +65,6 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
   slidesPerView: 1,
   slidesPerColumn: 1,
   slidesPerColumnFill: `row`,
-  slidesPerGroup: 1,
   spaceBetween: 6,
 
   breakpoints: {
@@ -73,14 +72,14 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
     500: {
       slidesPerView: 2,
       slidesPerColumn: 2,
-      slidesPerGroup: 2,
+      slidesPerColumnFill: `row`,
       spaceBetween: 34,
     },
 
     1440: {
       slidesPerView: 3,
       slidesPerColumn: 2,
-      slidesPerGroup: 3,
+      slidesPerColumnFill: `row`,
       spaceBetween: 50,
     },
 
