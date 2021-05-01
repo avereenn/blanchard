@@ -98,7 +98,9 @@ gallerySliderListEl.addEventListener(`click`, event => {
   galleryModalEl.classList.add(`gallery-modal_open`);
   document.body.classList.add(`hold`);
   galleryModalImgEl.src = src;
-  document.querySelector(`#bg-btn`).focus();
+
+  //переводим фокус на фон модального окна, с задержкой анимации свойства visibility
+  setTimeout(() => document.querySelector(`.js-bg-btn`).focus(), 160);
 });
 
 galleryModalEl.addEventListener(`click`, function(event) {
