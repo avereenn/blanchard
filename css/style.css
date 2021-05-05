@@ -1192,10 +1192,12 @@ ul {
 .catalog__top {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .catalog__title {
-  margin-right: 41px;
+  margin-right: 40px;
+  margin-bottom: 0;
 }
 
 .catalog__tab-btn {
@@ -1203,6 +1205,9 @@ ul {
   width: 46px;
   height: 46px;
   background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1220,6 +1225,7 @@ ul {
   border-radius: 50%;
   border-style: solid;
   border-width: 2px;
+  transition: border-color .2s ease-in;
 }
 
 .catalog__tab-btn:focus {
@@ -1233,11 +1239,64 @@ ul {
 }
 
 .catalog__tab-btn:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 46px;
+}
+
+.catalog__tab-btn_france {
+  background-image: url(../img/catalog/flags/france.webp);
+}
+
+.catalog__tab-btn_germany {
+  background-image: url(../img/catalog/flags/germany.webp);
+}
+
+.catalog__tab-btn_italy {
+  background-image: url(../img/catalog/flags/italy.webp);
+}
+
+.catalog__tab-btn_russia {
+  background-image: url(../img/catalog/flags/russia.webp);
+}
+
+.catalog__tab-btn_belgium {
+  background-image: url(../img/catalog/flags/belgium.webp);
+}
+
+.catalog__tab-info {
+  max-width: 68%;
+  margin-bottom: 40px;
 }
 
 .catalog__tab-content {
   display: flex;
+}
+
+.catalog__painter-info,
+.catalog__accordion {
+  flex: 0 1 50%;
+}
+
+.painter-info__figure {
+  margin: 0;
+}
+
+.painter-info__img {
+  margin-bottom: 20px;
+}
+
+.painter-info__title h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 33px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.painter-info__years {
+  color: #999;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 /*EVENTS*/
