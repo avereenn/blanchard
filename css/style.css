@@ -1761,13 +1761,20 @@ ul {
   }
 
   .gallery-modal__img {
-    min-width: 301px;
+    min-width: 45%;
   }
 
   .gallery-modal__caption {
     padding-bottom: 120px;
   }
 
+}
+
+@media(max-width: 640px) {
+  .hero__title {
+    font-size: 52px;
+    line-height: 64px;
+  }
 }
 
 @media(max-width: 500px) {
