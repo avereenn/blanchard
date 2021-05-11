@@ -1287,7 +1287,6 @@ ul {
 .painter-info__title h3 {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 33px;
   font-size: 24px;
   font-weight: 600;
 }
@@ -1297,6 +1296,11 @@ ul {
   line-height: 16px;
   font-size: 12px;
   font-weight: 400;
+}
+
+.painter-info__info {
+  margin-bottom: 0;
+  padding-right: 40px;
 }
 
 /*EVENTS*/
