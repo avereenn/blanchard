@@ -1269,6 +1269,7 @@ ul {
 
 .catalog__tab-content {
   display: flex;
+  width: 100%;
 }
 
 .catalog__painter-info,
@@ -1301,6 +1302,48 @@ ul {
 .painter-info__info {
   margin-bottom: 0;
   padding-right: 40px;
+}
+
+/* CATALOG ACCORDION */
+.accordion {
+  border-top: 1px solid #cacaca;
+}
+
+.accordion__item {
+  border-bottom: 1px solid #cacaca;
+}
+
+.accordion__btn {
+  width: 100%;
+  padding: 40px 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: left;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  transition: border-color .16s ease-in;
+}
+
+.accordion__btn.ui-state-active {
+  border-bottom-color: var(--main-color-2);
+}
+
+.accordion__painters-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 340px;
+  padding: 25px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.accordion__painter-link:hover {
+  color: var(--main-color-2);
 }
 
 /*EVENTS*/

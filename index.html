@@ -18,6 +18,10 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+  <!-- ACCORDION -->
+  <script src="js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scripts.js" defer></script>
 </head>
@@ -613,7 +617,7 @@
                 граждане Флоренции в костюмах того времени).
               </p>
             </article>
-            <ul class="catalog__accordion accordion">
+            <ul class="catalog__accordion accordion js-accordion">
               <li class="accordion__item">
                 <button class="accordion__btn">C 1400 по 1499 гг.</button>
                 <ul class="accordion__painters-list">
@@ -693,21 +697,2745 @@
               </li>
               <li class="accordion__item">
                 <button class="accordion__btn">C 1500 по 1599 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
               </li>
               <li class="accordion__item">
                 <button class="accordion__btn">C 1600 по 1699 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
               </li>
               <li class="accordion__item">
                 <button class="accordion__btn">C 1700 по 1799 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
               </li>
               <li class="accordion__item">
                 <button class="accordion__btn">C 1800 по 1899 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
               </li>
               <li class="accordion__item">
                 <button class="accordion__btn">C 1900 по 1999 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
               </li>
               <li class="accordion__item">
                 <button class="accordion__btn">C 2000 г.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__tab">
+          <p class="catalog__tab-info">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры,
+            будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
+            стремящиеся вытеснить
+            традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть
+            функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalog__tab-content">
+            <article class="catalog__painter-info painter-info">
+              <figure class="painter-info__figure">
+                <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
+                <figcaption class="painter-info__title">
+                  <h3>Доменико Гирландайо</h3>
+                <span class="painter-info__years">2 июня 1448 — 11 января 1494.</span>
+                </figcaption>
+              </figure>
+              <p class="painter-info__info">
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
+                течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
+                всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные
+                граждане Флоренции в костюмах того времени).
+              </p>
+            </article>
+            <ul class="catalog__accordion accordion js-accordion">
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1400 по 1499 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1500 по 1599 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1600 по 1699 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1700 по 1799 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1800 по 1899 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1900 по 1999 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 2000 г.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__tab">
+          <p class="catalog__tab-info">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры,
+            будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
+            стремящиеся вытеснить
+            традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть
+            функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalog__tab-content">
+            <article class="catalog__painter-info painter-info">
+              <figure class="painter-info__figure">
+                <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
+                <figcaption class="painter-info__title">
+                  <h3>Доменико Гирландайо</h3>
+                <span class="painter-info__years">2 июня 1448 — 11 января 1494.</span>
+                </figcaption>
+              </figure>
+              <p class="painter-info__info">
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
+                течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
+                всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные
+                граждане Флоренции в костюмах того времени).
+              </p>
+            </article>
+            <ul class="catalog__accordion accordion js-accordion">
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1400 по 1499 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1500 по 1599 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1600 по 1699 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1700 по 1799 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1800 по 1899 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1900 по 1999 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 2000 г.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__tab">
+          <p class="catalog__tab-info">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры,
+            будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
+            стремящиеся вытеснить
+            традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть
+            функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalog__tab-content">
+            <article class="catalog__painter-info painter-info">
+              <figure class="painter-info__figure">
+                <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
+                <figcaption class="painter-info__title">
+                  <h3>Доменико Гирландайо</h3>
+                <span class="painter-info__years">2 июня 1448 — 11 января 1494.</span>
+                </figcaption>
+              </figure>
+              <p class="painter-info__info">
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
+                течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
+                всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные
+                граждане Флоренции в костюмах того времени).
+              </p>
+            </article>
+            <ul class="catalog__accordion accordion js-accordion">
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1400 по 1499 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1500 по 1599 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1600 по 1699 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1700 по 1799 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1800 по 1899 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1900 по 1999 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 2000 г.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__tab">
+          <p class="catalog__tab-info">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры,
+            будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
+            стремящиеся вытеснить
+            традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть
+            функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalog__tab-content">
+            <article class="catalog__painter-info painter-info">
+              <figure class="painter-info__figure">
+                <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
+                <figcaption class="painter-info__title">
+                  <h3>Доменико Гирландайо</h3>
+                <span class="painter-info__years">2 июня 1448 — 11 января 1494.</span>
+                </figcaption>
+              </figure>
+              <p class="painter-info__info">
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
+                течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
+                всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные
+                граждане Флоренции в костюмах того времени).
+              </p>
+            </article>
+            <ul class="catalog__accordion accordion js-accordion">
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1400 по 1499 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1500 по 1599 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1600 по 1699 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1700 по 1799 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1800 по 1899 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 1900 по 1999 гг.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">C 2000 г.</button>
+                <ul class="accordion__painters-list">
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Брамантино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Веккьетта</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link accordion__painter-link_active" href="#">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни да Удине</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Джорджоне</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пезеллино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пизанелло</a>
+                  </li>
+                  <li class="accordion__painter-item">
+                    <a class="accordion__painter-link" href="#">Пинтуриккьо</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

@@ -108,3 +108,12 @@ galleryModalEl.addEventListener(`click`, function(event) {
   this.classList.remove(`gallery-modal_open`);
   document.body.classList.remove(`hold`);
 });
+
+// ACCORDION
+$(`.js-accordion`).each(function() {
+  $(this).accordion({
+    collapsible: true,
+    header: `.accordion__btn`,
+    heightStyle: `content`,
+  });
+});
