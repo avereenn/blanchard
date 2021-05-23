@@ -109,6 +109,13 @@ galleryModalEl.addEventListener(`click`, function(event) {
   document.body.classList.remove(`hold`);
 });
 
+// TABS
+$(`.js-catalog-tabs`).tabs({
+  active: 2,
+  show: {duration: 160},
+  hide: {duration: 160},
+});
+
 // ACCORDION
 $(`.js-accordion`).each(function() {
   $(this).accordion({

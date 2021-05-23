@@ -579,19 +579,27 @@
       </div>
     </section>
     <section class="catalog container">
-      <div class="catalog__top">
-        <h2 class="catalog__title title">Каталог</h2>
-        <div class="catalog__tab-btns">
-          <button class="catalog__tab-btn catalog__tab-btn_france"></button>
-          <button class="catalog__tab-btn catalog__tab-btn_germany"></button>
-          <button class="catalog__tab-btn catalog__tab-btn_italy catalog__tab-btn_active"></button>
-          <button class="catalog__tab-btn catalog__tab-btn_russia"></button>
-          <button class="catalog__tab-btn catalog__tab-btn_belgium"></button>
-        </div>
-      </div>
-      <div class="catalog__tabs">
-        <div class="catalog__tab">
-          <p class="catalog__tab-info">
+      <h2 class="catalog__title title">Каталог</h2>
+      <div class="catalog__tabs catalog-tabs js-catalog-tabs">
+        <ul class="catalog-tabs__nav-list">
+          <li class="catalog-tabs__nav-item">
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_france" href="#catalog-tab-1"></a>
+          </li>
+          <li class="catalog-tabs__nav-item">
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_germany" href="#catalog-tab-2"></a>
+          </li>
+          <li class="catalog-tabs__nav-item">
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_italy" href="#catalog-tab-3"></a>
+          </li>
+          <li class="catalog-tabs__nav-item">
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_russia" href="#catalog-tab-4"></a>
+          </li>
+          <li class="catalog-tabs__nav-item">
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_belgium" href="#catalog-tab-5"></a>
+          </li>
+        </ul>
+        <div id="catalog-tab-1" class="catalog-tabs__tab">
+          <p class="catalog-tabs__tab-info">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
             политической культуры,
             будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
@@ -600,7 +608,7 @@
             функционально разнесены на
             независимые элементы.
           </p>
-          <div class="catalog__tab-content">
+          <div class="catalog-tabs__tab-content">
             <article class="catalog__painter-info painter-info">
               <figure class="painter-info__figure">
                 <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
@@ -1160,8 +1168,8 @@
             </ul>
           </div>
         </div>
-        <div class="catalog__tab">
-          <p class="catalog__tab-info">
+        <div id="catalog-tab-2" class="catalog-tabs__tab">
+          <p class="catalog-tabs__tab-info">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
             политической культуры,
             будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
@@ -1170,7 +1178,7 @@
             функционально разнесены на
             независимые элементы.
           </p>
-          <div class="catalog__tab-content">
+          <div class="catalog-tabs__tab-content">
             <article class="catalog__painter-info painter-info">
               <figure class="painter-info__figure">
                 <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
@@ -1730,8 +1738,8 @@
             </ul>
           </div>
         </div>
-        <div class="catalog__tab">
-          <p class="catalog__tab-info">
+        <div id="catalog-tab-3" class="catalog-tabs__tab">
+          <p class="catalog-tabs__tab-info">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
             политической культуры,
             будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
@@ -1740,7 +1748,7 @@
             функционально разнесены на
             независимые элементы.
           </p>
-          <div class="catalog__tab-content">
+          <div class="catalog-tabs__tab-content">
             <article class="catalog__painter-info painter-info">
               <figure class="painter-info__figure">
                 <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
@@ -2300,8 +2308,8 @@
             </ul>
           </div>
         </div>
-        <div class="catalog__tab">
-          <p class="catalog__tab-info">
+        <div id="catalog-tab-4" class="catalog-tabs__tab">
+          <p class="catalog-tabs__tab-info">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
             политической культуры,
             будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
@@ -2310,7 +2318,7 @@
             функционально разнесены на
             независимые элементы.
           </p>
-          <div class="catalog__tab-content">
+          <div class="catalog-tabs__tab-content">
             <article class="catalog__painter-info painter-info">
               <figure class="painter-info__figure">
                 <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">
@@ -2870,8 +2878,8 @@
             </ul>
           </div>
         </div>
-        <div class="catalog__tab">
-          <p class="catalog__tab-info">
+        <div id="catalog-tab-5" class="catalog-tabs__tab">
+          <p class="catalog-tabs__tab-info">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
             политической культуры,
             будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
@@ -2880,7 +2888,7 @@
             функционально разнесены на
             независимые элементы.
           </p>
-          <div class="catalog__tab-content">
+          <div class="catalog-tabs__tab-content">
             <article class="catalog__painter-info painter-info">
               <figure class="painter-info__figure">
                 <img class="painter-info__img" src="img/catalog/painters/ghirlandaio.webp" alt="Доменико Гирландайо">

@@ -136,6 +136,7 @@ ul {
 }
 
 .title {
+  margin-left: -2px;
   margin-top: 0;
   margin-bottom: 16px;
   color: inherit;
@@ -1189,19 +1190,25 @@ ul {
 
 /*CATALOG*/
 
-.catalog__top {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.catalog__title {
-  margin-right: 40px;
-  margin-bottom: 0;
-}
-
-.catalog__tab-btn {
+.catalog-tabs {
   position: relative;
+}
+
+.catalog-tabs__nav-list {
+  position: absolute;
+  top: -16px;
+  left: 222px;
+  display: flex;
+  transform: translateY(-100%);
+}
+
+.catalog-tabs__nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.catalog-tabs__tab-link {
+  position: relative;
+  display: inline-block;
   width: 46px;
   height: 46px;
   background-color: transparent;
@@ -1213,7 +1220,7 @@ ul {
   cursor: pointer;
 }
 
-.catalog__tab-btn::after {
+.catalog-tabs__tab-link::after {
   content: '';
   position: absolute;
   top: -10px;
@@ -1228,48 +1235,49 @@ ul {
   transition: border-color .2s ease-in;
 }
 
-.catalog__tab-btn:focus {
+.catalog-tabs__tab-link:focus {
   outline: none;
 }
 
-.catalog__tab-btn:hover::after,
-.catalog__tab-btn:focus::after,
-.catalog__tab-btn_active::after {
+.catalog-tabs__tab-link:hover::after,
+.catalog-tabs__tab-link:focus::after,
+.catalog-tabs__nav-item.ui-state-active .catalog-tabs__tab-link::after {
+  outline: none;
   border-color: var(--main-color-2);
 }
 
-.catalog__tab-btn:not(:last-child) {
-  margin-right: 46px;
-}
-
-.catalog__tab-btn_france {
+.catalog-tabs__tab-link_france {
   background-image: url(../img/catalog/flags/france.webp);
 }
 
-.catalog__tab-btn_germany {
+.catalog-tabs__tab-link_germany {
   background-image: url(../img/catalog/flags/germany.webp);
 }
 
-.catalog__tab-btn_italy {
+.catalog-tabs__tab-link_italy {
   background-image: url(../img/catalog/flags/italy.webp);
 }
 
-.catalog__tab-btn_russia {
+.catalog-tabs__tab-link_russia {
   background-image: url(../img/catalog/flags/russia.webp);
 }
 
-.catalog__tab-btn_belgium {
+.catalog-tabs__tab-link_belgium {
   background-image: url(../img/catalog/flags/belgium.webp);
 }
 
-.catalog__tab-info {
+.catalog-tabs__tab-info {
   max-width: 68%;
   margin-bottom: 40px;
 }
 
-.catalog__tab-content {
+.catalog-tabs__tab-content {
   display: flex;
   width: 100%;
+}
+
+.catalog__painter-info {
+  margin-right: 15px;
 }
 
 .catalog__painter-info,
@@ -1315,7 +1323,7 @@ ul {
 
 .accordion__btn {
   width: 100%;
-  padding: 40px 0;
+  padding: 40.25px 0;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -1324,6 +1332,7 @@ ul {
   border-color: transparent;
   border-radius: 0;
   border-width: 0 0 1px 0;
+  cursor: pointer;
   transition: border-color .16s ease-in;
 }
 
@@ -1336,6 +1345,7 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 340px;
+  max-width: 760px;
   padding: 25px 0;
   font-weight: normal;
   font-size: 16px;
@@ -1451,9 +1461,21 @@ ul {
     margin-right: 50px;
   }
 
+  /* GALLERY */
+
   .gallery-slider {
     width: 800px;
     height: 616px;
+  }
+
+  /* CATALOG */
+
+  .catalog__painter-info {
+    margin-right: 50px;
+  }
+
+  .accordion__painters-list {
+    max-height: 440px;
   }
 
 }
@@ -1697,9 +1719,25 @@ ul {
     padding-bottom: 90px;
   }
 
+  /* CATALOG */
+
+  .catalog-tabs__tab-info {
+    max-width: 100%;
+    margin-bottom: 38px;
+  }
+
+  .catalog-tabs__nav-list {
+    top: -8px;
+  }
+
+  .accordion__painter-item {
+    max-width: 208px;
+  }
+
 }
 
 @media(max-width: 880px) {
+
   .header__search-open::after {
     content: '';
     position: absolute;
@@ -1809,6 +1847,44 @@ ul {
 
   .gallery-modal__caption {
     padding-bottom: 120px;
+  }
+
+  /* CATALOG */
+  .catalog-tabs__nav-list {
+    left: auto;
+    right: 0;
+    top: -12px;
+    width: 67%;
+    justify-content: space-between;
+  }
+
+  .catalog__accordion {
+    margin-bottom: 50px;
+  }
+
+  .catalog-tabs__nav-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .catalog-tabs__tab-content {
+    flex-direction: column-reverse;
+  }
+
+  .accordion__painters-list {
+    max-height: 340px;
+    padding: 26px 0;
+  }
+
+  .catalog-tabs__tab-info {
+    margin-bottom: 20px;
+  }
+
+  .catalog__painter-info {
+    margin-right: 0;
+  }
+
+  .painter-info__info {
+    padding-right: 0;
   }
 
 }
