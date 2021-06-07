@@ -81,6 +81,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  max-width: 361px;
   color: #333;
   font: normal 16px/32px 'Open Sans', sans-serif;
 }
@@ -2121,5 +2122,15 @@ ul {
 
   .gallery-modal__caption {
     padding: 20px;
+  }
+  
+  /* CATALOG */
+  .catalog-tabs__nav-list {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    transform: none;
   }
 }
