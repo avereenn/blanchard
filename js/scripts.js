@@ -124,3 +124,24 @@ $(`.js-accordion`).each(function() {
     heightStyle: `content`,
   });
 });
+
+// EVENTS SWIPER
+const eventsSwiper = new Swiper(`.events-slider`, {
+  observer: true,
+
+  pagination: {
+    el: '.events-slider__pagination',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 6,
+  slidesPerColumnFill: `row`,
+
+  breakpoints: {
+
+    500: {
+      //enabled: false,
+    },
+
+  }
+});

@@ -3452,8 +3452,9 @@
     </section>
     <section class="events">
       <h2 class="events__title title">События</h2>
-      <ul class="events__list">
-        <li class="events__item">
+      <div class="events__slider events-slider swiper-container">
+      <ul class="events__list swiper-wrapper">
+        <li class="events__item swiper-slide">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/events/engraving.webp">
             <source media="(max-width: 500px)" srcset="img/320/events/engraving.webp">
@@ -3474,7 +3475,7 @@
             <a class="events__more-link" href="#">Подробнее</a>
           </div>
         </li>
-        <li class="events__item">
+        <li class="events__item swiper-slide">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/events/open-discussion.webp">
             <source media="(max-width: 500px)" srcset="img/320/events/open-discussion.webp">
@@ -3495,7 +3496,7 @@
             <a class="events__more-link" href="#">Подробнее</a>
           </div>
         </li>
-        <li class="events__item">
+        <li class="events__item swiper-slide">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/events/formation.webp">
             <source media="(max-width: 500px)" srcset="img/320/events/formation.webp">
@@ -3516,7 +3517,7 @@
             <a class="events__more-link" href="#">Подробнее</a>
           </div>
         </li>
-        <li class="events__item">
+        <li class="events__item swiper-slide">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/events/biennale.webp">
             <source media="(max-width: 500px)" srcset="img/320/events/biennale.webp">
@@ -3537,7 +3538,7 @@
             <a class="events__more-link" href="#">Подробнее</a>
           </div>
         </li>
-        <li class="events__item">
+        <li class="events__item swiper-slide">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/events/silver-metaphor.webp">
             <source media="(max-width: 500px)" srcset="img/320/events/silver-metaphor.webp">
@@ -3559,6 +3560,8 @@
           </div>
         </li>
       </ul>
+      <div class="events-slider__pagination"></div>
+      </div>
       <button class="events__show-all-btn">Все события</button>
     </section>
     <section class="editions">
