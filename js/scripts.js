@@ -145,3 +145,35 @@ const eventsSwiper = new Swiper(`.events-slider`, {
 
   }
 });
+
+//EDITIONS SWIPER
+
+const editionsSwiper = new Swiper(`.editions-slider`, {
+  observer: true,
+
+  enabled: false,
+
+  breakpoints: {
+
+    500: {
+      //enabled: true,
+    },
+
+  }
+});
+
+//PROJECTS SWIPER
+
+const projectsSwiper = new Swiper(`.projects-slider`, {
+  observer: true,
+  
+  navigation: {
+    nextEl: '.projects-slider__btn_next',
+    prevEl: '.projects-slider__btn_prev',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 6,
+  slidesPerColumnFill: `row`,
+  
+});

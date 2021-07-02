@@ -211,6 +211,7 @@ ul {
   display: inline-block;
   width: 8px;
   height: 8px;
+  margin-left: 3px;
   border-color: currentColor transparent transparent currentColor;
   border-style: solid;
   border-width: 1px;
@@ -218,6 +219,8 @@ ul {
 }
 
 .slider__btn_next::before {
+  margin-left: 0;
+  margin-right: 3px;
   border-color: transparent currentColor currentColor transparent;
 }
 
@@ -1387,6 +1390,7 @@ ul {
 
 /*EDITIONS*/
 .editions {
+  color: #fff;
   background-image: url(../img/editions/showcase-bg.webp);
 }
 
@@ -1416,12 +1420,21 @@ ul {
   display: flex;
 }
 
-.projects-slider__item {
-  flex: 0 0 calc(33.333% - 50px);
+.projects__slider slider__btn {
+  width: 30px;
+  height: 30px;
 }
 
-.projects-slider__item:not(:last-child) {
-  margin-right: 50px;
+.projects-slider__item {
+  /*flex: 0 0 calc(33.333% - 50px);*/
+  text-align: center;
+  filter: grayscale(1);
+  transition: filter .2s ease-out;
+}
+
+.projects-slider__item:hover,
+.projects-slider__item:focus {
+  filter: grayscale(0);
 }
 
 /*CONTACTS*/
@@ -2198,4 +2211,40 @@ ul {
   .editions {
     background-image: url(../img/320/editions/showcase-bg.webp);
   }
+  
+  .editions__wrapper {
+    flex-direction: column;
+  }
+  
+  .editions-filter {
+    max-width: 100%;
+  }
+  
+  .editions-filter__price-field {
+    width: 25%;
+  }
+  
+  /* EDITIONS SLIDER 320 */
+  .editions-slider__btns {
+    display: none;
+  }
+  
+  .editions-slider__list {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .editions-slider__item {
+    flex: 0 1 50%;
+    max-width: 35%;
+  }
+  
+  /* PROJECTS 320 */
+  /* PROJECTS SLIDER 320 */
+  .projects-slider {
+    align-items: center;
+    width: 100%;
+    height: 80px;
+  }
+  
 }

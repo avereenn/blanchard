@@ -3569,8 +3569,7 @@
       <div class="editions__wrapper">
         <form class="editions__filter editions-filter" action="#" method="GET">
           <fieldset class="editions-filter__fieldset">
-            <h3 class="editions-filter__title">Категории</h3>
-            <ul class="editions-filter__list">
+            <!--<ul class="editions-filter__list">
               <li class="editions-filter__item">
                 <label for="best-sellers" class="editions-filter__label">Бестселлеры
                   <input type="checkbox" name="best-sellers" id="best-sellers" class="editions-filter__checkbox">
@@ -3631,15 +3630,30 @@
                   <input type="checkbox" name="press" id="press" class="editions-filter__checkbox">
                 </label>
               </li>
-            </ul>
+            </ul>-->
+            <select class="editions-filter__select js-select" multiple>
+              <option value="">Категории</option>
+              <option value="best-sellers">Бестеллеры</option>
+              <option value="art">Искусство</option>
+              <option value="architecture">Архитектура</option>
+              <option value="design">Дизайн</option>
+              <option value="fashion">Мода</option>
+              <option value="for-kids">Детям</option>
+              <option value="literature">Художественная литература</option>
+              <option value="publicism">Публицистика</option>
+              <option value="guides">Путеводители</option>
+              <option value="philosophy">Философия</option>
+              <option value="education">Учебная литература</option>
+              <option value="press">Журналы и газеты</option>
+            </select>
           </fieldset>
           <fieldset class="editions-filter__fieldset">
             <h3 class="editions-filter__title">Цена</h3>
             <div class="editions-filter__price">
               <label class="editions-filter__label" for="from-price">От</label>
-              <input class="editions-filter__price" id="from-price" name="from-price" type="number" placeholder="50">
+              <input class="editions-filter__price-field" id="from-price" name="from-price" type="number" placeholder="50">
               <label for="to-price" class="editions-filter__label">до</label>
-              <input class="editions-filter__price" id="to-price" name="to-price" type="number" placeholder="25000">
+              <input class="editions-filter__price-field" id="to-price" name="to-price" type="number" placeholder="25000">
             </div>
           </fieldset>
         </form>
@@ -3647,10 +3661,10 @@
           <div class="editions-slider__btns slider__btns">
             <button class="editions-slider__btn slider__btn"></button>
             <span class="editions-slider__pages slider__pages">1/3</span>
-            <button class="editions-slider__btn_next slider__btn_next"></button>
+            <button class="editions-slider__btn_next slider__btn slider__btn_next"></button>
           </div>
-          <ul class="editions-slider__list slider__list">
-            <li class="editions-slider__item">
+          <ul class="editions-slider__list slider__list swiper-wrapper">
+            <li class="editions-slider__item swiper-slide">
               <article class="editions-slider__product product">
                 <figure>
                   <img class="product__img" src="img/editions/books/art-of-color.webp" alt="книга. Искусство цвета">
@@ -3665,7 +3679,7 @@
                 <a class="product__order-link" href="#">Заказать</a>
               </article>
             </li>
-            <li class="editions-slider__item">
+            <li class="editions-slider__item swiper-slide">
               <article class="editions-slider__product product">
                 <figure>
                   <img class="product__img" src="img/editions/books/typography.webp" alt="книга. Типографика">
@@ -3680,7 +3694,7 @@
                 <a class="product__order-link" href="#">Заказать</a>
               </article>
             </li>
-            <li class="editions-slider__item">
+            <li class="editions-slider__item swiper-slide">
               <article class="editions-slider__product product">
                 <figure>
                   <img class="product__img" src="img/editions/books/book-about-letters.webp" alt="Книга про буквы">
@@ -3695,7 +3709,7 @@
                 <a class="product__order-link" href="#">Заказать</a>
               </article>
             </li>
-            <li class="editions-slider__item">
+            <li class="editions-slider__item swiper-slide">
               <article class="editions-slider__product product">
                 <figure>
                   <img class="product__img" src="img/editions/books/ilyin.webp" alt="книга. Николай Ильин">
@@ -3710,7 +3724,7 @@
                 <a class="product__order-link" href="#">Заказать</a>
               </article>
             </li>
-            <li class="editions-slider__item">
+            <li class="editions-slider__item swiper-slide">
               <article class="editions-slider__product product">
                 <figure>
                   <img class="product__img" src="img/editions/books/modular-grids.webp"
@@ -3726,7 +3740,7 @@
                 <a class="product__order-link" href="#">Заказать</a>
               </article>
             </li>
-            <li class="editions-slider__item">
+            <li class="editions-slider__item swiper-slide">
               <article class="editions-slider__product product">
                 <figure>
                   <img class="product__img" src="img/editions/books/evolution.webp"
@@ -3742,7 +3756,7 @@
                 <a class="product__order-link" href="#">Заказать</a>
               </article>
             </li>
-            <li class="editions-slider__item">
+            <li class="editions-slider__item swiper-slide">
               <article class="editions-slider__product product">
                 <figure>
                   <img class="product__img" src="img/editions/books/visual-perception.webp"
@@ -3798,41 +3812,41 @@
       </p>
       <div class="projects__partners">
         <h3 class="projects-slider__title">Партнёры проектов</h3>
-        <div class="projects__slider swiper-container">
-          <button class="projects-slider__btn slider__btn"></button>
-          <div class="projects-slider__wrapper slider">
-            <ul class="projects-slider__list slider__list">
-              <li class="projects-slider__item">
+        <div class="projects__slider">
+          <button class="projects-slider__btn_prev slider__btn"></button>
+          <div class="projects-slider__wrapper projects-slider swiper-container">
+            <ul class="projects-slider__list slider__list swiper-wrapper">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/fleelands.webp" alt="freelands foundation">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/ica.webp" alt="institute for contemporary art">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/workhouse.webp" alt="workhouse arts center">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/1849.webp" alt="1849 wine co.">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/hiscox.webp" alt="hiscox">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/camden.webp" alt="camden arts centre">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/stassen.webp" alt="stassen premium belgium cider">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/watts.webp" alt="watts gallery artists willage">
               </li>
-              <li class="projects-slider__item">
+              <li class="projects-slider__item swiper-slide">
                 <img class="projects__partner-img" src="img/projects/esad.webp" lang="fr"
                   alt="école supérieure d'art et de design de valenciennes">
               </li>
             </ul>
           </div>
-          <button class="projects-slider__btn_next slider__btn_next"></button>
+          <button class="projects-slider__btn_next slider__btn slider__btn_next"></button>
         </div>
       </div>
     </section>
