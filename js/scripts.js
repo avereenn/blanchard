@@ -8,7 +8,9 @@ const selectElems = document.querySelectorAll(`.js-select`),
       gallerySliderListEl = document.querySelector(`.js-gallery-slider-list`),
       galleryModalEl = document.querySelector(`.gallery-modal`),
       galleryModalImgEl = galleryModalEl.querySelector(`.gallery-modal__img`),
-      galleryModalClose = document.querySelector(`.gallery-modal__close`);
+      galleryModalClose = document.querySelector(`.gallery-modal__close`),
+      expandBtnEl = document.querySelector(`.js-expand-btn`),
+      eventsListEl = document.querySelector(`.js-events-list`);
 
 // HEADER SELECTS CHOICES
 selectElems.forEach((select) => {
@@ -125,6 +127,12 @@ $(`.js-accordion`).each(function() {
   });
 });
 
+//Обработчик кнопки "Все события"
+expandBtnEl.addEventListener(`click`, (event) => {
+  eventsListEl.classList.add(`events__list_open`);
+  event.target.hidden = true;
+});
+
 // EVENTS SWIPER
 const eventsSwiper = new Swiper(`.events-slider`, {
   observer: true,
@@ -140,7 +148,7 @@ const eventsSwiper = new Swiper(`.events-slider`, {
   breakpoints: {
 
     500: {
-      //enabled: false,
+      enabled: false,
     },
 
   }
@@ -166,7 +174,7 @@ const editionsSwiper = new Swiper(`.editions-slider`, {
 
 const projectsSwiper = new Swiper(`.projects-slider`, {
   observer: true,
-  
+
   navigation: {
     nextEl: '.projects-slider__btn_next',
     prevEl: '.projects-slider__btn_prev',
@@ -175,5 +183,5 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
   slidesPerView: 1,
   spaceBetween: 6,
   slidesPerColumnFill: `row`,
-  
+
 });
