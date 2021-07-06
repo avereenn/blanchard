@@ -149,6 +149,7 @@ const eventsSwiper = new Swiper(`.events-slider`, {
 
     500: {
       enabled: false,
+      spaceBetween: 50,
     },
 
   }

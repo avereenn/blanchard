@@ -1192,7 +1192,10 @@ ul {
   outline-offset: 6px;
 }
 
-/*CATALOG*/
+/* CATALOG */
+.catalog {
+  margin-bottom: 70px;
+}
 
 .catalog-tabs {
   position: relative;
@@ -1201,7 +1204,7 @@ ul {
 .catalog-tabs__nav-list {
   position: absolute;
   top: -16px;
-  left: 222px;
+  left: 225px;
   display: flex;
   transform: translateY(-100%);
 }
@@ -1281,7 +1284,7 @@ ul {
 }
 
 .catalog__painter-info {
-  margin-right: 15px;
+  margin-right: auto;
 }
 
 .catalog__painter-info,
@@ -1329,7 +1332,7 @@ ul {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 40.25px 0;
+  padding: 32px 0;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -1344,8 +1347,8 @@ ul {
 
 .accordion__btn-arrow {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-left: auto;
   border: 1px solid #999;
   border-radius: 50%;
@@ -1390,7 +1393,7 @@ ul {
 }
 
 .accordion__painter-item {
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .accordion__painter-link:hover {
@@ -1398,29 +1401,28 @@ ul {
 }
 
 /*EVENTS*/
-
 .events {
-  text-align: center;
+  margin-bottom: 70px;
 }
 
 .events__list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   width: 100%;
-  max-height: 630px;
 }
 
 .events__list_open {
-  max-height: fit-content;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .events__item {
-  flex: 0 1 calc(33.333% - 50px);
+  flex: 0 0 calc(33.333% - 50px);
   height: 100%;
 }
 
-.events__item:not(:nth-child(3n)):not(:last-child) {
+.events__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -1509,6 +1511,7 @@ ul {
 /* BREAKPOINTS */
 
 @media(max-width: 1700px) {
+  /* HEADER 1700 */
   .header__logo-link {
     margin-right: 60px;
   }
@@ -1521,14 +1524,14 @@ ul {
     margin-right: 50px;
   }
 
-  /* GALLERY */
+  /* GALLERY 1700*/
 
   .gallery-slider {
     width: 800px;
     height: 616px;
   }
 
-  /* CATALOG */
+  /* CATALOG 1700*/
 
   .catalog__painter-info {
     margin-right: 50px;
@@ -1547,6 +1550,7 @@ ul {
     padding-right: 50px;
   }
 
+  /* HEADER 1440 */
   .header__container {
     padding-top: 29px;
     padding-bottom: 28px;
@@ -1730,7 +1734,7 @@ ul {
     margin-bottom: 134px;
   }
 
-  /* GALLERY */
+  /* GALLERY 1440*/
   .gallery {
     padding-top: 78px;
     background-image: url(../img/1024/gallery/gallery-bg.webp);
@@ -1766,7 +1770,7 @@ ul {
     max-width: calc(100% - 630px);
   }
 
-  /* GALLERY-MODAL */
+  /* GALLERY-MODAL 1440*/
   .gallery-modal__wrapper {
     width: 594px;
   }
@@ -1779,7 +1783,7 @@ ul {
     padding-bottom: 90px;
   }
 
-  /* CATALOG */
+  /* CATALOG 1440*/
 
   .catalog-tabs__tab-info {
     max-width: 100%;
@@ -1790,11 +1794,16 @@ ul {
     top: -8px;
   }
 
-  .accordion__painter-item {
-    max-width: 208px;
+  .painter-info__info {
+    padding-right: 0;
   }
 
-  /* EDITIONS */
+  .accordion__painter-item {
+    max-width: 208px;
+    margin-right: 65px;
+  }
+
+  /* EDITIONS 1440*/
   .editions {
     background-image: url(../img/1024/editions/showcase-bg.webp);
   }
@@ -1803,6 +1812,7 @@ ul {
 
 @media(max-width: 880px) {
 
+  /* HEADER 880 */
   .header__search-open::after {
     content: '';
     position: absolute;
@@ -1867,7 +1877,7 @@ ul {
     padding-left: 2px;
   }
 
-  /* GALLERY */
+  /* GALLERY 880 */
   .gallery {
     padding-bottom: 68px;
     background-image: url(../img/768/gallery/gallery-bg.webp);
@@ -1900,7 +1910,7 @@ ul {
     max-width: 100%;
   }
 
-  /* GALLERY-MODAL */
+  /* GALLERY-MODAL 880 */
   .gallery-modal__wrapper {
     width: calc(100% - 100px);
     margin: auto 50px;
@@ -1914,7 +1924,7 @@ ul {
     padding-bottom: 120px;
   }
 
-  /* CATALOG */
+  /* CATALOG 880 */
   .catalog-tabs__nav-list {
     left: auto;
     right: 0;
@@ -1935,9 +1945,17 @@ ul {
     flex-direction: column-reverse;
   }
 
+  .accordion__btn {
+    padding: 31.5px 0;
+  }
+
   .accordion__painters-list {
-    max-height: 340px;
-    padding: 26px 0;
+    max-height: 350px;
+    padding: 25px 0;
+  }
+
+  .accordion__painter-item {
+    margin-right: 60px;
   }
 
   .catalog-tabs__tab-info {
@@ -2085,7 +2103,7 @@ ul {
     opacity: 0;
   }
 
-  /* HERO 320 */
+  /* HERO 500 */
   .hero {
     margin-bottom: 50px;
   }
@@ -2121,7 +2139,7 @@ ul {
     line-height: 16px;
   }
 
-  /* ABOUT 320 */
+  /* ABOUT 500 */
   .about-us {
     margin-bottom: 40px;
   }
@@ -2133,7 +2151,7 @@ ul {
     line-height: 28px;
   }
 
-  /* GALLERY 320 */
+  /* GALLERY 500 */
   .gallery {
     padding-top: 50px;
     background-image: url(../img/320/gallery/gallery-bg.webp);
@@ -2174,7 +2192,7 @@ ul {
     height: 100%;
   }
 
-  /* GALLERY-MODAL */
+  /* GALLERY-MODAL 500 */
   .gallery-modal__wrapper {
     width: calc(100% - 30px);
     margin: auto 15px;
@@ -2193,9 +2211,25 @@ ul {
     padding: 20px;
   }
 
-  /* CATALOG */
+  /* CATALOG 500 */
   .catalog {
     margin-bottom: 60px;
+  }
+
+  .catalog__title {
+    margin-bottom: 12px;
+  }
+
+  .catalog-tabs__tab-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .catalog-tabs__tab-link::after {
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
   }
 
   .catalog-tabs__nav-list {
@@ -2208,10 +2242,10 @@ ul {
   }
 
   .accordion__painters-list {
-    max-height: 490px;
+    max-height: fit-content;
   }
 
-  /* EVENTS */
+  /* EVENTS 500 */
   .events {
     margin-bottom: 60px;
   }
@@ -2244,12 +2278,20 @@ ul {
   .events-slider__pagination > *:not(:last-child) {
     margin-right: auto;
   }
+  .events__list_open {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .events__item {
+    flex: 1 0 auto;
+  }
 
   .events__expand-btn {
     display: none;
   }
 
-  /* EDITIONS */
+  /* EDITIONS 500 */
   .editions {
     background-image: url(../img/320/editions/showcase-bg.webp);
   }
@@ -2266,7 +2308,7 @@ ul {
     width: 25%;
   }
 
-  /* EDITIONS SLIDER 320 */
+  /* EDITIONS SLIDER 500 */
   .editions-slider__btns {
     display: none;
   }
@@ -2281,8 +2323,8 @@ ul {
     max-width: 35%;
   }
 
-  /* PROJECTS 320 */
-  /* PROJECTS SLIDER 320 */
+  /* PROJECTS 500 */
+  /* PROJECTS SLIDER 500 */
   .projects-slider {
     align-items: center;
     width: 100%;
