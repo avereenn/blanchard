@@ -1194,7 +1194,11 @@ ul {
 
 /* CATALOG */
 .catalog {
-  margin-bottom: 70px;
+  margin-bottom: 80px;
+}
+
+.catalog__title {
+  margin-bottom: 14px;
 }
 
 .catalog-tabs {
@@ -1203,8 +1207,8 @@ ul {
 
 .catalog-tabs__nav-list {
   position: absolute;
-  top: -16px;
-  left: 225px;
+  top: -14px;
+  left: 222px;
   display: flex;
   transform: translateY(-100%);
 }
@@ -1332,7 +1336,7 @@ ul {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 32px 0;
+  padding: 31px 0;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -1380,12 +1384,14 @@ ul {
 
 .accordion__painters-list {
   display: flex;
-  align-content: flex-start;
+  align-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 340px;
+  max-height: 344px;
   width: 100%;
-  padding: 25px 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-right: 108px;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
@@ -1393,7 +1399,7 @@ ul {
 }
 
 .accordion__painter-item {
-  margin-right: 60px;
+  margin-right: 62px;
 }
 
 .accordion__painter-link:hover {
@@ -1539,6 +1545,7 @@ ul {
 
   .accordion__painters-list {
     max-height: 440px;
+    padding-right: 12px;
   }
 
 }
@@ -1785,6 +1792,10 @@ ul {
 
   /* CATALOG 1440*/
 
+  .catalog__title {
+    margin-bottom: 16px;
+  }
+
   .catalog-tabs__tab-info {
     max-width: 100%;
     margin-bottom: 38px;
@@ -1800,7 +1811,7 @@ ul {
 
   .accordion__painter-item {
     max-width: 208px;
-    margin-right: 65px;
+    margin-right: 55px;
   }
 
   /* EDITIONS 1440*/
@@ -1925,6 +1936,11 @@ ul {
   }
 
   /* CATALOG 880 */
+
+  .catalog {
+    margin-bottom: 70px;
+  }
+
   .catalog-tabs__nav-list {
     left: auto;
     right: 0;
@@ -1946,16 +1962,15 @@ ul {
   }
 
   .accordion__btn {
-    padding: 31.5px 0;
+    padding: 31px 0;
   }
 
   .accordion__painters-list {
     max-height: 350px;
-    padding: 25px 0;
   }
 
   .accordion__painter-item {
-    margin-right: 60px;
+    margin-right: 8.2%;
   }
 
   .catalog-tabs__tab-info {
@@ -1977,10 +1992,22 @@ ul {
 
 }
 
-@media(max-width: 640px) {
+@media(max-width: 760px) {
   .hero__title {
     font-size: 52px;
     line-height: 64px;
+  }
+
+  .catalog-tabs__nav-list {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+
+  .accordion__painters-list {
+    max-height: 440px;
   }
 }
 
@@ -2213,11 +2240,15 @@ ul {
 
   /* CATALOG 500 */
   .catalog {
-    margin-bottom: 60px;
+    margin-bottom: 51px;
   }
 
   .catalog__title {
     margin-bottom: 12px;
+  }
+
+  .catalog-tabs__tab-info {
+    display: none;
   }
 
   .catalog-tabs__tab-link {
@@ -2233,16 +2264,48 @@ ul {
   }
 
   .catalog-tabs__nav-list {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
     width: 100%;
-    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .catalog__accordion {
+    margin-bottom: 48px;
+  }
+
+  .accordion__btn {
+    padding: 21px 0;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .accordion__btn-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .accordion__btn-arrow::before {
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
   }
 
   .accordion__painters-list {
+    padding-top: 18px;
+    padding-bottom: 20px;
     max-height: fit-content;
+  }
+
+  .painter-info__img {
+    margin-bottom: 10px;
+  }
+
+  .painter-info__title h3 {
+    margin-bottom: 4px;
+  }
+
+  .painter-info__info {
+    padding-right: 4px;
   }
 
   /* EVENTS 500 */
