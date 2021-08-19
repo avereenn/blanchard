@@ -1250,8 +1250,16 @@ ul {
   outline: none;
 }
 
-.catalog-tabs__tab-link:hover::after,
-.catalog-tabs__tab-link:focus::after,
+.catalog-tabs__tab-link:hover,
+.catalog-tabs__tab-link:focus {
+  box-shadow: 0 0 20px 0 var(--main-color-2);
+}
+
+.catalog-tabs__tab-link:active {
+  border: 2px solid var(--main-color-1);
+  box-shadow: none;
+}
+
 .catalog-tabs__nav-item.ui-state-active .catalog-tabs__tab-link::after {
   outline: none;
   border-color: var(--main-color-2);
@@ -1337,6 +1345,7 @@ ul {
   align-items: center;
   width: 100%;
   padding: 31px 0;
+  font-family: inherit;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -1356,6 +1365,35 @@ ul {
   margin-left: auto;
   border: 1px solid #999;
   border-radius: 50%;
+}
+
+.accordion__btn:focus {
+  outline: none;
+}
+
+.accordion__btn:focus .accordion__btn-text {
+  color: #fff;
+  background-color: var(--main-color-2);
+}
+
+.accordion__btn:hover .accordion__btn-text {
+  color: var(--main-color-2);
+}
+
+.accordion__btn:hover .accordion__btn-arrow {
+  background-color: #d1a9f0;
+}
+
+.accordion__btn:focus .accordion__btn-arrow {
+  background-color: #d1a9f0;
+}
+
+.accordion__btn:active .accordion__btn-text {
+  color: var(--main-color-1);
+}
+
+.accordion__btn:active .accordion__btn-arrow {
+  background-color: var(--main-color-2);
 }
 
 .accordion__btn-arrow::before {
@@ -1404,6 +1442,16 @@ ul {
 
 .accordion__painter-link:hover {
   color: var(--main-color-2);
+  border-bottom: 1px solid var(--main-color-2);
+}
+
+.accordion__painter-link:active {
+  border-bottom: none;
+}
+
+.accordion__painter-link:focus {
+  color: #fff;
+  background-color: var(--main-color-2);
 }
 
 /*EVENTS*/
