@@ -1291,17 +1291,35 @@ ul {
 }
 
 .catalog-tabs__tab-content {
+  position: relative;
   display: flex;
   width: 100%;
 }
 
 .catalog__painter-info {
-  margin-right: auto;
+  margin-right: 50px;
 }
 
 .catalog__painter-info,
 .catalog__accordion {
-  flex: 0 1 50%;
+  flex: 0 1 47%;
+}
+
+.painter-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .16s ease-in;
+}
+
+.painter-info_active {
+  position: relative;
+  top: auto;
+  left: auto;
+  visibility: visible;
+  opacity: 1;
 }
 
 .painter-info__figure {
@@ -1312,7 +1330,8 @@ ul {
   margin-bottom: 20px;
 }
 
-.painter-info__title h3 {
+.painter-info__title h3,
+.painter-info_empty .painter-info__title  {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 24px;
@@ -1328,7 +1347,39 @@ ul {
 
 .painter-info__info {
   margin-bottom: 0;
-  padding-right: 40px;
+}
+
+.painter-info__empty {
+  display: flex;
+  flex-direction: column;
+}
+
+.painter-info_empty .painter-info__figure {
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  margin-bottom: 30px;
+  background-color: #ececec;
+}
+
+.painter-info_empty .painter-info__figure img {
+  margin: auto auto 22px auto;
+  width: 236px;
+}
+
+.painter-info_empty .painter-info__figure figcaption {
+  margin: 0 auto auto auto;
+  color: #666;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.empty-content__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 /* CATALOG ACCORDION */
@@ -1371,13 +1422,13 @@ ul {
   outline: none;
 }
 
+.accordion__btn:hover .accordion__btn-text {
+  color: var(--main-color-2);
+}
+
 .accordion__btn:focus .accordion__btn-text {
   color: #fff;
   background-color: var(--main-color-2);
-}
-
-.accordion__btn:hover .accordion__btn-text {
-  color: var(--main-color-2);
 }
 
 .accordion__btn:hover .accordion__btn-arrow {
@@ -1420,6 +1471,49 @@ ul {
   transform: translate(-50%, -25%) rotate(225deg);
 }
 
+.empty-content {
+  display: flex;
+  padding: 25px 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.empty-content__preview {
+  position: relative;
+  width: 251px;
+  height: 165px;
+  margin-right: 24px;
+  background-color: #b7b7b7;
+}
+
+.empty-content__preview::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 2px solid #b7b7b7;
+}
+
+.empty-content__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-content__title {
+  margin-bottom: 5px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.empty-content p {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .accordion__painters-list {
   display: flex;
   align-content: space-between;
@@ -1452,6 +1546,10 @@ ul {
 .accordion__painter-link:focus {
   color: #fff;
   background-color: var(--main-color-2);
+}
+
+.accordion__painter-link_active {
+  color: var(--main-color-1);
 }
 
 /*EVENTS*/
@@ -1658,6 +1756,11 @@ ul {
 
   /* CATALOG 1700*/
 
+  .catalog__painter-info,
+  .catalog__accordion {
+    flex: 0 1 50%;
+  }
+
   .catalog__painter-info {
     margin-right: 50px;
   }
@@ -1665,6 +1768,10 @@ ul {
   .accordion__painters-list {
     max-height: 440px;
     padding-right: 12px;
+  }
+
+  .painter-info_empty .painter-info__figure {
+    margin-right: 0;
   }
 
 }
@@ -1933,6 +2040,14 @@ ul {
     margin-right: 55px;
   }
 
+  .painter-info_empty .painter-info__figure {
+    height: 274px;
+  }
+
+  .painter-info_empty .painter-info__figure img {
+    width: 170px;
+  }
+
   /* EDITIONS 1440*/
   .editions {
     background-image: url(../img/1024/editions/showcase-bg.webp);
@@ -2102,6 +2217,15 @@ ul {
 
   .painter-info__info {
     padding-right: 0;
+  }
+
+  .painter-info_empty .painter-info__figure {
+    margin-right: 0;
+    height: 420px;
+  }
+
+  .painter-info_empty .painter-info__figure img {
+    width: 236px;
   }
 
   /* EDITIONS */
@@ -2419,12 +2543,21 @@ ul {
     margin-bottom: 10px;
   }
 
-  .painter-info__title h3 {
+  .painter-info__title h3,
+  .painter-info_empty .painter-info__title  {
     margin-bottom: 4px;
   }
 
   .painter-info__info {
     padding-right: 4px;
+  }
+
+  .painter-info_empty .painter-info__figure {
+    height: 180px;
+  }
+
+  .painter-info_empty .painter-info__figure img {
+    width: 107px;
   }
 
   /* EVENTS 500 */

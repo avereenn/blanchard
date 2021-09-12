@@ -1,16 +1,18 @@
 `use strict`;
 
-const selectElems = document.querySelectorAll(`.js-select`),
-  burgerBtnEl = document.querySelector(`.js-burger`),
-  menuEl = document.querySelector(`.js-menu`),
-  searchOpenBtnEl = document.querySelector(`.js-search-open`),
-  searchFormEl = document.querySelector(`.js-search-form`),
-  gallerySliderListEl = document.querySelector(`.js-gallery-slider-list`),
-  galleryModalEl = document.querySelector(`.gallery-modal`),
-  galleryModalImgEl = galleryModalEl.querySelector(`.gallery-modal__img`),
-  galleryModalClose = document.querySelector(`.gallery-modal__close`),
-  expandBtnEl = document.querySelector(`.js-expand-btn`),
-  eventsListEl = document.querySelector(`.js-events-list`);
+const NO_PAINTER_INFO_ID = `#unknown-painter`;
+const selectElems = document.querySelectorAll(`.js-select`);
+const burgerBtnEl = document.querySelector(`.js-burger`);
+const menuEl = document.querySelector(`.js-menu`);
+const searchOpenBtnEl = document.querySelector(`.js-search-open`);
+const searchFormEl = document.querySelector(`.js-search-form`);
+const gallerySliderListEl = document.querySelector(`.js-gallery-slider-list`);
+const galleryModalEl = document.querySelector(`.js-gallery-modal`);
+const galleryModalImgEl = galleryModalEl.querySelector(`.js-gallery-modal-img`);
+const galleryModalClose = document.querySelector(`.js-gallery-modal-close`);
+const catalogTabsEl = document.querySelector(`.js-catalog-tabs`);
+const expandBtnEl = document.querySelector(`.js-expand-btn`);
+const eventsListEl = document.querySelector(`.js-events-list`);
 
 // HEADER SELECTS CHOICES
 selectElems.forEach(select => {
@@ -140,11 +142,31 @@ $(`.js-accordion`).each(function () {
   });
 });
 
-// PAINTER-LINK
-$(`.js-catalog-tabs`).on(`click`, function(event) {
-  event.preventDefault();
+// PAINTER-LINK-CLICK
+catalogTabsEl.addEventListener(`click`, function(event) {
   if(!event.target.classList.contains(`accordion__painter-link`)) return;
-  alert(event.target.textContent);
+  event.preventDefault();
+  
+  const linkEl = event.target;
+  const links = linkEl.closest(`.accordion__painters-list`).querySelectorAll(`.accordion__painter-link`);
+  const cardId = linkEl.getAttribute(`href`);
+  const painterName = linkEl.textContent.replace(`,`, ``);
+  const parentTabEl = linkEl.closest(`.catalog-tabs__tab`);
+  const cards = parentTabEl.querySelectorAll(`.painter-info`);
+  let targetCard;
+
+  if(cardId === NO_PAINTER_INFO_ID) {
+    targetCard = parentTabEl.querySelector(`.painter-info_empty`);
+    targetCard.querySelector(`.js-painter-name`).textContent = painterName;
+  } else targetCard = parentTabEl.querySelector(cardId);
+
+  cards.forEach(card => {
+    (card === targetCard) ? card.classList.add(`painter-info_active`) : card.classList.remove(`painter-info_active`);
+  });
+
+  links.forEach(link => {
+    (link === linkEl) ? link.classList.add(`accordion__painter-link_active`) : link.classList.remove(`accordion__painter-link_active`);
+  })
 });
 
 //Обработчик кнопки "Все события"
