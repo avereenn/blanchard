@@ -1457,33 +1457,104 @@ ul {
 /*EVENTS*/
 .events {
   margin-bottom: 70px;
+  text-align: center;
+}
+
+.events__title,
+.events__list {
+  text-align: left;
 }
 
 .events__list {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.events__list_open {
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .events__item {
-  flex: 0 0 calc(33.333% - 50px);
-  height: 100%;
+  flex: 0 0 calc((100% - 106px)/3);
+  margin-bottom: 50px;
+  border: 1px solid #cacaca;
+  transition: opacity .16s ease-in;
 }
 
-.events__item:not(:last-child) {
+.events__item:not(:nth-child(-n + 3)) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.events__item:not(:nth-child(3n)) {
   margin-right: 50px;
 }
 
+.events__list_show {
+  justify-content: center;
+}
+
+.events__list_show .events__item {
+  position: relative;
+  top: auto;
+  left: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.events__event {
+  height: 100%;
+}
+
+.event__place {
+  padding: 5px 20px 0 20px;
+  color: #999;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.event__info {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 40px 40px 50px;
+  min-height: 310px;
+}
+
+.event__title {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #333;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.event__text {
+  margin-bottom: 82px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.event__more-link {
+  margin-top: auto;
+  width: fit-content;
+  color: var(--main-color-2);
+  font-size: 16px;
+  line-height: 32px;
+  border-bottom: 1px solid var(--main-color-2);
+}
+
 .events__expand-btn {
-  width: 188px;
   margin-left: auto;
   margin-right: auto;
+  padding: 15px 35px;
+  color: var(--main-color-2);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  background-color: transparent;
+  border: 2px solid var(--main-color-2);
+  border-radius: 100px;
 }
 
 /*EDITIONS*/
@@ -2366,7 +2437,7 @@ ul {
     height: 630px;
   }
 
-  .events-slider__img {
+  .event__img {
     width: 100%;
     height: 185px;
     object-fit: cover;
