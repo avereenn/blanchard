@@ -32,11 +32,20 @@ selectListElems.forEach(list => {
   new SimpleBar(list);
 });
 
-// HEADER BURGER
-burgerBtnEl.addEventListener(`click`, function () {
-  this.classList.toggle(`header__burger_open`);
+function toggleNavMenu() {
+  burgerBtnEl.classList.toggle(`header__burger_open`);
   menuEl.classList.toggle(`header__menu_open`);
   document.body.classList.toggle(`hold`);
+}
+
+// HEADER BURGER
+burgerBtnEl.addEventListener(`click`, toggleNavMenu);
+
+//выключаем меню при клике по ссылке
+menuEl.addEventListener(`click`, event => {
+  if(!event.target.classList.contains(`anchor`)) return;
+  
+  toggleNavMenu();
 });
 
 // HEADER SEARCH OPEN
@@ -126,22 +135,6 @@ galleryModalEl.addEventListener(`click`, function (event) {
   document.body.classList.remove(`hold`);
 });
 
-// TABS
-$(`.js-catalog-tabs`).tabs({
-  active: 2,
-  show: { duration: 160 },
-  hide: { duration: 160 }
-});
-
-// ACCORDION
-$(`.js-accordion`).each(function () {
-  $(this).accordion({
-    collapsible: true,
-    header: `.accordion__btn`,
-    heightStyle: `content`
-  });
-});
-
 // PAINTER-LINK-CLICK
 catalogTabsEl.addEventListener(`click`, function(event) {
   if(!event.target.classList.contains(`accordion__painter-link`)) return;
@@ -187,7 +180,7 @@ const eventsSwiper = new Swiper(`.events-slider`, {
   breakpoints: {
     500: {
       enabled: false,
-      spaceBetween: ``
+      spaceBetween: ``,
     }
   }
 });
@@ -214,4 +207,35 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
 
   slidesPerView: 1,
   spaceBetween: 6
+});
+
+//jQuery
+
+$(`document`).ready(function() {
+  //плавные пепеходы по якорям
+  $(`.anchor`).on(`click`, function(event) {
+    event.preventDefault();
+    
+    const href = $(this).attr(`href`);
+    const offsetTop = $(href).offset().top;
+    
+    $(`html, body`).animate({
+      scrollTop: offsetTop,
+    }, 400);
+  });
+  // TABS
+  $(`.js-catalog-tabs`).tabs({
+    active: 2,
+    show: { duration: 160 },
+    hide: { duration: 160 }
+  });
+  
+  // ACCORDION
+  $(`.js-accordion`).each(function () {
+    $(this).accordion({
+      collapsible: true,
+      header: `.accordion__btn`,
+      heightStyle: `content`
+    });
+  });
 });

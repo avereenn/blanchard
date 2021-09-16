@@ -2593,13 +2593,16 @@ ul {
   .events-slider__pagination > *:not(:last-child) {
     margin-right: auto;
   }
-  .events__list_open {
-    justify-content: flex-start;
+  .events__list {
     flex-wrap: nowrap;
   }
 
-  .events__item {
+  .events__list .events__item {
     flex: 1 0 auto;
+    height: auto;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
   }
 
   .events__expand-btn {
