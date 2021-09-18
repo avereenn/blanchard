@@ -111,6 +111,11 @@ ul {
   list-style: none;
 }
 
+picture {
+  font-size: 0;
+  line-height: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1569,10 +1574,19 @@ ul {
 }
 
 .events__item {
-  flex: 0 0 calc((100% - 106px)/3);
+  flex: 0 0 calc((100% - 100px)/3);
+  height: auto;
   margin-bottom: 50px;
-  border: 1px solid #cacaca;
   transition: opacity .16s ease-in;
+}
+
+.event__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-color: #cacaca;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
 }
 
 .events__item:not(:nth-child(-n + 3)) {
@@ -1584,7 +1598,7 @@ ul {
 }
 
 .events__item:not(:nth-child(3n)) {
-  margin-right: 50px;
+  margin-right: auto;
 }
 
 .events__list_show {
@@ -1599,12 +1613,19 @@ ul {
   visibility: visible;
 }
 
-.events__event {
+.event {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
+.event__img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .event__place {
-  padding: 5px 20px 0 20px;
+  padding: 15px 20px 0 20px;
   color: #999;
   font-size: 12px;
   line-height: 16px;
@@ -1614,8 +1635,8 @@ ul {
 .event__info {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding: 2px 40px 40px 50px;
-  min-height: 310px;
 }
 
 .event__title {
@@ -1628,7 +1649,7 @@ ul {
 }
 
 .event__text {
-  margin-bottom: 82px;
+  padding-bottom: 82px;
   font-size: 16px;
   line-height: 32px;
 }
@@ -2017,6 +2038,9 @@ ul {
   }
 
   /* CATALOG 1440*/
+  .catalog {
+    margin-bottom: 82px;
+  }
 
   .catalog__title {
     margin-bottom: 16px;
@@ -2046,6 +2070,32 @@ ul {
 
   .painter-info_empty .painter-info__figure img {
     width: 170px;
+  }
+
+  /* EVENTS 1440 */
+  .events__item {
+    flex: 0 0 calc((100% - 50px)/3);
+  }
+
+  .event__img {
+    height: 200px;
+  }
+
+  .event__place {
+    padding: 16px 18px 2px 20px;
+  }
+
+  .event__info {
+    padding: 0 25px 48px 35px;
+  }
+
+  .event__title {
+    margin-bottom: 4px;
+  }
+
+  .event__text {
+    padding-right: 8px;
+    padding-bottom: 9px;
   }
 
   /* EDITIONS 1440*/
@@ -2571,9 +2621,7 @@ ul {
   }
 
   .event__img {
-    width: 100%;
     height: 185px;
-    object-fit: cover;
   }
 
   .events-slider__pagination {
