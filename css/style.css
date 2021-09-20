@@ -1686,6 +1686,105 @@ picture {
   display: flex;
 }
 
+.editions-filter__checkbox {
+  display: none;
+}
+
+.editions-filter__header {
+  position: relative;
+}
+
+.editions-filter__header-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-color: var(--main-color-2);
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+}
+
+.editions-filter__header-btn:active {
+  border-color: red;
+}
+
+.editions-filter__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.editions-filter__label {
+  display: flex;
+}
+
+.editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text,
+.editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text + .editions-filter__check-close {
+  color: var(--main-color-2);
+}
+
+.editions-filter__check-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.editions-filter__check-text::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid currentColor;
+}
+
+.editions-filter__check-text::after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  display: none;
+  width: 8px;
+  height: 8px;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.editions-filter__checkbox:checked + .editions-filter__check-text::after {
+  display: block;
+}
+
+.editions-filter__check-close {
+  position: relative;
+  display: none;
+  width: 20px;
+  height: 20px;
+  color: inherit;
+}
+
+.editions-filter__check-close::before,
+.editions-filter__check-close::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  display: block;
+  width: 10px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.editions-filter__check-close::before {
+  transform: rotate(-45deg);
+}
+
+.editions-filter__check-close::after {
+  transform: rotate(45deg);
+}
+
 .editions-filter__price {
   display: flex;
 }
@@ -2668,6 +2767,30 @@ picture {
 
   .editions-filter {
     max-width: 100%;
+  }
+  
+  .editions-filter__header-btn {
+  display: block;
+  }
+  
+  .editions-filter__label > * {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .16s ease-in;
+  }
+  
+  .editions-filter__list_show .editions-filter__label > *,
+  .editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text,
+  .editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text + .editions-filter__check-close,
+  .editions-filter__label .editions-filter__checkbox:checked {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  }
+  
+  .editions-filter__checkbox:checked + .editions-filter__check-text + .editions-filter__check-close {
+  display: inline-block;
   }
 
   .editions-filter__price-field {
