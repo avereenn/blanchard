@@ -46,7 +46,7 @@ burgerBtnEl.addEventListener(`click`, toggleNavMenu);
 //выключаем меню при клике по ссылке
 menuEl.addEventListener(`click`, event => {
   if(!event.target.classList.contains(`anchor`)) return;
-  
+
   toggleNavMenu();
 });
 
@@ -141,7 +141,7 @@ galleryModalEl.addEventListener(`click`, function (event) {
 catalogTabsEl.addEventListener(`click`, function(event) {
   if(!event.target.classList.contains(`accordion__painter-link`)) return;
   event.preventDefault();
-  
+
   const linkEl = event.target;
   const links = linkEl.closest(`.accordion__painters-list`).querySelectorAll(`.accordion__painter-link`);
   const cardId = linkEl.getAttribute(`href`);
@@ -222,10 +222,10 @@ $(`document`).ready(function() {
   //плавные пепеходы по якорям
   $(`.anchor`).on(`click`, function(event) {
     event.preventDefault();
-    
+
     const href = $(this).attr(`href`);
     const offsetTop = $(href).offset().top;
-    
+
     $(`html, body`).animate({
       scrollTop: offsetTop,
     }, 700);
@@ -236,7 +236,7 @@ $(`document`).ready(function() {
     show: { duration: 160 },
     hide: { duration: 160 }
   });
-  
+
   // ACCORDION
   $(`.js-accordion`).each(function () {
     $(this).accordion({
