@@ -1444,6 +1444,7 @@
       <button class="events__expand-btn js-expand-btn">Все события</button>
     </section>
     <section id="editions" class="editions">
+      <div class="container">
         <h2 class="editions__title title">Издания</h2>
       <div class="editions__wrapper">
         <form class="editions__filter editions-filter" action="#" method="GET">
@@ -1476,7 +1477,7 @@
               </li>
               <li class="editions-filter__item">
                 <label class="editions-filter__label">
-                  <input type="checkbox" name="design" class="editions-filter__checkbox">
+                  <input type="checkbox" name="design" class="editions-filter__checkbox" checked>
                   <span class="editions-filter__check-text">Дизайн</span>
                   <span class="editions-filter__check-close"></span>
                 </label>
@@ -1540,7 +1541,7 @@
             </ul>
           </fieldset>
           <fieldset class="editions-filter__fieldset">
-            <h3 class="editions-filter__title">Цена</h3>
+            <h3 class="editions-filter__title editions-filter__title_price">Цена</h3>
             <div class="editions-filter__price">
               <label class="editions-filter__label" for="from-price">От</label>
               <input class="editions-filter__price-field" id="from-price" name="from-price" type="number"
@@ -1548,6 +1549,7 @@
               <label for="to-price" class="editions-filter__label">до</label>
               <input class="editions-filter__price-field" id="to-price" name="to-price" type="number"
                 placeholder="25000">
+                <span>руб.</span>
             </div>
           </fieldset>
         </form>
@@ -1669,6 +1671,7 @@
           </ul>
         </div>
       </div>
+    </div>
     </section>
     <section id="projects" class="projects">
       <h2 class="projects__title title">Проекты</h2>
