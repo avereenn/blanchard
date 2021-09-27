@@ -1448,93 +1448,93 @@
         <h2 class="editions__title title">Издания</h2>
       <div class="editions__wrapper">
         <form class="editions__filter editions-filter" action="#" method="GET">
-          <fieldset class="editions-filter__fieldset editions-filter__categories js-filter-categories">
+          <fieldset class="editions-filter__fieldset js-filter-categories">
             <div class="editions-filter__header">
               <h3 class="editions-filter__title">Категории</h3>
               <button class="editions-filter__header-btn js-filter-header-btn" type="button"></button>
             </div>
             <ul class="editions-filter__list js-filter-list">
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="bestSellers" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Бестселлеры</span>
+                <input id="bestSellers" class="editions-filter__checkbox sr-only" type="checkbox" name="bestSellers">
+                <label class="editions-filter__label editions-filter__label_check" for="bestSellers">
+                  Бестселлеры
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="art" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Искусство</span>
+                <input id="art" class="editions-filter__checkbox sr-only" type="checkbox" name="art">
+                <label class="editions-filter__label editions-filter__label_check" for="art">
+                  Искусство
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="architecture" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Архитектура</span>
+                <input id="architecture" class="editions-filter__checkbox sr-only" type="checkbox" name="architecture">
+                <label class="editions-filter__label editions-filter__label_check" for="architecture">
+                  Архитектура
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="design" class="editions-filter__checkbox" checked>
-                  <span class="editions-filter__check-text">Дизайн</span>
+                <input id="design" class="editions-filter__checkbox sr-only" type="checkbox" name="design" checked>
+                <label class="editions-filter__label editions-filter__label_check" for="design">
+                  Дизайн
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="fashion" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Мода</span>
+                <input id="fashion" class="editions-filter__checkbox sr-only" type="checkbox" name="fashion">
+                <label class="editions-filter__label editions-filter__label_check" for="fashion">
+                  Мода
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="forKids" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Детям</span>
+                <input id="forKids" class="editions-filter__checkbox sr-only" type="checkbox" name="forKids">
+                <label class="editions-filter__label editions-filter__label_check" for="forKids">
+                  Детям
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="literature" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Художественная литература</span>
+                <input id="literature" class="editions-filter__checkbox sr-only" type="checkbox" name="literature">
+                <label class="editions-filter__label editions-filter__label_check" for="literature">
+                  Художественная литература
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="publicism" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Публицистика</span>
+                <input id="publicism" class="editions-filter__checkbox sr-only" type="checkbox" name="publicism">
+                <label class="editions-filter__label editions-filter__label_check" for="publicism">
+                  Публицистика
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="guides" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Путеводители</span>
+                <input id="guides" class="editions-filter__checkbox sr-only" type="checkbox" name="guides">
+                <label class="editions-filter__label editions-filter__label_check" for="guides">
+                  Путеводители
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label for="philosophy" class="editions-filter__label">
-                  <input type="checkbox" name="philosophy" id="philosophy" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Философия</span>
+                <input id="philosophy" class="editions-filter__checkbox sr-only" type="checkbox" name="philosophy">
+                <label class="editions-filter__label editions-filter__label_check" for="philosophy">
+                  Философия
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label for="education" class="editions-filter__label">
-                  <input type="checkbox" name="education" id="education" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Учебная литература</span>
+                <input id="education" class="editions-filter__checkbox sr-only" type="checkbox" name="education">
+                <label class="editions-filter__label editions-filter__label_check" for="education">
+                  Учебная литература
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
               <li class="editions-filter__item">
-                <label class="editions-filter__label">
-                  <input type="checkbox" name="press" class="editions-filter__checkbox">
-                  <span class="editions-filter__check-text">Журналы и газеты</span>
+                <input id="press" class="editions-filter__checkbox sr-only" type="checkbox" name="press">
+                <label class="editions-filter__label editions-filter__label_check" for="press">
+                  Журналы и газеты
                   <span class="editions-filter__check-close"></span>
                 </label>
               </li>
@@ -1543,11 +1543,11 @@
           <fieldset class="editions-filter__fieldset">
             <h3 class="editions-filter__title editions-filter__title_price">Цена</h3>
             <div class="editions-filter__price">
-              <label class="editions-filter__label" for="from-price">От</label>
-              <input class="editions-filter__price-field" id="from-price" name="from-price" type="number"
+              <label class="editions-filter__label" for="fromPrice">От</label>
+              <input class="editions-filter__price-field" id="fromPrice" name="from-price" type="number"
                 placeholder="50">
-              <label for="to-price" class="editions-filter__label">до</label>
-              <input class="editions-filter__price-field" id="to-price" name="to-price" type="number"
+              <label class="editions-filter__label" for="toPrice">до</label>
+              <input class="editions-filter__price-field" id="toPrice" name="to-price" type="number"
                 placeholder="25000">
                 <span>руб.</span>
             </div>

@@ -1706,10 +1706,6 @@ picture {
   display: flex;
 }
 
-.editions-filter__checkbox {
-  display: none;
-}
-
 .editions-filter__header {
   position: relative;
 }
@@ -1725,6 +1721,26 @@ picture {
   border-color: var(--main-color-2);
   border-style: solid;
   border-width: 1px 0 1px 0;
+}
+
+.editions-filter__header-btn::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-width: 0 0 1px 1px;
+  border-color: #fff;
+  border-style: solid;
+  transform: rotate(-45deg);
+  transition: transform .16s ease-in;
+}
+
+.editions-filter__fieldset_show .editions-filter__header-btn::after {
+  top: 12px;
+  transform: rotate(-225deg);
 }
 
 .editions-filter__title {
@@ -1751,23 +1767,22 @@ picture {
   flex-direction: column;
 }
 
-.editions-filter__label {
-  display: flex;
-}
 
-.editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text,
-.editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text + .editions-filter__check-close {
-  color: var(--main-color-2);
-}
-
-.editions-filter__check-text {
+.editions-filter__label_check {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
+  line-height: 2;
   cursor: pointer;
 }
 
-.editions-filter__check-text::before {
+.editions-filter__checkbox:checked + .editions-filter__label,
+.editions-filter__checkbox:checked + .editions-filter__label .editions-filter__check-close {
+  color: var(--main-color-2);
+}
+
+.editions-filter__label_check::before {
   content: '';
   display: inline-block;
   width: 12px;
@@ -1776,7 +1791,7 @@ picture {
   border: 1px solid currentColor;
 }
 
-.editions-filter__check-text::after {
+.editions-filter__label_check::after {
   content: '';
   position: absolute;
   top: 14px;
@@ -1788,7 +1803,7 @@ picture {
   border-radius: 50%;
 }
 
-.editions-filter__checkbox:checked + .editions-filter__check-text::after {
+.editions-filter__checkbox:checked + .editions-filter__label::after {
   display: block;
 }
 
@@ -1797,6 +1812,7 @@ picture {
   display: none;
   width: 20px;
   height: 20px;
+  margin-left: auto;
   color: inherit;
 }
 
@@ -1804,7 +1820,7 @@ picture {
 .editions-filter__check-close::after {
   content: '';
   position: absolute;
-  top: 13px;
+  top: 10px;
   left: 5px;
   display: block;
   width: 16px;
@@ -1820,12 +1836,9 @@ picture {
   transform: rotate(45deg);
 }
 
-.editions-filter__check-text:hover,
-.editions-filter__check-text:hover + .editions-filter__check-close,
-.editions-filter__check-text:focus,
-.editions-filter__check-text:focus + .editions-filter__check-close,
-.editions-filter__check-text:active,
-.editions-filter__check-text:active + .editions-filter__check-close {
+.editions-filter__label_check:hover,
+.editions-filter__checkbox:focus + .editions-filter__label,
+.editions-filter__label_check:active {
   color: var(--main-color-3);
 }
 
@@ -2928,26 +2941,25 @@ picture {
   }
 
   .editions-filter__header-btn {
-  display: block;
+    display: block;
+  }
+  
+  .editions-filter__label_check {
+    position: absolute;
+    visibility: hidden;
+    border-bottom: 1px solid #fff;
+    opacity: 0;
+    transition: opacity .16s ease-in;
   }
 
-  .editions-filter__label > * {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .16s ease-in;
-  }
-
-  .editions-filter__list_show .editions-filter__label > *,
-  .editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text,
-  .editions-filter__label .editions-filter__checkbox:checked + .editions-filter__check-text + .editions-filter__check-close,
-  .editions-filter__label .editions-filter__checkbox:checked {
+  .editions-filter__fieldset_show .editions-filter__label_check,
+  .editions-filter__checkbox:checked + .editions-filter__label {
   position: relative;
   visibility: visible;
   opacity: 1;
   }
 
-  .editions-filter__checkbox:checked + .editions-filter__check-text + .editions-filter__check-close {
+  .editions-filter__checkbox:checked + .editions-filter__label .editions-filter__check-close {
   display: inline-block;
   }
 

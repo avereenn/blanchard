@@ -14,7 +14,7 @@ const catalogTabsEl = document.querySelector(`.js-catalog-tabs`);
 const expandBtnEl = document.querySelector(`.js-expand-btn`);
 const eventsListEl = document.querySelector(`.js-events-list`);
 const filterHeaderBtnEl = document.querySelector(`.js-filter-header-btn`);
-const filterListEl = document.querySelector(`.js-filter-list`);
+const filterCategoriesEl = document.querySelector(`.js-filter-categories`);
 
 // HEADER SELECTS CHOICES
 selectElems.forEach(select => {
@@ -189,7 +189,7 @@ const eventsSwiper = new Swiper(`.events-slider`, {
 
 // EDITIONS FILTER
 filterHeaderBtnEl.addEventListener(`click`, function() {
-  filterListEl.classList.toggle(`editions-filter__list_show`);
+  filterCategoriesEl.classList.toggle(`editions-filter__fieldset_show`);
 });
 
 //EDITIONS SWIPER
