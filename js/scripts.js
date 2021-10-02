@@ -70,7 +70,6 @@ window.addEventListener(`click`, event => {
 
 // GALLERY SWIPER
 const gallerySwiper = new Swiper(`.gallery-slider`, {
-  observer: true,
 
   pagination: {
     el: '.gallery-slider__pages',
@@ -196,10 +195,30 @@ filterHeaderBtnEl.addEventListener(`click`, function() {
 
 const editionsSwiper = new Swiper(`.editions-slider`, {
   enabled: false,
+  
+  pagination: {
+    el: '.editions-slider__pages',
+    type: `fraction`,
+  },
+  
+  navigation: {
+    nextEl: '.editions-slider__btn_next',
+    prevEl: '.editions-slider__btn_prev',
+  },
 
   breakpoints: {
     500: {
-      //enabled: true,
+      enabled: true,
+      
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+    },
+    
+    880: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
     }
   }
 });
