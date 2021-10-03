@@ -45,7 +45,7 @@ burgerBtnEl.addEventListener(`click`, toggleNavMenu);
 
 //выключаем меню при клике по ссылке
 menuEl.addEventListener(`click`, event => {
-  if(!event.target.classList.contains(`anchor`)) return;
+  if (!event.target.classList.contains(`anchor`)) return;
 
   toggleNavMenu();
 });
@@ -137,8 +137,8 @@ galleryModalEl.addEventListener(`click`, function (event) {
 });
 
 // PAINTER-LINK-CLICK
-catalogTabsEl.addEventListener(`click`, function(event) {
-  if(!event.target.classList.contains(`accordion__painter-link`)) return;
+catalogTabsEl.addEventListener(`click`, function (event) {
+  if (!event.target.classList.contains(`accordion__painter-link`)) return;
   event.preventDefault();
 
   const linkEl = event.target;
@@ -149,7 +149,7 @@ catalogTabsEl.addEventListener(`click`, function(event) {
   const cards = parentTabEl.querySelectorAll(`.painter-info`);
   let targetCard;
 
-  if(cardId === NO_PAINTER_INFO_ID) {
+  if (cardId === NO_PAINTER_INFO_ID) {
     targetCard = parentTabEl.querySelector(`.painter-info_empty`);
     targetCard.querySelector(`.js-painter-name`).textContent = painterName;
   } else targetCard = parentTabEl.querySelector(cardId);
@@ -187,35 +187,46 @@ const eventsSwiper = new Swiper(`.events-slider`, {
 });
 
 // EDITIONS FILTER
-filterHeaderBtnEl.addEventListener(`click`, function() {
+filterHeaderBtnEl.addEventListener(`click`, function () {
   filterCategoriesEl.classList.toggle(`editions-filter__fieldset_show`);
 });
 
 //EDITIONS SWIPER
 
 const editionsSwiper = new Swiper(`.editions-slider`, {
-  enabled: false,
-  
+
   pagination: {
     el: '.editions-slider__pages',
     type: `fraction`,
   },
-  
+
   navigation: {
     nextEl: '.editions-slider__btn_next',
     prevEl: '.editions-slider__btn_prev',
   },
 
   breakpoints: {
+
+    320: {
+      enabled: false,
+      spaceBetween: ``,
+    },
+
     500: {
       enabled: true,
-      
+
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 30,
+      spaceBetween: 34,
     },
-    
-    880: {
+
+    1000: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+    },
+
+    1440: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
@@ -237,9 +248,9 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
 
 //jQuery
 
-$(`document`).ready(function() {
+$(`document`).ready(function () {
   //плавные пепеходы по якорям
-  $(`.anchor`).on(`click`, function(event) {
+  $(`.anchor`).on(`click`, function (event) {
     event.preventDefault();
 
     const href = $(this).attr(`href`);
