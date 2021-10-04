@@ -1972,6 +1972,7 @@ picture {
 }
 
 .product__order-btn {
+  position: relative;
   width: max-content;
   padding: 6px 20px;
   color: inherit;
@@ -1984,7 +1985,53 @@ picture {
   border-radius: 100px;
 }
 
+.product__order-btn::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 100px;
+}
+
+.product__order-btn:focus::before {
+  border-color: var(--main-color-3);
+}
+
+.product__order-btn:hover {
+  background-color: var(--main-color-3);
+}
+
+.product__order-btn:active {
+  background-color: var(--main-color-1);
+  border-color: var(--main-color-3);
+}
+
 /*PROJECTS*/
+
+.projects__tooltip {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid var(--main-color-2);
+  border-radius: 50%;
+}
+
+.projects__tooltip:hover,
+.projects__tooltip:focus {
+  background-color: var(--main-color-3);
+}
+
+.projects__tooltip:active {
+  color: #fff;
+  background-color: var(--main-color-1);
+}
 
 .projects__slider {
   display: flex;
