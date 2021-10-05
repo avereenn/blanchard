@@ -192,8 +192,7 @@ filterHeaderBtnEl.addEventListener(`click`, function () {
 });
 
 //EDITIONS SWIPER
-
-const editionsSwiper = new Swiper(`.editions-slider`, {
+const editionsSwiperProps = {
 
   pagination: {
     el: '.editions-slider__pages',
@@ -206,14 +205,12 @@ const editionsSwiper = new Swiper(`.editions-slider`, {
   },
 
   breakpoints: {
-
-    320: {
+    0: {
       enabled: false,
       spaceBetween: ``,
     },
 
     500: {
-      enabled: true,
 
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -232,6 +229,15 @@ const editionsSwiper = new Swiper(`.editions-slider`, {
       spaceBetween: 50,
     }
   }
+};
+const editionsSwiper = new Swiper(`.editions-slider`, editionsSwiperProps);
+
+window.addEventListener(`resize`, () => {
+  const clientWidth = document.documentElement.clientWidth;
+  console.log(clientWidth);
+  (clientWidth <= 500) ?
+      editionsSwiper.destroy(true, true) :
+      new Swiper(`.editions-slider`, editionsSwiperProps);
 });
 
 //PROJECTS SWIPER

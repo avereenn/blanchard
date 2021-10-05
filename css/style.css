@@ -1319,12 +1319,9 @@ picture {
 }
 
 .catalog__painter-info {
+  flex: 0 1 calc((100% - 50px)/2);
+  max-width: 750px;
   margin-right: 50px;
-}
-
-.catalog__painter-info,
-.catalog__accordion {
-  flex: 0 1 47%;
 }
 
 .painter-info {
@@ -1349,6 +1346,7 @@ picture {
 }
 
 .painter-info__img {
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -1406,6 +1404,7 @@ picture {
 
 /* CATALOG ACCORDION */
 .accordion {
+  flex-grow: 1;
   border-top: 1px solid #cacaca;
 }
 
@@ -1908,19 +1907,19 @@ picture {
 }
 
 .editions-slider {
-  width: 1150px;
+  width: 1158px;
   height: 532px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 6px 10px 6px;
 }
 
 .editions-slider__btns {
   top: -18px;
+  left: 6px;
   padding-left: 0;
 }
 
 .editions-slider__item {
-  flex: 0 0 calc((100% - 100px)/3);
+  flex: 0 0 calc((100% - 92px)/3);
 }
 
 .editions-slider__item:not(:last-child) {
@@ -1983,6 +1982,7 @@ picture {
   background-color: transparent;
   border: 2px solid var(--main-color-2);
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .product__order-btn::before {
@@ -2021,6 +2021,9 @@ picture {
   text-align: center;
   border: 1px solid var(--main-color-2);
   border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .16s ease-out,
+              color .16s ease-out;
 }
 
 .projects__tooltip:hover,
@@ -2115,10 +2118,6 @@ picture {
     flex: 0 1 50%;
   }
 
-  .catalog__painter-info {
-    margin-right: 50px;
-  }
-
   .accordion__painters-list {
     max-height: 440px;
     padding-right: 12px;
@@ -2131,6 +2130,7 @@ picture {
   /* EDITIONS 1700 */
   .editions-slider {
     width: 800px;
+    height: 410px;
   }
 
 }
@@ -2442,12 +2442,12 @@ picture {
   }
 
   .editions-slider {
-    width: 630px;
+    width: 638px;
     height: 453px;
   }
 
   .editions-slider__item {
-    flex: 0 0 calc((100% - 50px)/2);
+    flex: 0 0 calc((100% - 42px)/2);
   }
 
   .product__img {
@@ -2613,6 +2613,7 @@ picture {
   }
 
   .catalog__painter-info {
+    max-width: initial;
     margin-right: 0;
   }
 
@@ -2709,14 +2710,12 @@ picture {
   }
 
   .editions-slider {
-    width: 616px;
+    width: 624px;
     height: 453px;
-    padding-left: 2px;
-    padding-right: 2px;
   }
 
   .editions-slider__item {
-    flex: 0 0 calc((100% - 34px)/2);
+    flex: 0 0 calc((100% - 26px)/2);
   }
 
 }
@@ -2746,6 +2745,20 @@ picture {
 
   .event__title {
     font-size: 18px;
+  }
+
+  /* EDITIONS 760 */
+  .editions-filter__list {
+    max-height: 250px;
+  }
+
+  .editions-slider {
+    width: 400px;
+    height: 400px;
+  }
+
+  .editions-filter__item:not(:nth-last-child(-n + 4)) {
+    margin-right: auto;
   }
 }
 
@@ -3271,7 +3284,7 @@ picture {
   }
 
   .product__order-btn {
-    width: 130px;
+    width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
