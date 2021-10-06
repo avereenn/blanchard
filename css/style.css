@@ -1703,7 +1703,7 @@ picture {
 
 .editions .container {
   padding-top: 80px;
-  padding-bottom: 68px;
+  padding-bottom: 70px;
 }
 
 .editions__wrapper {
@@ -1920,6 +1920,7 @@ picture {
 
 .editions-slider__item {
   flex: 0 0 calc((100% - 92px)/3);
+  max-width: calc((100% - 92px)/3);
 }
 
 .editions-slider__item:not(:last-child) {
@@ -1939,7 +1940,7 @@ picture {
 
 .product__img {
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .product figure {
@@ -1952,6 +1953,7 @@ picture {
 }
 
 .product__name {
+  max-width: 59%;
   margin-right: auto;
 }
 
@@ -1963,6 +1965,13 @@ picture {
 
 .product__author {
   font-weight: 400;
+}
+
+.product__title,
+.product__author {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product__price {
@@ -2442,16 +2451,17 @@ picture {
   }
 
   .editions-slider {
-    width: 638px;
+    width: 636px;
     height: 453px;
   }
 
   .editions-slider__item {
     flex: 0 0 calc((100% - 42px)/2);
+    max-width: calc((100% - 42px)/2);
   }
 
   .product__img {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
 }
@@ -2710,12 +2720,17 @@ picture {
   }
 
   .editions-slider {
-    width: 624px;
-    height: 453px;
+    width: 626px;
+    height: 452px;
   }
 
   .editions-slider__item {
-    flex: 0 0 calc((100% - 26px)/2);
+    flex: 0 0 calc((100% - 34px)/2);
+    max-width: calc((100% - 34px)/2);
+  }
+
+  .product__img {
+    margin-bottom: 7px;
   }
 
 }
@@ -2759,6 +2774,11 @@ picture {
 
   .editions-filter__item:not(:nth-last-child(-n + 4)) {
     margin-right: auto;
+  }
+
+  .product__name {
+    flex-direction: column;
+    max-width: 100%;
   }
 }
 
@@ -3146,7 +3166,7 @@ picture {
 
   .editions .container {
     padding-top: 51px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 
   .editions__title {
@@ -3234,6 +3254,7 @@ picture {
     height: auto;
     padding-right: 0;
     padding-left: 0;
+    overflow: visible;
   }
 
   .editions-slider__btns {
@@ -3251,9 +3272,13 @@ picture {
 
   .editions-slider__item {
     flex: 0 0 calc((100% - 30px)/2);
+    max-width: calc((100% - 30px)/2);
     height: auto;
     min-height: 254px;
-    margin-bottom: 30px;
+  }
+
+  .editions-slider__item:not(:last-child) {
+    margin-bottom: 50px;
   }
 
   .product {
@@ -3270,7 +3295,6 @@ picture {
 
   .product__name {
     display: flex;
-    flex-direction: column;
     margin-right: 0;
     margin-bottom: 4px;
   }
@@ -3284,9 +3308,11 @@ picture {
   }
 
   .product__order-btn {
-    width: 100%;
-    padding-left: 0;
+    width: 97%;
+    padding-top: 6px;
     padding-right: 0;
+    padding-bottom: 8px;
+    padding-left: 0;
   }
 
   /* PROJECTS 500 */
