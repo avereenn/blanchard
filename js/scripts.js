@@ -34,19 +34,21 @@ selectListElems.forEach(list => {
   new SimpleBar(list);
 });
 
+
+
+// HEADER BURGER
+
 function toggleNavMenu() {
   burgerBtnEl.classList.toggle(`header__burger_open`);
   menuEl.classList.toggle(`header__menu_open`);
   document.body.classList.toggle(`hold`);
 }
 
-// HEADER BURGER
 burgerBtnEl.addEventListener(`click`, toggleNavMenu);
 
 //выключаем меню при клике по ссылке
 menuEl.addEventListener(`click`, event => {
-  if (!event.target.classList.contains(`anchor`)) return;
-
+  if(!event.target.classList.contains(`anchor`) || !menuEl.classList.contains(`header__menu_open`)) return;
   toggleNavMenu();
 });
 
@@ -57,7 +59,7 @@ searchOpenBtnEl.addEventListener(`click`, function () {
 });
 
 window.addEventListener(`click`, event => {
-  if (
+  if(
     !searchFormEl.classList.contains(`search-form_show`) ||
     event.target.closest(`.search-form_show`) ||
     event.target === searchOpenBtnEl
@@ -220,7 +222,7 @@ const editionsSwiperProps = {
     1000: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 50,
+      spaceBetween: 48,
     },
 
     1440: {
@@ -240,6 +242,15 @@ window.addEventListener(`resize`, () => {
       new Swiper(`.editions-slider`, editionsSwiperProps);
 });
 
+// PROJECTS TOOLTIPS
+const tooltipElems = document.querySelectorAll(`.projects__tooltip`)
+for(const tooltip of tooltipElems) {
+  const message = tooltip.dataset.tooltip;
+  tippy(tooltip,{
+    content: message,
+  });
+}
+
 //PROJECTS SWIPER
 
 const projectsSwiper = new Swiper(`.projects-slider`, {
@@ -249,7 +260,28 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
   },
 
   slidesPerView: 1,
-  spaceBetween: 6
+  slidesPerGroup: 1,
+  spaceBetween: 6,
+
+  breakpoints: {
+    500: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+    },
+
+    1000: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+    },
+
+    1440: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
+    },
+  }
 });
 
 //jQuery
