@@ -169,6 +169,7 @@ picture {
 
 .link {
   color: var(--main-color-3);
+  transition: color .16s ease-in;
 }
 
 .link:focus {
@@ -302,6 +303,7 @@ picture {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: color .16s ease-in;
 }
 
 .header__burger:hover {
@@ -371,16 +373,24 @@ picture {
   line-height: 25px;
 }
 
-.header-nav__link:focus, .header__log-in:focus {
+.header-nav__link,
+.header__log-in {
+  transition: color .16s ease-in;
+}
+
+.header-nav__link:focus,
+.header__log-in:focus {
   outline: var(--main-color-1) solid 2px;
   outline-offset: 6px;
 }
 
-.header-nav__link:hover, .header__log-in:hover {
+.header-nav__link:hover,
+.header__log-in:hover {
   color: var(--main-color-3);
 }
 
-.header__log-in:hover path, .header__log-in:active path {
+.header__log-in:hover path,
+.header__log-in:active path {
   fill: currentColor;
 }
 
@@ -679,11 +689,14 @@ picture {
   cursor: pointer;
 }
 
-.search-form:hover .search-form__input, .search-form:hover .search-form__submit, .search-form__submit:hover {
+.search-form:hover .search-form__input,
+.search-form:hover .search-form__submit,
+.search-form__submit:hover {
   color: var(--main-color-3);
 }
 
-.search-form__input:focus, .search-form__submit:focus {
+.search-form__input:focus,
+.search-form__submit:focus {
   outline: var(--main-color-1) solid 2px;
   outline-offset: 6px;
 }
@@ -1176,6 +1189,7 @@ picture {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: color .16s ease-in;
 }
 
 .gallery-modal__close::before,
@@ -1251,6 +1265,7 @@ picture {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition: box-shadow .16s ease-in;
 }
 
 .catalog-tabs__tab-link::after {
@@ -1430,6 +1445,10 @@ picture {
   transition: border-color .16s ease-in;
 }
 
+.accordion__btn-text {
+  transition: color .16s ease-in;
+}
+
 .accordion__btn-arrow {
   position: relative;
   width: 50px;
@@ -1437,6 +1456,7 @@ picture {
   margin-left: auto;
   border: 1px solid #999;
   border-radius: 50%;
+  transition: background-color .16s ease-in;
 }
 
 .accordion__btn:focus {
@@ -1676,7 +1696,12 @@ picture {
   color: var(--main-color-2);
   font-size: 16px;
   line-height: 28px;
-  border-bottom: 1px solid var(--main-color-2);
+  border-bottom: 1px solid currentColor;
+  transition: color .16s ease-in;
+}
+
+.event__more-link:hover {
+  color: var(--main-color-3);
 }
 
 .events__expand-btn {
@@ -1692,6 +1717,8 @@ picture {
   border: 2px solid var(--main-color-2);
   border-radius: 100px;
   cursor: pointer;
+  transition: color .16s ease-in,
+              background-color .16s ease-in;
 }
 
 .events__expand-btn::before {
@@ -1818,6 +1845,7 @@ picture {
   padding-left: 24px;
   line-height: 2;
   cursor: pointer;
+  transition: color .16s ease-in;
 }
 
 .editions-filter__checkbox:checked + .editions-filter__label,
@@ -1910,6 +1938,8 @@ picture {
   font-weight: 400;
   background-color: rgba(157, 92, 208, 0.5);
   border: none;
+  transition: background-color .16s ease-in,
+              box-shadow .16s ease-in;
 }
 
 .editions-filter__price-field:hover,
@@ -2028,6 +2058,7 @@ picture {
   border: 2px solid var(--main-color-2);
   border-radius: 100px;
   cursor: pointer;
+  transition: background-color .16s ease-in;
 }
 
 .product__order-btn::before {
@@ -2192,6 +2223,7 @@ picture {
   margin: auto;
   filter: grayscale(1);
   transform: scale(1.2);
+  transition: filter .16s ease-in;
 }
 
 .projects__partner-link:hover .projects__partner-img,
