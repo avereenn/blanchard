@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blanchard. Художественная галерея</title>
 
+  <!-- YMAPS -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=0c23509c-cb6c-487f-990b-64f8c52b04fb&lang=ru_RU" type="text/javascript"></script>
+
   <!--CHOICES-->
   <link rel="stylesheet" href="css/choices/choices.min.css">
   <script src="js/choices/choices.min.js"></script>
@@ -1797,21 +1800,23 @@
         </div>
       </div>
     </section>
-    <section id="contacts" class="contacts container">
-      <h2 class="contacts__title title">Контакты</h2>
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <h2 class="contacts__title title">Контакты</h2>
+      </div>
       <div class="contacts__wrapper">
-        <div class="contacts__info">
+        <div class="contacts__info ">
           <address class="contacts__address">
             <b>Шоурум №4</b><br>
             Леонтьевский переулок, дом 5, строение 1
           </address>
-          <form class="contacts__callback contacts-callback" action="#" method="GET">
+          <form class="contacts__feedback contacts-feedback" action="#" method="GET">
             <h3 class="contacts__small-title">Заказать обратный звонок</h3>
-            <label class="contacts-callback__label sr-only" for="name">Введите имя</label>
-            <input class="contacts-callback__input" type="text" name="name" id="name" placeholder="Имя*">
-            <label class="contacts-callback__label sr-only" for="phone">Введите телефон</label>
-            <input class="contacts-callback__input" type="tel" name="phone" id="phone" placeholder="Телефон*">
-            <button class="contacts-callback__submit" type="submit">Заказть</button>
+            <label class="contacts-feedback__label sr-only" for="name">Введите имя</label>
+            <input class="contacts-feedback__input" type="text" name="name" id="name" placeholder="Имя*">
+            <label class="contacts-feedback__label sr-only" for="phone">Введите телефон</label>
+            <input class="contacts-feedback__input" type="tel" name="phone" id="phone" placeholder="Телефон*">
+            <button class="contacts-feedback__submit" type="submit">Заказть</button>
           </form>
           <div class="contacts__one-click">
             <h3 class="contacts__small-title">Связаться в один клик</h3>
@@ -1819,7 +1824,7 @@
             <a class="contacts__sotial-link contacts__sotial-link_telegrm" href="#">tel</a>
           </div>
         </div>
-        <div class="contacts__map"></div>
+        <div id="contacts-map" class="contacts__map"></div>
       </div>
     </section>
   </main>

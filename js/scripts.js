@@ -284,6 +284,17 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
   }
 });
 
+// CONTACTS MAP
+ymaps.ready(init);
+
+function init(){
+  var myMap = new ymaps.Map(`contacts-map`, {
+      center: [55.759689, 37.616710],
+      zoom: 7,
+      controls: [`geolocationControl`, `zoomControl`],
+  });
+}
+
 //jQuery
 
 $(`document`).ready(function () {
@@ -298,6 +309,7 @@ $(`document`).ready(function () {
       scrollTop: offsetTop,
     }, 700);
   });
+  
   // TABS
   $(`.js-catalog-tabs`).tabs({
     active: 2,
