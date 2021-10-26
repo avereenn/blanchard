@@ -1449,7 +1449,7 @@
         </ul>
       </div>
       <div class="events-slider__pagination"></div>
-      <button class="events__expand-btn js-expand-btn">Все события</button>
+      <button class="events__expand-btn main-btn js-expand-btn">Все события</button>
     </section>
     <section id="editions" class="editions">
       <div class="container">
@@ -1807,21 +1807,30 @@
       <div class="contacts__wrapper">
         <div class="contacts__info ">
           <address class="contacts__address">
-            <b>Шоурум №4</b><br>
+            <b>Шоурум №4</b>
             Леонтьевский переулок, дом 5, строение 1
           </address>
           <form class="contacts__feedback contacts-feedback" action="#" method="GET">
-            <h3 class="contacts__small-title">Заказать обратный звонок</h3>
+            <h3 class="contacts-feedback__title">Заказать обратный звонок</h3>
             <label class="contacts-feedback__label sr-only" for="name">Введите имя</label>
             <input class="contacts-feedback__input" type="text" name="name" id="name" placeholder="Имя*">
             <label class="contacts-feedback__label sr-only" for="phone">Введите телефон</label>
             <input class="contacts-feedback__input" type="tel" name="phone" id="phone" placeholder="Телефон*">
-            <button class="contacts-feedback__submit" type="submit">Заказть</button>
+            <button class="contacts-feedback__submit main-btn" type="submit">Заказать</button>
           </form>
           <div class="contacts__one-click">
-            <h3 class="contacts__small-title">Связаться в один клик</h3>
-            <a class="contacts__sotial-link contacts__sotial-link_whatsapp" href="#">wa</a>
-            <a class="contacts__sotial-link contacts__sotial-link_telegrm" href="#">tel</a>
+            <h3 class="contacts__one-click-title">Связаться в один клик</h3>
+            <a class="contacts__sotial-link contacts__sotial-link_whatsapp" href="#">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8749 13.751C16.6249 13.626 15.3124 12.876 15.0624 12.8135C14.8124 12.6885 14.6249 12.6885 14.4374 12.9385C14.2499 13.1885 13.6874 13.8135 13.5624 13.9385C13.3749 14.126 13.2499 14.126 12.9999 14.001C12.7499 13.876 11.8749 13.5635 10.8749 12.5635C10.1249 11.8135 9.5624 10.9385 9.4374 10.626C9.3124 10.376 9.4374 10.1885 9.5624 10.0635C9.6874 9.93848 9.81239 9.75098 9.99989 9.62598C10.1874 9.50098 10.1874 9.37598 10.3124 9.18848C10.4374 9.00098 10.3749 8.87598 10.3124 8.68848C10.2499 8.50098 9.7499 7.18848 9.5624 6.62598C9.3749 6.06348 9.12489 6.18848 8.99989 6.12598C8.81239 6.12598 8.68739 6.06348 8.49989 6.06348C8.24989 6.06348 7.93739 6.18848 7.74989 6.37598C7.49989 6.62598 6.74989 7.25098 6.74989 8.56348C6.74989 9.87598 7.62489 11.251 7.74989 11.376C7.87489 11.5635 9.4999 14.4385 12.1874 15.626C14.8749 16.8135 14.8749 16.4385 15.3749 16.4385C15.8749 16.4385 16.9999 15.8135 17.2499 15.251C17.4999 14.626 17.4999 14.0635 17.4374 14.001C17.3124 14.001 17.1249 13.9385 16.8749 13.751ZM11.8749 20.1885C10.1249 20.1885 8.4999 19.6885 7.06239 18.751L3.68739 19.8135L4.81239 16.5635C3.74989 15.0635 3.12489 13.251 3.12489 11.376C3.12489 6.50098 7.06239 2.56348 11.9374 2.56348C16.8124 2.56348 20.6874 6.50098 20.6874 11.376C20.6874 16.251 16.7499 20.1885 11.8749 20.1885ZM11.8749 0.813477C6.0624 0.813477 1.31239 5.56348 1.31239 11.376C1.31239 13.3135 1.81239 15.1885 2.81239 16.8135L0.874893 22.501L6.74989 20.626C8.3124 21.501 10.0624 21.9385 11.8749 21.9385C17.6874 21.9385 22.4374 17.1885 22.4374 11.376C22.4374 5.56348 17.7499 0.813477 11.8749 0.813477Z" fill="white"/>
+              </svg>
+
+            </a>
+            <a class="contacts__sotial-link contacts__sotial-link_telegram" href="#">
+              <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.05311 7.7889L13.7167 2.7649C19.271 0.454701 20.425 0.0534209 21.1773 0.0401809C21.3428 0.0372609 21.7127 0.0782604 21.9523 0.2727C22.1547 0.436861 22.2103 0.658701 22.237 0.814301C22.2636 0.969901 22.2968 1.32458 22.2704 1.60166C21.9694 4.76406 20.667 12.4386 20.0045 15.9806C19.7241 17.4794 19.1725 17.9819 18.6377 18.0311C17.4762 18.138 16.5943 17.2635 15.4694 16.5261L11.006 13.528C9.03136 12.2268 10.3114 11.5116 11.4368 10.3428C11.7313 10.0368 16.8486 5.38226 16.9476 4.96002C16.9596 4.90722 16.9715 4.71042 16.8546 4.60642C16.7376 4.50242 16.565 4.53842 16.4404 4.5663C16.2639 4.60638 13.4519 6.46502 8.00436 10.1423C7.20616 10.6904 6.48315 10.9575 5.83543 10.9435C5.12131 10.9281 3.74767 10.5397 2.72651 10.2078C1.47399 9.80066 0.478513 9.58538 0.565233 8.89394C0.610353 8.53382 1.10631 8.16554 2.05307 7.78898L2.05311 7.7889Z" fill="white"/>
+              </svg>
+            </a>
           </div>
         </div>
         <div id="contacts-map" class="contacts__map"></div>
