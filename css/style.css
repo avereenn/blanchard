@@ -2239,9 +2239,6 @@ picture {
 
 .contacts__wrapper {
   display: flex;
-}
-
-.contacts__info {
   padding: 124px 122px 124px Max(160px, calc((100vw - 1600px)/2));
   background-color: #fff;
   border: 1px solid #cacaca;
@@ -2332,11 +2329,11 @@ picture {
 }
 
 .contacts__map {
-  width: 1220px;
+  width: 100%;
   height: 700px;
 }
 
-/*FOOTER*/
+/* FOOTER */
 
 .footer {
   display: flex;
@@ -2350,6 +2347,10 @@ picture {
 
 .footer__logo-link {
   margin-right: auto;
+}
+
+.footer__sotial-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* BREAKPOINTS */
@@ -2749,7 +2750,7 @@ picture {
   }
 
   /* CONTACTS 1440 */
-  .contacts__info {
+  .contacts__wrapper {
     padding-left: Max(50px, calc((100vw - 1170px)/2));
   }
 
@@ -3047,7 +3048,7 @@ picture {
   }
 
   /* CONTACTS 1000 */
-  .contacts__info {
+  .contacts__wrapper {
     padding-left: 50px;
   }
 
@@ -3115,6 +3116,8 @@ picture {
     padding-left: 14px;
     padding-right: 14px;
   }
+  
+  /* HEADER 500 */
 
   .header__container {
     padding-top: 12px;
@@ -3670,8 +3673,53 @@ picture {
   }
 
   /* CONTACTS 500 */
-  .contacts__info {
+  .contacts {
+    padding-bottom: 50px;
+  }
+  
+  .contacts__wrapper {
+    flex-direction: column;
+    padding: 0;
+    border: none;
+  }
+  .contacts__wrapper > *:not(.contacts__map) {
     padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .contacts__address {
+    order: 1;
+  }
+  
+  .contacts__map {
+    order: 2;
+    height: 200px;
+  }
+  
+  .contacts__feedback,
+  .contacts__one-click {
+    order: 3;
+  }
+  
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .footer > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer__sotial {
+    order: 1;
+  }
+  
+  .footer__logo-link {
+    order: 2;
+    width: 97px;
   }
 
 }
