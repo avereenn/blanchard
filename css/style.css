@@ -1845,7 +1845,6 @@ picture {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
   padding-left: 24px;
   line-height: 2;
   cursor: pointer;
@@ -3541,6 +3540,10 @@ picture {
   .editions-filter__list {
     max-height: max-content;
     flex-wrap: nowrap;
+  }
+  
+  .editions-filter__item_active {
+    order: -1;
   }
 
   .editions-filter .editions-filter__item {

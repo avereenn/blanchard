@@ -194,6 +194,17 @@ filterHeaderBtnEl.addEventListener(`click`, function () {
   filterCategoriesEl.classList.toggle(`editions-filter__fieldset_show`);
 });
 
+filterCategoriesEl.addEventListener(`change`, (event) => {
+  if(!event.target.classList.contains(`editions-filter__checkbox`)) return;
+  
+  if(event.target.checked) {
+    event.target.closest(`.editions-filter__item`).classList.add(`editions-filter__item_active`);
+    return;
+  }
+  
+  event.target.closest(`.editions-filter__item`).classList.remove(`editions-filter__item_active`);
+});
+
 //EDITIONS SWIPER
 const editionsSwiperProps = {
   pagination: {
@@ -315,7 +326,14 @@ function init(){
   });
   
   const placemark = new ymaps.Placemark([55.758468, 37.601088], null, {
-    preset: 'islands#redIcon',
+    iconLayout: 'default#image',
+    iconImageHref: 'img/sotial-icons/vk.svg',
+    iconImageSize: [40, 40],
+    iconImageOffset: [-14, -40],
+    iconShape: {
+      type: 'Circle',
+      radius: 20
+    },
   });
   
   myMap.geoObjects.add(placemark);
