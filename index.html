@@ -28,6 +28,10 @@
   <!-- TIPPYJS -->
   <script src="js/tippy/popper.min.js"></script>
   <script src="js/tippy/tippy-bundle.umd.js"></script>
+  
+  <!-- JUST-VALIDATE, INPUTMASK -->
+  <script src="js/justvalidate/just-validate.min.js"></script>
+  <script src="js/inputmask/inputmask.min.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scripts.js" defer></script>
@@ -1804,17 +1808,33 @@
       <div class="container">
         <h2 class="contacts__title title">Контакты</h2>
       </div>
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper container">
           <address class="contacts__address">
-            <b>Шоурум №4</b>
+            <h3 class="contacts__address-title">Шоурум №4</h3>
             Леонтьевский переулок, дом 5, строение 1
           </address>
-          <form class="contacts__feedback contacts-feedback" action="#" method="GET">
+          <form class="contacts__feedback contacts-feedback js-feedback-form" action="#" method="GET">
             <h3 class="contacts-feedback__title">Заказать обратный звонок</h3>
             <label class="contacts-feedback__label sr-only" for="name">Введите имя</label>
-            <input class="contacts-feedback__input" type="text" name="name" id="name" placeholder="Имя*">
+            <input
+              class="contacts-feedback__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Имя*"
+              required
+              data-validate-field="name"
+            >
             <label class="contacts-feedback__label sr-only" for="phone">Введите телефон</label>
-            <input class="contacts-feedback__input" type="tel" name="phone" id="phone" placeholder="Телефон*">
+            <input
+              class="contacts-feedback__input js-feedback-tel"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Телефон*"
+              required
+              data-validate-field="phone"
+            >
             <button class="contacts-feedback__submit main-btn" type="submit">Заказать</button>
           </form>
           <div class="contacts__one-click">

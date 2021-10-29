@@ -2236,13 +2236,21 @@ picture {
 }
 
 /*CONTACTS*/
+.contacts {
+  padding-bottom: 80px;
+}
 
 .contacts__wrapper {
+  position: relative;
   display: flex;
-  padding: 124px 122px 124px Max(160px, calc((100vw - 1600px)/2));
+  flex-direction: column;
   background-color: #fff;
-  border: 1px solid #cacaca;
+  border-top: 1px solid #cacaca;
   z-index: 1;
+}
+
+.contacts__wrapper > *:not(.contacts__map) {
+  max-width: 36%;
 }
 
 .contacts__address {
@@ -2254,7 +2262,7 @@ picture {
   line-height: 38px;
 }
 
-.contacts__address b {
+.contacts__address-title {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -2328,9 +2336,17 @@ picture {
   margin: auto;
 }
 
+.contacts__sotial-link_telegram svg {
+  margin-left: 7.5px;
+}
+
 .contacts__map {
-  width: 100%;
-  height: 700px;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  width: 64%;
+  border-left: 1px solid #cacaca;
 }
 
 /* FOOTER */
@@ -2343,6 +2359,11 @@ picture {
 
 .footer__sotial-list {
   display: flex;
+}
+
+.footer__sotial-link {
+  width: 44.6px;
+  height: 44.6px;
 }
 
 .footer__logo-link {
@@ -3051,6 +3072,9 @@ picture {
   .contacts__wrapper {
     padding-left: 50px;
   }
+  .contacts__map {
+    width: 45%;
+  }
 
 }
 
@@ -3674,17 +3698,23 @@ picture {
 
   /* CONTACTS 500 */
   .contacts {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
   
   .contacts__wrapper {
-    flex-direction: column;
     padding: 0;
-    border: none;
+    border-top: none;
   }
+  
+  .contacts__wrapper.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
   .contacts__wrapper > *:not(.contacts__map) {
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
   }
   
   .contacts__address {
@@ -3692,8 +3722,11 @@ picture {
   }
   
   .contacts__map {
+    position: relative;
     order: 2;
+    width: 100%;
     height: 200px;
+    border-left: none;
   }
   
   .contacts__feedback,
@@ -3715,6 +3748,11 @@ picture {
   
   .footer__sotial {
     order: 1;
+  }
+  
+  .footer__sotial-link svg {
+    width: 50px;
+    height: 50px;
   }
   
   .footer__logo-link {

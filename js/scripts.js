@@ -15,6 +15,9 @@ const expandBtnEl = document.querySelector(`.js-expand-btn`);
 const eventsListEl = document.querySelector(`.js-events-list`);
 const filterHeaderBtnEl = document.querySelector(`.js-filter-header-btn`);
 const filterCategoriesEl = document.querySelector(`.js-filter-categories`);
+const feedbackFormEl = document.querySelector(`.js-feedback-form`);
+const feedbackInputTelEl = document.querySelector(`.js-feedback-tel`);
+const inputmask = new Inputmask(`+7(999) 999-99-99`, {autoUnmask: true});
 
 // HEADER SELECTS CHOICES
 selectElems.forEach(select => {
@@ -33,8 +36,6 @@ const selectListElems = document.querySelectorAll(
 selectListElems.forEach(list => {
   new SimpleBar(list);
 });
-
-
 
 // HEADER BURGER
 
@@ -72,7 +73,6 @@ window.addEventListener(`click`, event => {
 
 // GALLERY SWIPER
 const gallerySwiper = new Swiper(`.gallery-slider`, {
-
   pagination: {
     el: '.gallery-slider__pages',
     type: `fraction`
@@ -88,6 +88,7 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
   grid: {
     rows: 1
   },
+  
   spaceBetween: 6,
 
   breakpoints: {
@@ -195,7 +196,6 @@ filterHeaderBtnEl.addEventListener(`click`, function () {
 
 //EDITIONS SWIPER
 const editionsSwiperProps = {
-
   pagination: {
     el: '.editions-slider__pages',
     type: `fraction`,
@@ -232,11 +232,12 @@ const editionsSwiperProps = {
     }
   }
 };
+
 const editionsSwiper = new Swiper(`.editions-slider`, editionsSwiperProps);
 
 window.addEventListener(`resize`, () => {
   const clientWidth = document.documentElement.clientWidth;
-  console.log(clientWidth);
+  
   (clientWidth <= 500) ?
       editionsSwiper.destroy(true, true) :
       new Swiper(`.editions-slider`, editionsSwiperProps);
@@ -284,15 +285,40 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
   }
 });
 
+// FORM VALIDATE & MASK
+inputmask.mask(feedbackInputTelEl);
+
+new window.JustValidate(`.js-feedback-form`, {
+
+  colorWrong: `#FF5C00`,
+  messages: {
+    name: `Как вас зовут?`,
+    phone: `Укажите ваш телефон`,
+  },
+
+  rules: {
+    phone: {
+      required: true,
+      phone: true,
+    },
+  },
+});
+
 // CONTACTS MAP
 ymaps.ready(init);
 
 function init(){
   var myMap = new ymaps.Map(`contacts-map`, {
-      center: [55.759689, 37.616710],
-      zoom: 7,
+      center: [55.758973, 37.603784],
+      zoom: 15,
       controls: [`geolocationControl`, `zoomControl`],
   });
+  
+  const placemark = new ymaps.Placemark([55.758468, 37.601088], null, {
+    preset: 'islands#redIcon',
+  });
+  
+  myMap.geoObjects.add(placemark);
 }
 
 //jQuery
