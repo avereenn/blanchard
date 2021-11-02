@@ -42,7 +42,6 @@ selectListElems.forEach(list => {
 function toggleNavMenu() {
   burgerBtnEl.classList.toggle(`header__burger_open`);
   menuEl.classList.toggle(`header__menu_open`);
-  document.body.classList.toggle(`hold`);
 }
 
 burgerBtnEl.addEventListener(`click`, toggleNavMenu);
@@ -319,24 +318,33 @@ new window.JustValidate(`.js-feedback-form`, {
 ymaps.ready(init);
 
 function init(){
-  var myMap = new ymaps.Map(`contacts-map`, {
+  const contactsMap = new ymaps.Map(`contacts-map`, {
       center: [55.758973, 37.603784],
       zoom: 15,
-      controls: [`geolocationControl`, `zoomControl`],
+      controls: [],
   });
   
-  const placemark = new ymaps.Placemark([55.758468, 37.601088], null, {
+  const placemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
     iconLayout: 'default#image',
     iconImageHref: 'img/sotial-icons/vk.svg',
     iconImageSize: [40, 40],
     iconImageOffset: [-14, -40],
-    iconShape: {
-      type: 'Circle',
-      radius: 20
-    },
   });
   
-  myMap.geoObjects.add(placemark);
+  contactsMap.geoObjects.add(placemark);
+  
+  contactsMap.controls.add('zoomControl', {
+    size: 'small',
+    float: 'none',
+    position: {
+      bottom: '50px',
+      right: '10px'
+    }
+  });
+  
+  contactsMap.controls.add('geolocationControl', {
+    float: 'right',
+  });
 }
 
 //jQuery
