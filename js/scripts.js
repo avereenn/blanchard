@@ -1,9 +1,12 @@
 `use strict`;
 
 const NO_PAINTER_INFO_ID = `#unknown-painter`;
-const selectElems = document.querySelectorAll(`.js-select`);
+const DIRECTIONS_ACTIVE_CLASS = `directions__item_active`;
+const selectEl = document.querySelector(`.js-select`);
 const burgerBtnEl = document.querySelector(`.js-burger`);
 const menuEl = document.querySelector(`.js-menu`);
+const directionsListEl = document.querySelector(`.js-directions-list`);
+const directionsAuthorListElems = document.querySelectorAll(`.directions__author-list`);
 const searchOpenBtnEl = document.querySelector(`.js-search-open`);
 const searchFormEl = document.querySelector(`.js-search-form`);
 const gallerySliderListEl = document.querySelector(`.js-gallery-slider-list`);
@@ -19,21 +22,34 @@ const feedbackFormEl = document.querySelector(`.js-feedback-form`);
 const feedbackInputTelEl = document.querySelector(`.js-feedback-tel`);
 const inputmask = new Inputmask(`+7(999) 999-99-99`, {autoUnmask: true});
 
-// HEADER SELECTS CHOICES
-selectElems.forEach(select => {
-  new Choices(select, {
-    searchEnabled: false,
-    itemSelectText: ``,
-    shouldSort: false
-  });
+directionsListEl.addEventListener(`click`, function(event) {
+  if(!event.target.classList.contains(`directions__link`)) return;
+
+  event.preventDefault();
+  const targetItemEl = event.target.closest(`.directions__item`);
+  const itemElems = this.querySelectorAll(`.directions__item`);
+
+  itemElems.forEach(item => {
+    if(item === targetItemEl && !item.classList.contains(DIRECTIONS_ACTIVE_CLASS)) {
+      item.classList.add(DIRECTIONS_ACTIVE_CLASS);
+      return;
+    }
+
+    item.classList.remove(DIRECTIONS_ACTIVE_CLASS);
+  })
 });
 
-// HEADER SELECTS SIMPLEBAR
-const selectListElems = document.querySelectorAll(
-  `.header__select-item .choices__list--dropdown`
-);
+// window.addEventListener(`click`, (event) => {
+//   const directionsItemActiveEl = document.querySelector(`.${DIRECTIONS_ACTIVE_CLASS}`);
+//   const directionsParentItem = event.target.closest(`.directions__item`);
+  
+//   if(!!directionsItemActiveEl && !directionsParentItem) {
+//     directionsItemActiveEl.classList.remove(DIRECTIONS_ACTIVE_CLASS);
+//   }
+// });
 
-selectListElems.forEach(list => {
+// HEADER SELECTS SIMPLEBAR
+directionsAuthorListElems.forEach(list => {
   new SimpleBar(list);
 });
 
@@ -68,6 +84,13 @@ window.addEventListener(`click`, event => {
 
   searchOpenBtnEl.classList.remove(`header__search-open_active`);
   searchFormEl.classList.remove(`search-form_show`);
+});
+
+// GALLERY SELECT CHOICES
+new Choices(selectEl, {
+  searchEnabled: false,
+  itemSelectText: ``,
+  shouldSort: false
 });
 
 // GALLERY SWIPER
