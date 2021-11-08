@@ -2359,7 +2359,7 @@ picture {
 .footer__sotial-item:not(:last-child) {
   margin-right: 30px;
 }
-
+/*
 /* BREAKPOINTS */
 
 @media(max-width: 1700px) {
@@ -3746,4 +3746,4 @@ picture {
     width: 97px;
   }
 
-}
+}*/

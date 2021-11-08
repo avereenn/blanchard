@@ -22,6 +22,8 @@ const feedbackFormEl = document.querySelector(`.js-feedback-form`);
 const feedbackInputTelEl = document.querySelector(`.js-feedback-tel`);
 const inputmask = new Inputmask(`+7(999) 999-99-99`, {autoUnmask: true});
 
+
+// DROPDOWNS
 directionsListEl.addEventListener(`click`, function(event) {
   if(!event.target.classList.contains(`directions__link`)) return;
 
@@ -39,14 +41,13 @@ directionsListEl.addEventListener(`click`, function(event) {
   })
 });
 
-// window.addEventListener(`click`, (event) => {
-//   const directionsItemActiveEl = document.querySelector(`.${DIRECTIONS_ACTIVE_CLASS}`);
-//   const directionsParentItem = event.target.closest(`.directions__item`);
-  
-//   if(!!directionsItemActiveEl && !directionsParentItem) {
-//     directionsItemActiveEl.classList.remove(DIRECTIONS_ACTIVE_CLASS);
-//   }
-// });
+window.addEventListener(`click`, (event) => {
+  if(!event.target.closest(`.directions__item`)) {
+    document.querySelectorAll(`.directions__item`).forEach(item => {
+      item.classList.remove(DIRECTIONS_ACTIVE_CLASS);
+    });
+  }
+});
 
 // HEADER SELECTS SIMPLEBAR
 directionsAuthorListElems.forEach(list => {
@@ -161,7 +162,8 @@ galleryModalEl.addEventListener(`click`, function (event) {
   document.body.classList.remove(`hold`);
 });
 
-// PAINTER-LINK-CLICK
+// PAINTER-LINK CLICK
+
 catalogTabsEl.addEventListener(`click`, function (event) {
   if (!event.target.classList.contains(`accordion__painter-link`)) return;
   event.preventDefault();
@@ -174,7 +176,7 @@ catalogTabsEl.addEventListener(`click`, function (event) {
   const cards = parentTabEl.querySelectorAll(`.painter-info`);
   let targetCard;
 
-  if (cardId === NO_PAINTER_INFO_ID) {
+  if (cardId.startsWith(NO_PAINTER_INFO_ID)) {
     targetCard = parentTabEl.querySelector(`.painter-info_empty`);
     targetCard.querySelector(`.js-painter-name`).textContent = painterName;
   } else targetCard = parentTabEl.querySelector(cardId);
@@ -187,6 +189,7 @@ catalogTabsEl.addEventListener(`click`, function (event) {
     (link === linkEl) ? link.classList.add(`accordion__painter-link_active`) : link.classList.remove(`accordion__painter-link_active`);
   })
 });
+
 
 //Обработчик кнопки "Все события"
 expandBtnEl.addEventListener(`click`, function () {
@@ -373,16 +376,28 @@ function init(){
 //jQuery
 
 $(`document`).ready(function () {
-  //плавные пепеходы по якорям
-  $(`.anchor`).on(`click`, function (event) {
+  // плавные пепеходы по якорям
+  function onScrollSmoothLinkClick(event) {
     event.preventDefault();
-
+  
     const href = $(this).attr(`href`);
     const offsetTop = $(href).offset().top;
-
+  
     $(`html, body`).animate({
       scrollTop: offsetTop,
     }, 700);
+  }
+  
+  // все переходы
+  $(`.anchor`).on(`click`, onScrollSmoothLinkClick);
+  
+  // переходы на мобильной версии
+  $(`.accordion__painter-link`).on(`click`, function(event) {
+    /**
+      *запускаем функцию плавного скролла в текущем контексте
+      *через таймер с нулевой задержкой, чтобы элемент сначала принял правильную позицию
+      */
+    if($(window).width() <= 500) setTimeout(() => onScrollSmoothLinkClick.call(this, event));
   });
   
   // TABS
