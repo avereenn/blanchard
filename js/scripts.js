@@ -1,7 +1,5 @@
 `use strict`;
 
-const NO_PAINTER_INFO_ID = `#unknown-painter`;
-const DIRECTIONS_ACTIVE_CLASS = `directions__item_active`;
 const selectEl = document.querySelector(`.js-select`);
 const burgerBtnEl = document.querySelector(`.js-burger`);
 const menuEl = document.querySelector(`.js-menu`);
@@ -20,11 +18,11 @@ const filterHeaderBtnEl = document.querySelector(`.js-filter-header-btn`);
 const filterCategoriesEl = document.querySelector(`.js-filter-categories`);
 const feedbackFormEl = document.querySelector(`.js-feedback-form`);
 const feedbackInputTelEl = document.querySelector(`.js-feedback-tel`);
-const inputmask = new Inputmask(`+7(999) 999-99-99`, {autoUnmask: true});
+const inputmask = new Inputmask(`+7(999) 999-99-99`, { autoUnmask: true });
 
 
 // DROPDOWNS
-directionsListEl.addEventListener(`click`, function(event) {
+directionsListEl.addEventListener(`click`, function (event) {
   if(!event.target.classList.contains(`directions__link`)) return;
 
   event.preventDefault();
@@ -32,19 +30,19 @@ directionsListEl.addEventListener(`click`, function(event) {
   const itemElems = this.querySelectorAll(`.directions__item`);
 
   itemElems.forEach(item => {
-    if(item === targetItemEl && !item.classList.contains(DIRECTIONS_ACTIVE_CLASS)) {
-      item.classList.add(DIRECTIONS_ACTIVE_CLASS);
+    if(item === targetItemEl && !item.classList.contains(`directions__item_active`)) {
+      item.classList.add(`directions__item_active`);
       return;
     }
 
-    item.classList.remove(DIRECTIONS_ACTIVE_CLASS);
+    item.classList.remove(`directions__item_active`);
   })
 });
 
 window.addEventListener(`click`, (event) => {
   if(!event.target.closest(`.directions__item`)) {
     document.querySelectorAll(`.directions__item`).forEach(item => {
-      item.classList.remove(DIRECTIONS_ACTIVE_CLASS);
+      item.classList.remove(`directions__item_active`);
     });
   }
 });
@@ -111,7 +109,7 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
   grid: {
     rows: 1
   },
-  
+
   spaceBetween: 6,
 
   breakpoints: {
@@ -140,7 +138,7 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
 gallerySliderListEl.addEventListener(`click`, event => {
   event.preventDefault();
   const link = event.target.closest(`.gallery-slider__link`);
-  if (!link) return;
+  if(!link) return;
   const src = link.getAttribute(`href`);
 
   galleryModalEl.classList.add(`gallery-modal_open`);
@@ -152,7 +150,7 @@ gallerySliderListEl.addEventListener(`click`, event => {
 });
 
 galleryModalEl.addEventListener(`click`, function (event) {
-  if (
+  if(
     !event.target.matches(`.gallery-modal__bg-btn`) &&
     !event.target.matches(`.gallery-modal__close`)
   )
@@ -165,7 +163,7 @@ galleryModalEl.addEventListener(`click`, function (event) {
 // PAINTER-LINK CLICK
 
 catalogTabsEl.addEventListener(`click`, function (event) {
-  if (!event.target.classList.contains(`accordion__painter-link`)) return;
+  if(!event.target.classList.contains(`accordion__painter-link`)) return;
   event.preventDefault();
 
   const linkEl = event.target;
@@ -176,7 +174,7 @@ catalogTabsEl.addEventListener(`click`, function (event) {
   const cards = parentTabEl.querySelectorAll(`.painter-info`);
   let targetCard;
 
-  if (cardId.startsWith(NO_PAINTER_INFO_ID)) {
+  if(cardId.startsWith(`#unknown-painter`)) {
     targetCard = parentTabEl.querySelector(`.painter-info_empty`);
     targetCard.querySelector(`.js-painter-name`).textContent = painterName;
   } else targetCard = parentTabEl.querySelector(cardId);
@@ -221,12 +219,12 @@ filterHeaderBtnEl.addEventListener(`click`, function () {
 
 filterCategoriesEl.addEventListener(`change`, (event) => {
   if(!event.target.classList.contains(`editions-filter__checkbox`)) return;
-  
+
   if(event.target.checked) {
     event.target.closest(`.editions-filter__item`).classList.add(`editions-filter__item_active`);
     return;
   }
-  
+
   event.target.closest(`.editions-filter__item`).classList.remove(`editions-filter__item_active`);
 });
 
@@ -273,17 +271,17 @@ const editionsSwiper = new Swiper(`.editions-slider`, editionsSwiperProps);
 
 window.addEventListener(`resize`, () => {
   const clientWidth = document.documentElement.clientWidth;
-  
+
   (clientWidth <= 500) ?
-      editionsSwiper.destroy(true, true) :
-      new Swiper(`.editions-slider`, editionsSwiperProps);
+    editionsSwiper.destroy(true, true) :
+    new Swiper(`.editions-slider`, editionsSwiperProps);
 });
 
 // PROJECTS TOOLTIPS
 const tooltipElems = document.querySelectorAll(`.projects__tooltip`)
-for(const tooltip of tooltipElems) {
+for (const tooltip of tooltipElems) {
   const message = tooltip.dataset.tooltip;
-  tippy(tooltip,{
+  tippy(tooltip, {
     content: message,
   });
 }
@@ -343,22 +341,22 @@ new window.JustValidate(`.js-feedback-form`, {
 // CONTACTS MAP
 ymaps.ready(init);
 
-function init(){
+function init() {
   const contactsMap = new ymaps.Map(`contacts-map`, {
-      center: [55.758973, 37.603784],
-      zoom: 15,
-      controls: [],
+    center: [55.758973, 37.603784],
+    zoom: 15,
+    controls: [],
   });
-  
+
   const placemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
     iconLayout: 'default#image',
     iconImageHref: 'img/sotial-icons/vk.svg',
     iconImageSize: [40, 40],
     iconImageOffset: [-14, -40],
   });
-  
+
   contactsMap.geoObjects.add(placemark);
-  
+
   contactsMap.controls.add('zoomControl', {
     size: 'small',
     float: 'none',
@@ -367,7 +365,7 @@ function init(){
       right: '10px'
     }
   });
-  
+
   contactsMap.controls.add('geolocationControl', {
     float: 'right',
   });
@@ -379,27 +377,27 @@ $(`document`).ready(function () {
   // плавные пепеходы по якорям
   function onScrollSmoothLinkClick(event) {
     event.preventDefault();
-  
+
     const href = $(this).attr(`href`);
     const offsetTop = $(href).offset().top;
-  
+
     $(`html, body`).animate({
       scrollTop: offsetTop,
     }, 700);
   }
-  
+
   // все переходы
   $(`.anchor`).on(`click`, onScrollSmoothLinkClick);
-  
+
   // переходы на мобильной версии
-  $(`.accordion__painter-link`).on(`click`, function(event) {
+  $(`.accordion__painter-link`).on(`click`, function (event) {
     /**
       *запускаем функцию плавного скролла в текущем контексте
       *через таймер с нулевой задержкой, чтобы элемент сначала принял правильную позицию
       */
     if($(window).width() <= 500) setTimeout(() => onScrollSmoothLinkClick.call(this, event));
   });
-  
+
   // TABS
   $(`.js-catalog-tabs`).tabs({
     active: 2,
