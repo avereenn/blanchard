@@ -167,6 +167,7 @@ picture {
 }
 
 .link {
+  align-self: flex-start;
   color: var(--main-color-3);
   transition: color .16s ease-in;
 }
@@ -241,9 +242,20 @@ picture {
   display: flex;
 }
 
+.slider__pages {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.slider__btns {
+  display: flex;
+}
+
 .slider__btn {
-  width: 30px;
-  height: 30px;
+  padding: 0;
+  color: #fff;
+  line-height: 0;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   transition: box-shadow .16s ease-in,
@@ -251,40 +263,41 @@ picture {
               background-color .16s ease-in;
 }
 
+.slider__btn-svg_prev {
+  transform: rotate(180deg);
+}
+
+.slider__btn-arrow {
+  stroke: currentColor;
+}
+
 .slider__btn:focus {
-  box-shadow: inset 0 0 0 2px var(--main-color-1);
   outline: 0;
+}
+
+.slider__btn:focus  .slider__btn-border {
+  stroke: #000;
 }
 
 .slider__btn:hover {
   color: #fff;
-  background-color: var(--main-color-2);
 }
 
-.slider__btn:active {
-  background-color: var(--main-color-1);
-  box-shadow: inset 0 0 0 2px var(--main-light-color);
+.slider__btn:hover .slider__btn-bg {
+  fill: var(--main-color-2);
 }
 
-.slider__btn:disabled {
-  color: #fff;
-  background-color: #666;
+.slider__btn:active .slider__btn-bg {
+  fill: var(--main-color-1);
 }
 
-.slider__btn::before {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-left: 3px;
-  border-color: currentColor transparent transparent currentColor;
-  border-style: solid;
-  border-width: 1px;
-  transform: rotate(-45deg);
+.slider__btn:active .slider__btn-border {
+  stroke: var(--main-light-color);
 }
 
-.slider__btn_next svg {
-  transform: rotate(180deg);
+.swiper-button-disabled {
+  opacity: .5;
+  pointer-events: none;
 }
 
 /*HEADER*/
@@ -488,8 +501,13 @@ picture {
   border: none;
 }
 
+.directions__arrow {
+  transition: transform .16s ease-in;
+}
+
 .directions__arrow path {
   stroke: currentColor;
+  transition: stroke .16s ease-in;
 }
 
 .directions__item:not(:last-child) {
@@ -643,6 +661,10 @@ picture {
 
 .directions__author-link[href="#carra"] {
   background-image: url(../img/dropdowns/futurism/carra.webp);
+}
+
+.directions__item_active .directions__arrow {
+  transform: rotate(180deg) translateY(25%);
 }
 
 .directions__item_active .directions__author-list {
@@ -1027,17 +1049,13 @@ picture {
   padding: 3px;
 }
 
-.slider__btns {
+.gallery-slider__btns {
   position: absolute;
-  top: -25px;
+  top: -24px;
   left: 0;
+  display: flex;
   padding-left: 10px;
   transform: translateY(-100%);
-}
-
-.slider__pages {
-  margin-left: 14px;
-  margin-right: 14px;
 }
 
 .gallery-slider__item {
@@ -1460,7 +1478,7 @@ picture {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 31px 0;
+  padding: 30.8px 0;
   font-family: inherit;
   font-weight: 600;
   font-size: 24px;
@@ -1469,7 +1487,7 @@ picture {
   background-color: transparent;
   border-color: transparent;
   border-radius: 0;
-  border-width: 0 0 1px 0;
+  border-width: 1px 0 1px 0;
   cursor: pointer;
   transition: border-color .16s ease-in;
 }
@@ -1478,14 +1496,9 @@ picture {
   transition: color .16s ease-in;
 }
 
-.accordion__btn-arrow {
-  position: relative;
-  width: 50px;
-  height: 50px;
+.accordion__spoiler {
   margin-left: auto;
-  border: 1px solid #999;
-  border-radius: 50%;
-  transition: background-color .16s ease-in;
+  transition: transform .16s ease-in;
 }
 
 .accordion__btn:focus {
@@ -1501,44 +1514,29 @@ picture {
   background-color: var(--main-color-2);
 }
 
-.accordion__btn:hover .accordion__btn-arrow {
-  background-color: #d1a9f0;
-}
-
-.accordion__btn:focus .accordion__btn-arrow {
-  background-color: #d1a9f0;
-}
-
 .accordion__btn:active .accordion__btn-text {
   color: var(--main-color-1);
 }
 
-.accordion__btn:active .accordion__btn-arrow {
-  background-color: var(--main-color-2);
-}
-
-.accordion__btn-arrow::before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  border-color: transparent #000 #000 transparent;
-  border-width: 2px;
-  border-style: solid;
-  transform: translate(-50%, -75%) rotate(45deg);
-  transition: transform .16s ease-in;
-}
-
-.accordion__btn.ui-state-active + .accordion__painters-list,
 .accordion__btn.ui-state-active {
+  border-top-color: var(--main-color-2);
   border-bottom-color: var(--main-color-2);
 }
 
-.accordion__btn.ui-state-active .accordion__btn-arrow::before {
-  transform: translate(-50%, -25%) rotate(225deg);
+.accordion__btn.ui-state-active .accordion__spoiler {
+  transform: rotate(180deg);
+}
+
+.accordion__btn.ui-state-active .accordion__spoiler-bg,
+.accordion__btn:hover .accordion__spoiler-bg,
+.accordion__btn:focus .accordion__spoiler-bg,
+.accordion__btn:active .accordion__spoiler-bg {
+  fill: var(--main-light-color);
+}
+
+.accordion__btn.ui-state-active .accordion__spoiler-border,
+.accordion__btn:active .accordion__spoiler-border {
+  stroke: var(--main-color-2);
 }
 
 .empty-content {
@@ -1597,11 +1595,10 @@ picture {
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
-  border-bottom: 1px solid transparent;
 }
 
 .accordion__painter-item {
-  margin-right: 62px;
+  margin-right: 60px;
 }
 
 .accordion__painter-link:hover {
@@ -1663,7 +1660,7 @@ picture {
 }
 
 .events__item:not(:nth-child(3n), :last-child) {
-  margin-right: auto;
+  margin-right: 50px;
 }
 
 .events__list_show {
@@ -1827,6 +1824,7 @@ picture {
   position: relative;
   display: flex;
   align-items: center;
+  width: fit-content;
   padding-left: 24px;
   line-height: 2;
   cursor: pointer;
@@ -1962,8 +1960,9 @@ picture {
 }
 
 .editions-slider__btns {
-  top: -18px;
-  left: 0;
+  position: absolute;
+  top: -50px;
+  left: 2px;
   padding-left: 0;
 }
 
@@ -2033,7 +2032,7 @@ picture {
 .product__order-btn {
   position: relative;
   width: max-content;
-  padding: 6px 20px 8px 20px;
+  padding: 6px 20px 6px 20px;
   color: inherit;
   font-family: inherit;
   font-size: 16px;
@@ -2110,9 +2109,15 @@ picture {
               color .16s ease-out;
 }
 
+.projects__tooltip-i {
+  fill: currentColor;
+  transition: fill .16s ease-out;
+}
+
 .projects__tooltip:hover,
 .projects__tooltip:focus {
-  background-color: var(--main-color-3);
+  background-color: var(--main-light-color);
+  outline: none;
 }
 
 .projects__tooltip:active {
@@ -3372,17 +3377,6 @@ picture {
     font-family: inherit;
     font-size: 18px;
     line-height: 28px;
-  }
-
-  .accordion__btn-arrow {
-    width: 30px;
-    height: 30px;
-  }
-
-  .accordion__btn-arrow::before {
-    width: 8px;
-    height: 8px;
-    border-width: 1px;
   }
 
   .accordion__painters-list {
