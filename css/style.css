@@ -340,7 +340,7 @@ picture {
 
 .header__burger {
   display: none;
-  width: 28px;
+  width: 26px;
   height: 28px;
   padding-left: 0;
   padding-right: 0;
@@ -693,7 +693,8 @@ picture {
   padding-top: 2px;
 }
 
-.search-form__submit {
+.search-form__submit,
+.header__search-open {
   position: relative;
   height: 20px;
   width: 20px;
@@ -705,16 +706,17 @@ picture {
   cursor: pointer;
 }
 
-.search-form__submit::before {
+.search-form__submit::before,
+.header__search-open::before {
   content: '';
   position: absolute;
-  bottom: -3px;
-  left: -4px;
+  bottom: 0;
+  left: 0;
   display: block;
   height: 2px;
   width: 8px;
   background-color: currentColor;
-  transform: rotate(-45deg);
+  transform: translate(-4px, 1px) rotate(-45deg);
 }
 
 .search-form__input {
@@ -733,11 +735,13 @@ picture {
 
 .search-form:hover .search-form__input,
 .search-form:hover .search-form__submit,
-.search-form__submit:hover {
+.search-form__submit:hover,
+.header__search-open:hover {
   color: var(--main-color-3);
 }
 
-.search-form__submit:focus {
+.search-form__submit:focus,
+.header__search-open:focus {
   outline: var(--main-color-1) solid 2px;
   outline-offset: 6px;
 }
@@ -2533,18 +2537,18 @@ picture {
 
   .header__search-open {
     order: 3;
-    transition: opacity .16s ease-out, visibility .32s ease-out;
+    transition: opacity .16s ease-out,
+                visibility .32s ease-out;
   }
 
-  .search-form__submit:not(.header__search-open) {
+  .search-form__submit {
     margin-right: 10px;
   }
 
   .header__search-open::before,
   .search-form__submit::before {
-    bottom: -1px;
-    left: -6px;
     width: 10px;
+    transform: translate(-6px, 0px) rotate(-45deg);
   }
 
   .header__search-open_active {
@@ -2554,7 +2558,7 @@ picture {
 
   /* HERO 1440 */
   .hero__info {
-    padding-top: 212px;
+    padding-top: 112px;
     padding-bottom: 115px;
   }
 
@@ -2730,6 +2734,18 @@ picture {
 @media(max-width: 1000px) {
 
   /* HEADER 1000 */
+  .header__search-open {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+    border-width: 3px;
+  }
+
+  .header__search-open::before {
+    height: 3px;
+    transform: translate(-6px, 3px) rotate(-45deg);
+  }
+
   .header__search-open::after {
     content: '';
     position: absolute;
@@ -2742,15 +2758,15 @@ picture {
   .header__search-open_active {
     position: relative;
     color: #b2b2b2;
-    visibility: visible;
     opacity: 1;
     border: none;
     border-radius: 0;
+    visibility: visible;
     z-index: 9;
   }
 
   .header__search-open_active::before {
-    transform-origin: left top;
+    transform-origin: center;
   }
 
   .header__search-open_active::after {
@@ -2758,7 +2774,8 @@ picture {
     transform: rotate(45deg);
   }
 
-  .header__search-open.header__search-open_active::before, .header__search-open.header__search-open_active::after {
+  .header__search-open.header__search-open_active::before,
+  .header__search-open.header__search-open_active::after {
     width: 33px;
     height: 4px;
     left: 0;
