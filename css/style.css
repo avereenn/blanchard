@@ -2183,14 +2183,11 @@ picture {
 }
 
 /*CONTACTS*/
-.contacts {
-  padding-bottom: 80px;
-}
-
 .contacts__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-bottom: 80px;
   background-color: #fff;
   border-top: 1px solid #cacaca;
 }
@@ -2497,10 +2494,13 @@ picture {
     margin-top: 35px;
     margin-bottom: 25px;
     padding: 0 0 6px 6px;
-    max-width: 0;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .16s ease-in, max-width .32s ease-in, visibility .32s ease-in;
+    transform: scale(0);
+    transform-origin: center right;
+    transition: opacity .25s ease-in,
+                transform .25s ease-in,
+                visibility .25s ease-in;
   }
 
   .search-form__input {
@@ -2516,11 +2516,11 @@ picture {
   }
 
   .search-form_show {
-    max-width: 100vw;
+    z-index: 9;
     background-color: #18171b;
     opacity: 1;
+    transform: scale(1);
     visibility: visible;
-    z-index: 9;
   }
 
   .header__search-open,
@@ -3538,6 +3538,7 @@ picture {
 
   .editions-filter__label_check {
     position: absolute;
+    width: 100%;
     line-height: 38px;
     visibility: hidden;
     border-bottom: 1px solid #fff;
@@ -3685,12 +3686,8 @@ picture {
   }
 
   /* CONTACTS 500 */
-  .contacts {
-    padding-bottom: 30px;
-  }
-  
   .contacts__wrapper {
-    padding: 0;
+    padding-bottom: 30px;
     border-top: none;
   }
   
