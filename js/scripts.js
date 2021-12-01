@@ -68,22 +68,22 @@ menuEl.addEventListener(`click`, event => {
 });
 
 // HEADER SEARCH OPEN
-// searchOpenBtnEl.addEventListener(`click`, function () {
-//   this.classList.toggle(`header__search-open_active`);
-//   searchFormEl.classList.toggle(`search-form_show`);
-// });
+searchOpenBtnEl.addEventListener(`click`, function () {
+  this.classList.toggle(`header__search-open_active`);
+  searchFormEl.classList.toggle(`search-form_show`);
+});
 
-// window.addEventListener(`click`, event => {
-//   if(
-//     !searchFormEl.classList.contains(`search-form_show`) ||
-//     event.target.closest(`.search-form_show`) ||
-//     event.target === searchOpenBtnEl
-//   )
-//     return;
+window.addEventListener(`click`, event => {
+  if(
+    !searchFormEl.classList.contains(`search-form_show`) ||
+    event.target.closest(`.search-form_show`) ||
+    event.target === searchOpenBtnEl
+  )
+    return;
 
-//   searchOpenBtnEl.classList.remove(`header__search-open_active`);
-//   searchFormEl.classList.remove(`search-form_show`);
-// });
+  searchOpenBtnEl.classList.remove(`header__search-open_active`);
+  searchFormEl.classList.remove(`search-form_show`);
+});
 
 // GALLERY SELECT CHOICES
 new Choices(selectEl, {

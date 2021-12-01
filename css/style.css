@@ -375,6 +375,7 @@ picture {
 .burger::after {
   content: '';
   position: absolute;
+  top: 0;
   left: 0;
   display: inline-block;
   height: 3.5px;
@@ -384,13 +385,13 @@ picture {
 }
 
 .burger::before {
-  top: -13px;
   width: 36px;
+  transform: translateY(-13px);
 }
 
 .burger::after {
-  top: 11px;
   width: 24px;
+  transform: translateY(11px);
 }
 
 .header__nav {
@@ -2461,18 +2462,16 @@ picture {
 
   .header__burger_open .burger::before,
   .header__burger_open .burger::after {
-    top: 0;
-    left: -4px;
     width: 37px;
     height: 4px;
   }
 
   .header__burger_open .burger::before {
-    transform: rotate(45deg);
+    transform: translate(-4px, 0) rotate(45deg);
   }
 
   .header__burger_open .burger::after {
-    transform: rotate(-45deg);
+    transform: translate(-4px, 0) rotate(-45deg);
   }
 
   .header__bottom {
@@ -2749,10 +2748,21 @@ picture {
   .header__search-open::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
+    left: 0;
     display: block;
     width: 0;
-    transform-origin: bottom left;
+    background-color: currentColor;
+    opacity: 0;
+    transform: translate(-4.5px, -50%) rotate(45deg);
+    visibility: hidden;
+  }
+  
+  .header__search-open::before,
+  .header__search-open::after {
+    transform-origin: center;
+    transition: width .2s ease-in,
+                transform .2s ease-in;
   }
 
   .header__search-open_active {
@@ -2764,22 +2774,20 @@ picture {
     visibility: visible;
     z-index: 9;
   }
-
+  
   .header__search-open_active::before {
-    transform-origin: center;
+    transform: translate(-4.5px, calc(-12px + 50%)) rotate(-45deg);
   }
 
   .header__search-open_active::after {
-    background-color: currentColor;
-    transform: rotate(45deg);
+    opacity: 1;
+    visibility: visible;
   }
 
-  .header__search-open.header__search-open_active::before,
-  .header__search-open.header__search-open_active::after {
+  .header__search-open_active::before,
+  .header__search-open_active::after {
     width: 33px;
     height: 4px;
-    left: 0;
-    transition: width .2s ease-in;
   }
 
   .header__bottom .container {
@@ -3118,33 +3126,39 @@ picture {
     height: 15px;
   }
 
-  .header__burger_open .burger::before, .header__burger_open .burger::after {
-    width: 18px;
-    height: 2px;
-  }
-
-  .header__burger_open .burger::after {
-    margin-top: 4.5px;
-  }
-
   .burger {
     width: 15.6px;
     height: 2px;
     vertical-align: super;
   }
 
-  .burger::before, .burger::after {
+  .burger::before,
+  .burger::after {
     height: 2px;
   }
 
   .burger::before {
-    margin-bottom: 4.5px;
     width: 20px;
+    transform: translateY(-6.5px);
   }
 
   .burger::after {
-    margin-top: 4.5px;
     width: 13.33px;
+    transform: translateY(6.5px);
+  }
+  
+  .header__burger_open .burger::before,
+  .header__burger_open .burger::after {
+    width: 18px;
+    height: 2px;
+  }
+  
+  .header__burger_open .burger::before {
+    transform: translate(-1.5px, 0) rotate(-45deg);
+  }
+  
+  .header__burger_open .burger::after {
+    transform: translate(-1.5px, 0) rotate(45deg);
   }
 
   .header__logo-link {
@@ -3175,21 +3189,32 @@ picture {
     line-height: 16px;
   }
 
-  .header__search-open, .search-form__submit {
+  .header__search-open,
+  .search-form__submit {
     width: 14.5px;
     height: 14.5px;
     border-width: 1.3px;
   }
 
-  .header__search-open::before, .search-form__submit::before {
+  .header__search-open::before,
+  .search-form__submit::before {
     width: 5px;
     height: 1.3px;
-    left: -2px;
+    transform: translate(-2.6px, 1.3px) rotate(-45deg);
   }
 
-  .header__search-open.header__search-open_active::before, .header__search-open.header__search-open_active::after {
+  .header__search-open_active::before,
+  .header__search-open_active::after {
     width: 18px;
     height: 2px;
+  }
+  
+  .header__search-open_active::before {
+    transform: translate(-1.8px, calc(-7.3px + 50%)) rotate(-45deg);
+  }
+  
+  .header__search-open_active::after {
+    transform: translate(-1.8px, -50%) rotate(45deg);
   }
 
   .header__bottom .container {
