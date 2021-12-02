@@ -1474,6 +1474,7 @@ picture {
 .accordion__btn:focus .accordion__spoiler-circle,
 .accordion__btn:active .accordion__spoiler-circle {
   fill: var(--main-light-color);
+  stroke: var(--main-light-color);
 }
 
 .accordion__btn.ui-state-active .accordion__spoiler-circle,
@@ -1910,6 +1911,7 @@ picture {
   position: absolute;
   top: -49px;
   left: 1px;
+  width: fit-content;
   padding-left: 0;
 }
 
