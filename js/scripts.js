@@ -113,7 +113,7 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
   spaceBetween: 6,
 
   breakpoints: {
-    500: {
+    501: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       grid: {
@@ -205,7 +205,7 @@ const eventsSwiper = new Swiper(`.events-slider`, {
   spaceBetween: 6,
 
   breakpoints: {
-    500: {
+    501: {
       enabled: false,
       spaceBetween: ``,
     }
@@ -299,7 +299,7 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
   spaceBetween: 6,
 
   breakpoints: {
-    500: {
+    501: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
@@ -395,7 +395,7 @@ $(`document`).ready(function () {
       *запускаем функцию плавного скролла в текущем контексте
       *через таймер с нулевой задержкой, чтобы элемент сначала принял правильную позицию
       */
-    if($(window).width() <= 500) setTimeout(() => onScrollSmoothLinkClick.call(this, event));
+    if($(window).width() <= 1000) setTimeout(() => onScrollSmoothLinkClick.call(this, event));
   });
 
   // TABS

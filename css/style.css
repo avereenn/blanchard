@@ -249,6 +249,7 @@ picture {
 
 .slider__btns {
   display: flex;
+  align-items: flex-start;
 }
 
 .slider__btn {
@@ -1683,10 +1684,8 @@ picture {
 }
 
 .events__expand-btn {
-  margin-left: auto;
-  margin-right: auto;
+  padding: 16px 36px 14px 33px;
 }
-
 
 /*EDITIONS*/
 .editions {
@@ -1751,7 +1750,7 @@ picture {
 .editions-filter__title {
   font-size: 16px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 32px;
 }
 
 .editions-filter__fieldset {
@@ -1763,7 +1762,7 @@ picture {
 }
 
 .editions-filter__fieldset:first-child {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 .editions-filter__list {
@@ -1898,7 +1897,7 @@ picture {
 
 .editions-filter__price-field::placeholder {
   color: inherit;
-  font: inherit;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* EDITIONS SLIDER */
@@ -1914,7 +1913,7 @@ picture {
 
 .editions-slider__btns {
   position: absolute;
-  top: -49px;
+  top: -48px;
   left: 1px;
   width: fit-content;
   padding-left: 0;
@@ -2035,6 +2034,10 @@ picture {
 .projects {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.projects__title {
+  margin-bottom: 18px;
 }
 
 .projects__text {
@@ -2371,7 +2374,7 @@ picture {
 
   /* PROJECTS 1700 */
   .projects__partner-img {
-    transform: scale(1);
+    transform: scale(.86);
   }
 
 }
@@ -2675,11 +2678,11 @@ picture {
 
   /* EVENTS 1440 */
   .events__item {
-    flex: 0 0 calc((100% - 50px)/3);
+    flex: 0 0 calc((100% - 54px)/3);
   }
 
   .events__item:not(:nth-child(3n), :last-child) {
-    margin-right: 25px;
+    margin-right: 27px;
   }
 
   .event__img {
@@ -2687,20 +2690,24 @@ picture {
   }
 
   .event__place {
-    padding: 16px 18px 2px 20px;
+    padding-top: 16px;
   }
 
   .event__info {
-    padding: 0 25px 48px 35px;
+    padding: 0 24px 50px 35px;
   }
 
   .event__title {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .event__text {
     padding-right: 8px;
-    padding-bottom: 27px;
+    padding-bottom: 28px;
+  }
+
+  .events__expand-btn {
+    padding: 15px 36px 15px 33px;
   }
 
   /* EDITIONS 1440*/
@@ -2710,6 +2717,23 @@ picture {
 
   .editions .container {
     padding-bottom: 80px;
+  }
+
+  .editions-filter__header {
+    margin-bottom: 0;
+  }
+
+  .editions-filter__fieldset:first-child {
+    margin-bottom: 27px;
+  }
+
+  .editions-filter__title_price {
+    margin-bottom: 7px;
+  }
+
+  .editions-filter__price-field {
+    padding: 5px 10px 1px 10px;
+    line-height: 32px;
   }
 
   .editions-slider {
@@ -2726,9 +2750,13 @@ picture {
     margin-bottom: 8px;
   }
 
+  .product__author {
+    line-height: 26px;
+  }
+
   /* PROJECTS 1440 */
   .projects__title {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
   }
 
   .projects__text {
@@ -2737,9 +2765,13 @@ picture {
 
   .projects-slider {
     width: calc(100% - 106px);
-    height: 128px;
+    height: 130px;
     padding-top: 2px;
     padding-bottom: 2px;
+  }
+
+  .projects-slider__title {
+    margin-bottom: 21px;
   }
 
   .projects-slider__item {
@@ -2815,6 +2847,7 @@ picture {
 
   .header__bottom .container {
     position: static;
+    padding: 0;
   }
 
   .search-form {
@@ -2833,10 +2866,6 @@ picture {
     width: 100%;
   }
 
-  .about-us__text {
-    padding-left: 2px;
-  }
-
   /* GALLERY 1000 */
   .gallery {
     padding-bottom: 68px;
@@ -2849,7 +2878,13 @@ picture {
 
   .gallery__filter {
     width: 42%;
-    margin-bottom: 165px;
+    margin-bottom: 107px;
+  }
+
+  .gallery__slider {
+    width: calc(100% + 6px);
+    margin-bottom: 19px;
+    margin-left: -3px;
   }
 
   .gallery-slider {
@@ -2857,12 +2892,7 @@ picture {
   }
 
   .gallery-slider__btns {
-    padding-left: 0;
-  }
-
-  .gallery__slider {
-    width: 100%;
-    margin-bottom: 20px;
+    left: 3px;
   }
 
   .gallery__info {
@@ -2892,10 +2922,9 @@ picture {
 
   .catalog-tabs__nav-list {
     left: auto;
-    right: 0;
-    top: -12px;
+    right: -2px;
+    top: -13px;
     width: 67%;
-    justify-content: space-between;
   }
 
   .catalog__accordion {
@@ -2903,7 +2932,7 @@ picture {
   }
 
   .catalog-tabs__nav-item:not(:last-child) {
-    margin-right: 0;
+    margin-right: 54px;
   }
 
   .catalog-tabs__tab-content {
@@ -2919,7 +2948,7 @@ picture {
   }
 
   .accordion__painter-item {
-    margin-right: 8.2%;
+    margin-right: 59px;
   }
 
   .catalog-tabs__tab-info {
@@ -2946,11 +2975,11 @@ picture {
 
   /* EVENTS 1000 */
   .events {
-    margin-bottom: 84px;
+    margin-bottom: 80px;
   }
 
   .events__item {
-    flex: 0 0 calc((100% - 32px)/2);
+    flex: 0 0 calc((100% - 34px)/2);
     margin-bottom: 50px;
   }
 
@@ -2967,11 +2996,23 @@ picture {
   }
 
   .events__item:not(:nth-child(2n), :last-child) {
-    margin-right: auto;
+    margin-right: 34px;
+  }
+
+  .event__info {
+    padding-bottom: 49px;
+  }
+
+  .event__place {
+    padding-right: 17px;
+  }
+
+  .event__title {
+    margin-bottom: 2px;
   }
 
   .event__text {
-    padding-bottom: 60px;
+    padding-bottom: 62px;
   }
 
   .events__list_show .events__item {
@@ -2988,7 +3029,8 @@ picture {
   }
 
   .editions .container {
-    padding-bottom: 70px;
+    padding-top: 84px;
+    padding-bottom: 74px;
   }
 
   .editions__wrapper {
@@ -3000,19 +3042,20 @@ picture {
     margin-bottom: 50px;
   }
 
+  .editions-filter__fieldset:first-child {
+    margin-bottom: 25px;
+  }
+
   .editions-filter__list {
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-content: flex-start;
     width: 100%;
-    max-height: 150px;
+    max-height: 160px;
   }
 
   .editions-filter__item:not(:nth-last-child(-n + 4)) {
-    margin-right: 52px;
-  }
-
-  .editions-filter__title_price {
-    margin-bottom: 8px;
+    margin-right: 104px;
+    max-width: 154px;
   }
 
   .editions-filter__price {
@@ -3023,15 +3066,16 @@ picture {
     position: relative;
     top: auto;
     left: auto;
-    margin-bottom: 19px;
+    margin-bottom: 15px;
     transform: none;
   }
 
   .editions-slider {
     width: 626px;
     height: 452px;
-    padding-left: 6px;
     padding-right: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
   }
 
   .editions-slider__item {
@@ -3040,7 +3084,15 @@ picture {
   }
 
   .product__img {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
+  }
+
+  .product__author {
+    line-height: 28px;
+  }
+
+  .product__order-btn {
+    padding: 6px 19px 8px 20px;
   }
 
   /* PROJECTS 1000 */
@@ -3053,12 +3105,19 @@ picture {
   }
 
   .projects-slider__title {
-    margin-left: -3px;
     margin-bottom: 27px;
   }
 
   .projects-slider__item {
     flex: 0 0 calc((100% - 34px)/2);
+  }
+
+  .projects__partner-link {
+    padding: 0 25px;
+  }
+
+  .projects__partner-img {
+    transform: none;
   }
 
   /* CONTACTS 1000 */
@@ -3082,11 +3141,20 @@ picture {
     top: auto;
     left: auto;
     right: auto;
+    width: 100%;
     transform: none;
+  }
+
+  .catalog-tabs__nav-item:not(:last-child) {
+    margin-right: auto;
   }
 
   .accordion__painters-list {
     max-height: 440px;
+  }
+
+  .accordion__painter-item {
+    margin-right: 16px;
   }
 
   /* EVENTS 760 */
@@ -3108,6 +3176,10 @@ picture {
     height: 400px;
   }
 
+  .editions-filter__list {
+    align-content: stretch;
+  }
+
   .editions-filter__item:not(:nth-last-child(-n + 4)) {
     margin-right: auto;
   }
@@ -3118,6 +3190,11 @@ picture {
 
   .product__name {
     max-width: 100%;
+  }
+
+  /* PROJECTS 760 */
+  .projects__partner-link {
+    padding: 0 12px;
   }
 }
 
@@ -3401,7 +3478,6 @@ picture {
   }
 
   .catalog-tabs__nav-list {
-    width: 100%;
     margin-bottom: 10px;
   }
 
