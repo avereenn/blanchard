@@ -493,11 +493,11 @@ picture {
   border: none;
 }
 
-.directions__arrow {
+.spoiler {
   transition: transform .16s ease-in;
 }
 
-.directions__arrow path {
+.arrow {
   stroke: currentColor;
   transition: stroke .16s ease-in;
 }
@@ -655,7 +655,7 @@ picture {
   background-image: url(../img/dropdowns/futurism/carra.webp);
 }
 
-.directions__item_active .directions__arrow {
+.directions__item_active .spoiler {
   transform: rotate(180deg) translateY(25%);
 }
 
@@ -1721,30 +1721,17 @@ picture {
   display: none;
   width: 100%;
   height: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  color: inherit;
   background-color: transparent;
   border-color: rgba(255,255,255,.5);
   border-style: solid;
   border-width: 1px 0 1px 0;
 }
 
-.editions-filter__header-btn::after {
-  content: '';
-  position: absolute;
-  top: 14px;
-  right: 3px;
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-width: 0 0 1px 1px;
-  border-color: #fff;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: transform .16s ease-in;
-}
-
-.editions-filter__fieldset_show .editions-filter__header-btn::after {
-  top: 16px;
-  transform: rotate(-225deg);
+.editions-filter__fieldset_show .spoiler {
+  transform: rotate(180deg) translateY(25%);
 }
 
 .editions-filter__title {
@@ -1783,8 +1770,7 @@ picture {
   transition: color .16s ease-in;
 }
 
-.editions-filter__checkbox:checked + .editions-filter__label,
-.editions-filter__checkbox:checked + .editions-filter__label .editions-filter__check-close {
+.editions-filter__checkbox:checked + .editions-filter__label {
   color: var(--main-color-2);
 }
 
@@ -1815,33 +1801,10 @@ picture {
   display: block;
 }
 
-.editions-filter__check-close {
-  position: relative;
-  display: none;
-  width: 20px;
-  height: 20px;
+.editions-filter__close {
+  display: inline-block;
   margin-left: auto;
-  color: inherit;
-}
-
-.editions-filter__check-close::before,
-.editions-filter__check-close::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  display: block;
-  width: 16px;
-  height: 1px;
-  background-color: currentColor;
-}
-
-.editions-filter__check-close::before {
-  transform: rotate(-45deg);
-}
-
-.editions-filter__check-close::after {
-  transform: rotate(45deg);
+  opacity: 0;
 }
 
 .editions-filter__label_check:hover,
@@ -3337,7 +3300,6 @@ picture {
     padding-bottom: 20px;
     margin-right: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
   }
 
   .search-form__submit {
@@ -3627,7 +3589,7 @@ picture {
 
   .editions .container {
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 44px;
   }
 
   .editions__title {
@@ -3640,6 +3602,7 @@ picture {
 
   .editions-filter {
     max-width: 100%;
+    margin-bottom: 37px;
   }
 
   .editions-filter__header {
@@ -3648,12 +3611,9 @@ picture {
   }
 
   .editions-filter__header-btn {
-    display: block;
-  }
-
-  .editions-filter__header-btn::after {
-    top: 13px;
-    right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .editions-filter__list {
@@ -3673,7 +3633,9 @@ picture {
   .editions-filter__label_check {
     position: absolute;
     width: 100%;
-    line-height: 38px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    line-height: 32px;
     visibility: hidden;
     border-bottom: 1px solid #fff;
     opacity: 0;
@@ -3681,30 +3643,26 @@ picture {
   }
 
   .editions-filter__label_check::before {
-    top: 14px;
+    top: 13px;
   }
 
   .editions-filter__label_check::after {
-    top: 18px;
+    top: 17px;
   }
 
   .editions-filter__fieldset_show .editions-filter__label_check,
   .editions-filter__checkbox:checked + .editions-filter__label {
-  position: relative;
-  visibility: visible;
-  opacity: 1;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
   }
 
-  .editions-filter__checkbox:checked + .editions-filter__label .editions-filter__check-close {
-  display: inline-block;
+  .editions-filter__checkbox:checked + .editions-filter__label .editions-filter__close {
+    opacity: 1;
   }
 
   .editions-filter__fieldset:first-child {
-    margin-bottom: 20px;
-  }
-
-  .editions-filter {
-    margin-bottom: 40px;
+    margin-bottom: 18px;
   }
 
   .editions-filter__price {
@@ -3766,11 +3724,11 @@ picture {
 
   .product__name {
     margin-right: 0;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .product__title {
-    line-height: 14px;
+    line-height: 15px;
   }
 
   .product__author {
