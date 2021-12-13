@@ -3299,7 +3299,7 @@ picture {
     padding-right: 64px;
     padding-bottom: 20px;
     margin-right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   .search-form__submit {
@@ -3754,18 +3754,18 @@ picture {
   }
 
   .projects__text {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
   /* PROJECTS SLIDER 500 */
   .projects-slider {
     align-items: center;
-    width: calc(100% - 96px);
-    height: 65px;
+    width: calc(100% - 94px);
+    height: 67px;
   }
 
   .projects-slider__title {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     font-size: 18px;
   }
 
@@ -3774,7 +3774,7 @@ picture {
   }
 
   .projects__partner-link {
-    padding: 0 42px;
+    padding: 0 45px;
   }
 
   /* CONTACTS 500 */
