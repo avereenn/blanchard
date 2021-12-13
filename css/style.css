@@ -2157,22 +2157,20 @@ picture {
 
 /*CONTACTS*/
 .contacts__wrapper {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  padding-bottom: 80px;
-  background-color: #fff;
-  border-top: 1px solid #cacaca;
 }
 
-.contacts__wrapper > *:not(.contacts__map) {
-  max-width: 36%;
+.contacts__info {
+  min-width: 682px;
+  padding: 123px 122px 122px Max(160px, calc((100vw - 1760px)/2));
+  border-top: 1px solid #cacaca;
+  border-right: 1px solid #cacaca;
 }
 
 .contacts__address {
   display: flex;
   flex-direction: column;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   font-style: normal;
   font-weight: 400;
   line-height: 38px;
@@ -2188,23 +2186,30 @@ picture {
 .contacts-feedback {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .contacts-feedback__title,
 .contacts__one-click-title {
-  margin-bottom: 14px;
   font-size: 24px;
   font-weight: 400;
 }
 
+.contacts-feedback__title {
+  margin-bottom: 15px;
+}
+
 .contacts-feedback__input {
   width: 100%;
-  margin-bottom: 20px;
-  padding: 4px 24px;
+  margin-bottom: 24px;
+  padding: 3px 24px;
   line-height: 32px;
   border: 1px solid #333;
   border-radius: 100px;
+}
+
+.contacts-feedback__input_tel {
+  margin-bottom: 21px;
 }
 
 .contacts-feedback__input::placeholder {
@@ -2215,6 +2220,13 @@ picture {
 
 .contacts-feedback__submit {
   align-self: flex-start;
+  font-family: 'Open Sans';
+  padding: 15px 34px;
+  font-weight: 700;
+}
+
+.contacts__one-click-title {
+  margin-bottom: 13px;
 }
 
 .contacts__sotial-link {
@@ -2256,21 +2268,30 @@ picture {
   margin-left: 7.5px;
 }
 
+.contacts__map-wrapper {
+  flex: 0 1 63.5%;
+  width: calc(100% - 700px);
+}
+
+.contacts__map-address {
+  display: none;
+}
+
 .contacts__map {
-  position: absolute;
-  top: -1px;
-  right: 0;
-  bottom: 0;
-  width: 64%;
+  width: 100%;
+  height: 700px;
   border-left: 1px solid #cacaca;
 }
 
 /* FOOTER */
-
 .footer {
+  background-color: #000;;
+}
+.footer .container{
   display: flex;
   align-items: center;
-  background-color: #000;
+  padding-top: 47px;
+  padding-bottom: 50px;
 }
 
 .footer__sotial-list {
@@ -2287,7 +2308,7 @@ picture {
 }
 
 .footer__sotial-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 18px;
 }
 /*
 /* BREAKPOINTS */
@@ -2742,7 +2763,7 @@ picture {
   }
 
   /* CONTACTS 1440 */
-  .contacts__wrapper {
+  .contacts__info {
     padding-left: Max(50px, calc((100vw - 1170px)/2));
   }
 
@@ -3085,11 +3106,8 @@ picture {
   }
 
   /* CONTACTS 1000 */
-  .contacts__wrapper {
+  .contacts__info {
     padding-left: 50px;
-  }
-  .contacts__map {
-    width: 45%;
   }
 
 }
