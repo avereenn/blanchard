@@ -343,16 +343,16 @@ ymaps.ready(init);
 
 function init() {
   const contactsMap = new ymaps.Map(`contacts-map`, {
-    center: [55.758973, 37.603784],
-    zoom: 15,
+    center: [55.758468, 37.601088],// [55.76031149432346, 37.63817938120783],
+    zoom: 14.25,
     controls: [],
   });
 
   const placemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
     iconLayout: 'default#image',
-    iconImageHref: 'img/sotial-icons/vk.svg',
-    iconImageSize: [40, 40],
-    iconImageOffset: [-14, -40],
+    iconImageHref: 'img/placemark.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-10, -10],
   });
 
   contactsMap.geoObjects.add(placemark);
