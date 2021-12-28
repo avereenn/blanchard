@@ -963,6 +963,7 @@ picture {
 
 .gallery__filter .choices__list--dropdown {
   top: 100%;
+  z-index: 10;
   height: max-content;
   max-height: 100vh;
   width: 100%;
@@ -2219,6 +2220,16 @@ picture {
   font-weight: 400;
 }
 
+.contacts-feedback__input:focus,
+.contacts-feedback__input:hover {
+  background-color: #eaeaea;
+  outline: none;
+}
+
+.conacts-feedback__input:active {
+  background-color: #fff;
+}
+
 .contacts-feedback__submit {
   align-self: flex-start;
   font-family: 'Open Sans';
@@ -3130,6 +3141,7 @@ picture {
   }
 
   .projects__partner-img {
+    max-height: 100%;
     transform: none;
   }
 
@@ -3868,10 +3880,24 @@ picture {
     display: none;
   }
   
+  .contacts__address {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .contacts__address-title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
   .contacts__wrapper > *:not(.contacts__map-wrapper),
   .contacts__address {
     padding-left: 14px;
     padding-right: 14px;
+  }
+  
+  .contacts__one-click-title {
+    font-size: 18px;
   }
 
   .contacts__map-wrapper {
@@ -3883,7 +3909,7 @@ picture {
     height: 200px;
   }
   
-  /* FOOTER */
+  /* FOOTER 500 */
   .footer .container {
     flex-direction: column;
     padding-top: 20px;

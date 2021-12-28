@@ -89,25 +89,25 @@ window.addEventListener(`click`, event => {
 new Choices(selectEl, {
   searchEnabled: false,
   itemSelectText: ``,
-  shouldSort: false
+  shouldSort: false,
 });
 
 // GALLERY SWIPER
 const gallerySwiper = new Swiper(`.gallery-slider`, {
   pagination: {
     el: '.gallery-slider__pages',
-    type: `fraction`
+    type: `fraction`,
   },
 
   navigation: {
     nextEl: '.gallery-slider__btn_next',
-    prevEl: '.gallery-slider__btn_prev'
+    prevEl: '.gallery-slider__btn_prev',
   },
 
   slidesPerView: 1,
   slidesPerGroup: 1,
   grid: {
-    rows: 1
+    rows: 1,
   },
 
   spaceBetween: 6,
@@ -117,19 +117,19 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
       slidesPerView: 2,
       slidesPerGroup: 2,
       grid: {
-        rows: 2
+        rows: 2,
       },
-      spaceBetween: 34
+      spaceBetween: 34,
     },
 
     1440: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       grid: {
-        rows: 2
+        rows: 2,
       },
-      spaceBetween: 50
-    }
+      spaceBetween: 50,
+    },
   }
 });
 
@@ -185,7 +185,7 @@ catalogTabsEl.addEventListener(`click`, function (event) {
 
   links.forEach(link => {
     (link === linkEl) ? link.classList.add(`accordion__painter-link_active`) : link.classList.remove(`accordion__painter-link_active`);
-  })
+  });
 });
 
 
@@ -278,7 +278,7 @@ window.addEventListener(`resize`, () => {
 });
 
 // PROJECTS TOOLTIPS
-const tooltipElems = document.querySelectorAll(`.projects__tooltip`)
+const tooltipElems = document.querySelectorAll(`.projects__tooltip`);
 for (const tooltip of tooltipElems) {
   const message = tooltip.dataset.tooltip;
   tippy(tooltip, {
@@ -291,7 +291,7 @@ for (const tooltip of tooltipElems) {
 const projectsSwiper = new Swiper(`.projects-slider`, {
   navigation: {
     nextEl: '.projects-slider__btn_next',
-    prevEl: '.projects-slider__btn_prev'
+    prevEl: '.projects-slider__btn_prev',
   },
 
   slidesPerView: 1,
@@ -319,12 +319,12 @@ const projectsSwiper = new Swiper(`.projects-slider`, {
   }
 });
 
-// FORM VALIDATE & MASK
+// JUSTVALIDATE & MASK
 inputmask.mask(feedbackInputTelEl);
 
 new window.JustValidate(`.js-feedback-form`, {
 
-  colorWrong: `#FF5C00`,
+  colorWrong: `#d11616`,
   messages: {
     name: `Как вас зовут?`,
     phone: `Укажите ваш телефон`,
@@ -402,7 +402,7 @@ $(`document`).ready(function () {
   $(`.js-catalog-tabs`).tabs({
     active: 2,
     show: { duration: 160 },
-    hide: { duration: 160 }
+    hide: { duration: 160 },
   });
 
   // ACCORDION
@@ -410,7 +410,7 @@ $(`document`).ready(function () {
     $(this).accordion({
       collapsible: true,
       header: `.accordion__btn`,
-      heightStyle: `content`
+      heightStyle: `content`,
     });
   });
 });
