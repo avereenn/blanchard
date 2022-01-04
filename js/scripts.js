@@ -23,14 +23,14 @@ const inputmask = new Inputmask(`+7(999) 999-99-99`, { autoUnmask: true });
 
 // DROPDOWNS
 directionsListEl.addEventListener(`click`, function (event) {
-  if(!event.target.classList.contains(`directions__link`)) return;
+  if (!event.target.classList.contains(`directions__link`)) return;
 
   event.preventDefault();
   const targetItemEl = event.target.closest(`.directions__item`);
   const itemElems = this.querySelectorAll(`.directions__item`);
 
   itemElems.forEach(item => {
-    if(item === targetItemEl && !item.classList.contains(`directions__item_active`)) {
+    if (item === targetItemEl && !item.classList.contains(`directions__item_active`)) {
       item.classList.add(`directions__item_active`);
       return;
     }
@@ -40,7 +40,7 @@ directionsListEl.addEventListener(`click`, function (event) {
 });
 
 window.addEventListener(`click`, (event) => {
-  if(!event.target.closest(`.directions__item`)) {
+  if (!event.target.closest(`.directions__item`)) {
     document.querySelectorAll(`.directions__item`).forEach(item => {
       item.classList.remove(`directions__item_active`);
     });
@@ -63,7 +63,7 @@ burgerBtnEl.addEventListener(`click`, toggleNavMenu);
 
 //выключаем меню при клике по ссылке
 menuEl.addEventListener(`click`, event => {
-  if(!event.target.classList.contains(`anchor`) || !menuEl.classList.contains(`header__menu_open`)) return;
+  if (!event.target.classList.contains(`anchor`) || !menuEl.classList.contains(`header__menu_open`)) return;
   toggleNavMenu();
 });
 
@@ -74,7 +74,7 @@ searchOpenBtnEl.addEventListener(`click`, function () {
 });
 
 window.addEventListener(`click`, event => {
-  if(
+  if (
     !searchFormEl.classList.contains(`search-form_show`) ||
     event.target.closest(`.search-form_show`) ||
     event.target === searchOpenBtnEl
@@ -95,13 +95,13 @@ new Choices(selectEl, {
 // GALLERY SWIPER
 const gallerySwiper = new Swiper(`.gallery-slider`, {
   pagination: {
-    el: '.gallery-slider__pages',
+    el: `.gallery-slider__pages`,
     type: `fraction`,
   },
 
   navigation: {
-    nextEl: '.gallery-slider__btn_next',
-    prevEl: '.gallery-slider__btn_prev',
+    nextEl: `.gallery-slider__btn_next`,
+    prevEl: `.gallery-slider__btn_prev`,
   },
 
   slidesPerView: 1,
@@ -138,7 +138,7 @@ const gallerySwiper = new Swiper(`.gallery-slider`, {
 gallerySliderListEl.addEventListener(`click`, event => {
   event.preventDefault();
   const link = event.target.closest(`.gallery-slider__link`);
-  if(!link) return;
+  if (!link) return;
   const src = link.getAttribute(`href`);
 
   galleryModalEl.classList.add(`gallery-modal_open`);
@@ -150,7 +150,7 @@ gallerySliderListEl.addEventListener(`click`, event => {
 });
 
 galleryModalEl.addEventListener(`click`, function (event) {
-  if(
+  if (
     !event.target.matches(`.gallery-modal__bg-btn`) &&
     !event.target.matches(`.gallery-modal__close`)
   )
@@ -163,7 +163,7 @@ galleryModalEl.addEventListener(`click`, function (event) {
 // PAINTER-LINK CLICK
 
 catalogTabsEl.addEventListener(`click`, function (event) {
-  if(!event.target.classList.contains(`accordion__painter-link`)) return;
+  if (!event.target.classList.contains(`accordion__painter-link`)) return;
   event.preventDefault();
 
   const linkEl = event.target;
@@ -174,7 +174,7 @@ catalogTabsEl.addEventListener(`click`, function (event) {
   const cards = parentTabEl.querySelectorAll(`.painter-info`);
   let targetCard;
 
-  if(cardId.startsWith(`#unknown-painter`)) {
+  if (cardId.startsWith(`#unknown-painter`)) {
     targetCard = parentTabEl.querySelector(`.painter-info_empty`);
     targetCard.querySelector(`.js-painter-name`).textContent = painterName;
   } else targetCard = parentTabEl.querySelector(cardId);
@@ -198,7 +198,7 @@ expandBtnEl.addEventListener(`click`, function () {
 // EVENTS SWIPER
 const eventsSwiper = new Swiper(`.events-slider`, {
   pagination: {
-    el: '.events-slider__pagination'
+    el: `.events-slider__pagination`
   },
 
   slidesPerView: 1,
@@ -218,9 +218,9 @@ filterHeaderBtnEl.addEventListener(`click`, function () {
 });
 
 filterCategoriesEl.addEventListener(`change`, (event) => {
-  if(!event.target.classList.contains(`editions-filter__checkbox`)) return;
+  if (!event.target.classList.contains(`editions-filter__checkbox`)) return;
 
-  if(event.target.checked) {
+  if (event.target.checked) {
     event.target.closest(`.editions-filter__item`).classList.add(`editions-filter__item_active`);
     return;
   }
@@ -231,13 +231,13 @@ filterCategoriesEl.addEventListener(`change`, (event) => {
 //EDITIONS SWIPER
 const editionsSwiperProps = {
   pagination: {
-    el: '.editions-slider__pages',
+    el: `.editions-slider__pages`,
     type: `fraction`,
   },
 
   navigation: {
-    nextEl: '.editions-slider__btn_next',
-    prevEl: '.editions-slider__btn_prev',
+    nextEl: `.editions-slider__btn_next`,
+    prevEl: `.editions-slider__btn_prev`,
   },
 
   breakpoints: {
@@ -290,8 +290,8 @@ for (const tooltip of tooltipElems) {
 
 const projectsSwiper = new Swiper(`.projects-slider`, {
   navigation: {
-    nextEl: '.projects-slider__btn_next',
-    prevEl: '.projects-slider__btn_prev',
+    nextEl: `.projects-slider__btn_next`,
+    prevEl: `.projects-slider__btn_prev`,
   },
 
   slidesPerView: 1,
@@ -349,25 +349,73 @@ function init() {
   });
 
   const placemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: 'img/placemark.svg',
+    iconLayout: `default#image`,
+    iconImageHref: `img/placemark.svg`,
     iconImageSize: [20, 20],
     iconImageOffset: [-10, -10],
   });
 
   contactsMap.geoObjects.add(placemark);
 
-  contactsMap.controls.add('zoomControl', {
-    size: 'small',
-    float: 'none',
-    position: {
-      bottom: '50px',
-      right: '10px'
+  // Создадим пользовательский макет ползунка масштаба.
+  const ZoomLayout = ymaps.templateLayoutFactory.createClass(
+    `<div class='contacts-map__zoom-btns'><button id='zoom-in' class='contacts-map__zoom-btn'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+          <path fill="#666" fill-rule="evenodd" d="M11 15H6v-4h5V6h4v5h5v4h-5v5h-4v-5zm0 0"/>
+        </svg>
+      </button><button id='zoom-out' class='contacts-map__zoom-btn'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+          <path fill="#666" fill-rule="evenodd" d="M6 11h14v4H6z"/>
+        </svg>
+      </button></div>`, {
+
+    // Переопределяем методы макета, чтобы выполнять дополнительные действия
+    // при построении и очистке макета.
+    build: function () {
+      // Вызываем родительский метод build.
+      ZoomLayout.superclass.build.call(this);
+
+      // Привязываем функции-обработчики к контексту и сохраняем ссылки
+      // на них, чтобы потом отписаться от событий.
+      this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
+      this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this);
+
+      // Начинаем слушать клики на кнопках макета.
+      $(`#zoom-in`).bind(`click`, this.zoomInCallback);
+      $(`#zoom-out`).bind(`click`, this.zoomOutCallback);
+    },
+
+    clear: function () {
+      // Снимаем обработчики кликов.
+      $(`#zoom-in`).unbind(`click`, this.zoomInCallback);
+      $(`#zoom-out`).unbind(`click`, this.zoomOutCallback);
+
+      // Вызываем родительский метод clear.
+      ZoomLayout.superclass.clear.call(this);
+    },
+
+    zoomIn: function () {
+      var map = this.getData().control.getMap();
+      map.setZoom(map.getZoom() + 1, { checkZoomRange: true });
+    },
+
+    zoomOut: function () {
+      var map = this.getData().control.getMap();
+      map.setZoom(map.getZoom() - 1, { checkZoomRange: true });
     }
+  }),
+    zoomControl = new ymaps.control.ZoomControl({ options: { layout: ZoomLayout } });
+
+  contactsMap.controls.add(zoomControl, {
+    float: `none`,
+    position: {
+      top: `260px`,
+      right: `10px`,
+    },
   });
 
-  contactsMap.controls.add('geolocationControl', {
-    float: 'right',
+  contactsMap.controls.add(`geolocationControl`, {
+    float: `right`,
   });
 }
 
@@ -395,7 +443,7 @@ $(`document`).ready(function () {
       *запускаем функцию плавного скролла в текущем контексте
       *через таймер с нулевой задержкой, чтобы элемент сначала принял правильную позицию
       */
-    if($(window).width() <= 1000) setTimeout(() => onScrollSmoothLinkClick.call(this, event));
+    if ($(window).width() <= 1000) setTimeout(() => onScrollSmoothLinkClick.call(this, event));
   });
 
   // TABS
