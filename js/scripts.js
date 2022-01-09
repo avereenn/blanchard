@@ -214,6 +214,9 @@ const eventsSwiper = new Swiper(`.events-slider`, {
 
 // EDITIONS FILTER
 filterHeaderBtnEl.addEventListener(`click`, function () {
+  filterCategoriesEl.classList.contains(`editions-filter__fieldset_show`) ?
+    this.title = `Свернуть список категорий` : this.title = `Раскрыть список категорий`;
+
   filterCategoriesEl.classList.toggle(`editions-filter__fieldset_show`);
 });
 
@@ -359,11 +362,11 @@ function init() {
 
   // Создадим пользовательский макет ползунка масштаба.
   const ZoomLayout = ymaps.templateLayoutFactory.createClass(
-    `<div class='contacts-map__zoom-btns'><button id='zoom-in' class='contacts-map__zoom-btn'>
+    `<div class='contacts-map__zoom-btns'><button id='zoom-in' class='contacts-map__zoom-btn' title='Приблизить'>
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
           <path fill="#666" fill-rule="evenodd" d="M11 15H6v-4h5V6h4v5h5v4h-5v5h-4v-5zm0 0"/>
         </svg>
-      </button><button id='zoom-out' class='contacts-map__zoom-btn'>
+      </button><button id='zoom-out' class='contacts-map__zoom-btn' title='Отдалить'>
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
           <path fill="#666" fill-rule="evenodd" d="M6 11h14v4H6z"/>
         </svg>
