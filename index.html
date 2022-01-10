@@ -2348,12 +2348,16 @@
           </address>
           <form class="contacts__feedback contacts-feedback js-feedback-form" action="#" method="GET">
             <h3 class="contacts-feedback__title">Заказать обратный звонок</h3>
+            <div class="contacts-feedback__input-wrapper">
             <label class="contacts-feedback__label sr-only" for="name">Введите имя</label>
             <input class="contacts-feedback__input" type="text" name="name" id="name" placeholder="Имя*" required
               data-validate-field="name">
+            </div>
+            <div class="contacts-feedback__input-wrapper">
             <label class="contacts-feedback__label sr-only" for="phone">Введите телефон</label>
             <input class="contacts-feedback__input contacts-feedback__input_tel js-feedback-tel" type="tel" name="phone"
               id="phone" placeholder="Телефон*" required data-validate-field="phone">
+            </div>
             <button class="contacts-feedback__submit main-btn" type="submit">Заказать</button>
           </form>
           <div class="contacts__oneclick">

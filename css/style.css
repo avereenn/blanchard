@@ -2204,6 +2204,10 @@ picture {
   margin-bottom: 16px;
 }
 
+.contacts-feedback__input-wrapper {
+  position: relative;
+}
+
 .contacts-feedback__input {
   width: 100%;
   margin-bottom: 23px;
@@ -2224,13 +2228,10 @@ picture {
   font-weight: 400;
 }
 
-.contacts-feedback__input:hover {
-  background-color: #eaeaea;
-}
-
+.contacts-feedback__input:hover,
 .contacts-feedback__input:focus {
-  outline: 1px solid var(--main-color-2);
-  outline-offset: 2px;
+  background-color: #eaeaea;
+  outline: none;
 }
 
 .conacts-feedback__input:active {
@@ -2242,6 +2243,16 @@ picture {
   font-family: 'Open Sans';
   padding: 15px 33px;
   font-weight: 700;
+}
+
+.contacts-feedback .js-validate-error-label {
+  position: absolute;
+  top: 0;
+  padding-left: 24px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  line-height: 14px;
+  transform: translateY(-100%);
 }
 
 .contacts__oneclick-title {
