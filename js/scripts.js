@@ -55,6 +55,8 @@ directionsAuthorListElems.forEach(list => {
 // HEADER BURGER
 
 function toggleNavMenu() {
+  burgerBtnEl.classList.contains(`header__burger_open`) ?
+    burgerBtnEl.title = `Открыть меню` : burgerBtnEl.title = `Закрыть меню`;
   burgerBtnEl.classList.toggle(`header__burger_open`);
   menuEl.classList.toggle(`header__menu_open`);
 }
@@ -69,6 +71,8 @@ menuEl.addEventListener(`click`, event => {
 
 // HEADER SEARCH OPEN
 searchOpenBtnEl.addEventListener(`click`, function () {
+  this.classList.contains(`header__search-open_active`) ? 
+    this.title = `Открыть форму поиска` : this.title = `Закрыть форму поиска`;
   this.classList.toggle(`header__search-open_active`);
   searchFormEl.classList.toggle(`search-form_show`);
 });
@@ -80,7 +84,8 @@ window.addEventListener(`click`, event => {
     event.target === searchOpenBtnEl
   )
     return;
-
+  
+  searchOpenBtnEl.title = `Открыть форму поиска`;
   searchOpenBtnEl.classList.remove(`header__search-open_active`);
   searchFormEl.classList.remove(`search-form_show`);
 });
@@ -215,7 +220,7 @@ const eventsSwiper = new Swiper(`.events-slider`, {
 // EDITIONS FILTER
 filterHeaderBtnEl.addEventListener(`click`, function () {
   filterCategoriesEl.classList.contains(`editions-filter__fieldset_show`) ?
-    this.title = `Свернуть список категорий` : this.title = `Раскрыть список категорий`;
+    this.title = `Раскрыть список категорий` : this.title = `Свернуть список категорий`;
 
   filterCategoriesEl.classList.toggle(`editions-filter__fieldset_show`);
 });
@@ -283,7 +288,7 @@ window.addEventListener(`resize`, () => {
 // PROJECTS TOOLTIPS
 const tooltipElems = document.querySelectorAll(`.projects__tooltip`);
 for (const tooltip of tooltipElems) {
-  const message = tooltip.dataset.tooltip;
+  const message = tooltip.ariaLabel;
   tippy(tooltip, {
     content: message,
   });
