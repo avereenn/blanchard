@@ -368,13 +368,14 @@ function init() {
   // Создадим пользовательский макет ползунка масштаба.
   const ZoomLayout = ymaps.templateLayoutFactory.createClass(
     `<div class='contacts-map__zoom-btns'><button id='zoom-in' class='contacts-map__zoom-btn' title='Приблизить'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
-          <path fill="#666" fill-rule="evenodd" d="M11 15H6v-4h5V6h4v5h5v4h-5v5h-4v-5zm0 0"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5.992c0-.537.448-.992 1-.992.556 0 1 .444 1 .992V11h5.008c.537 0 .992.448.992 1 0 .556-.444 1-.992
+          1H13v5.008c0 .537-.448.992-1 .992-.556 0-1-.444-1-.992V13H5.992C5.455 13 5 12.552 5 12c0-.556.444-1 .992-1H11V5.992z" fill="currentColor"></path>
         </svg>
       </button><button id='zoom-out' class='contacts-map__zoom-btn' title='Отдалить'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
-          <path fill="#666" fill-rule="evenodd" d="M6 11h14v4H6z"/>
-        </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 12a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z" fill="currentColor"></path>
+      </svg>
       </button></div>`, {
 
     // Переопределяем методы макета, чтобы выполнять дополнительные действия
