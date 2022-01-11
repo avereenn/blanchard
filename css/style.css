@@ -123,10 +123,14 @@ ul {
   list-style: none;
 }
 
+input, textarea, select {
+  -webkit-appearance: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 picture {
@@ -3842,6 +3846,7 @@ picture {
   .editions-filter__close {
     display: inline-block;
     margin-left: auto;
+    opacity: 0;
   }
 
   .editions-filter__fieldset_show .editions-filter__label_check,
