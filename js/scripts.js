@@ -98,7 +98,7 @@ new Choices(selectEl, {
 });
 
 // GALLERY SWIPER
-const gallerySwiper = new Swiper(`.gallery-slider`, {
+const gallerySwiper = new Swiper(`.gallery-slider__swiper`, {
   pagination: {
     el: `.gallery-slider__pages`,
     type: `fraction`,
@@ -203,7 +203,7 @@ expandBtnEl.addEventListener(`click`, function () {
 // EVENTS SWIPER
 const eventsSwiper = new Swiper(`.events-slider`, {
   pagination: {
-    el: `.events-slider__pagination`
+    el: `.events__slider-pagination`
   },
 
   slidesPerView: 1,
@@ -275,14 +275,14 @@ const editionsSwiperProps = {
   }
 };
 
-const editionsSwiper = new Swiper(`.editions-slider`, editionsSwiperProps);
+const editionsSwiper = new Swiper(`.editions-slider__swiper`, editionsSwiperProps);
 
 window.addEventListener(`resize`, () => {
   const clientWidth = document.documentElement.clientWidth;
 
   (clientWidth <= 500) ?
     editionsSwiper.destroy(true, true) :
-    new Swiper(`.editions-slider`, editionsSwiperProps);
+    new Swiper(`.editions-slider__swiper`, editionsSwiperProps);
 });
 
 // PROJECTS TOOLTIPS
@@ -296,7 +296,7 @@ for (const tooltip of tooltipElems) {
 
 //PROJECTS SWIPER
 
-const projectsSwiper = new Swiper(`.projects-slider`, {
+const projectsSwiper = new Swiper(`.projects-slider__swiper`, {
   navigation: {
     nextEl: `.projects-slider__btn_next`,
     prevEl: `.projects-slider__btn_prev`,

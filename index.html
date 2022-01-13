@@ -8,8 +8,7 @@
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
   <!-- YMAPS -->
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=0c23509c-cb6c-487f-990b-64f8c52b04fb&lang=ru_RU"
-    type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=0c23509c-cb6c-487f-990b-64f8c52b04fb&lang=ru_RU"></script>
 
   <!--CHOICES-->
   <link rel="stylesheet" href="css/choices/choices.min.css">
@@ -262,30 +261,30 @@
               <option value="technique">Скульптура</option>
             </select>
           </div>
-          <div class="gallery__slider">
-            <div class="gallery-slider__btns slider__btns">
-              <button class="gallery-slider__btn gallery-slider__btn_prev slider__btn">
-                <svg class="slider__btn-svg slider__btn-svg_prev" width="30" height="30" viewBox="0 0 30 30" fill="none"
+          <div class="gallery__slider gallery-slider">
+            <div class="gallery-slider__btns slider-btns">
+              <button class="gallery-slider__btn gallery-slider__btn_prev slider-btn">
+                <svg class="slider-btn-svg slider-btn-svg_prev" width="30" height="30" viewBox="0 0 30 30" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path class="slider__btn-circle"
+                  <path class="slider-btn-circle"
                     d="M15 1C22.732 1 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15C1 7.26801 7.26802 0.999999 15 1Z"
                     fill="#666" stroke="#666" stroke-width="2" />
-                  <path class="slider__btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
+                  <path class="slider-btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
                 </svg>
               </button>
-              <span class="gallery-slider__pages slider__pages">1/3</span>
-              <button class="gallery-slider__btn gallery-slider__btn_next slider__btn slider__btn_next">
-                <svg class="slider__btn-svg slider__btn-svg_next" width="30" height="30" viewBox="0 0 30 30" fill="none"
+              <span class="gallery-slider__pages slider-pages">1/3</span>
+              <button class="gallery-slider__btn gallery-slider__btn_next slider-btn slider-btn_next">
+                <svg class="slider-btn-svg slider-btn-svg_next" width="30" height="30" viewBox="0 0 30 30" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path class="slider__btn-circle"
+                  <path class="slider-btn-circle"
                     d="M15 1C22.732 1 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15C1 7.26801 7.26802 0.999999 15 1Z"
                     fill="#666" stroke="#666" stroke-width="2" />
-                  <path class="slider__btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
+                  <path class="slider-btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
                 </svg>
               </button>
             </div>
-            <div class="gallery-slider swiper">
-              <ul class="gallery-slider__list slider__list swiper-wrapper js-gallery-slider-list">
+            <div class="gallery-slider__swiper swiper">
+              <ul class="gallery-slider-list slider-list swiper-wrapper js-gallery-slider-list">
                 <li class="gallery-slider__item swiper-slide">
                   <a href="img/320/gallery/images/img-1.webp" class="gallery-slider__link">
                     <picture>
@@ -662,7 +661,8 @@
                       </p>
                     </figcaption>
                   </figure>
-                  <button class="gallery-modal__close js-gallery-modal-close" title="Закрыть описание изображения"></button>
+                  <button class="gallery-modal__close js-gallery-modal-close"
+                    title="Закрыть описание изображения"></button>
                 </div>
               </div>
             </div>
@@ -679,19 +679,24 @@
       <div class="catalog__tabs catalog-tabs js-catalog-tabs">
         <ul class="catalog-tabs__nav-list">
           <li class="catalog-tabs__nav-item">
-            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_france" href="#catalog-france" title="Показать художников Франции"></a>
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_france" href="#catalog-france"
+              title="Показать художников Франции"></a>
           </li>
           <li class="catalog-tabs__nav-item">
-            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_germany" href="#catalog-germany" title="Показать художников Германии"></a>
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_germany" href="#catalog-germany"
+              title="Показать художников Германии"></a>
           </li>
           <li class="catalog-tabs__nav-item">
-            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_italy" href="#catalog-italy" title="Показать художников Италии"></a>
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_italy" href="#catalog-italy"
+              title="Показать художников Италии"></a>
           </li>
           <li class="catalog-tabs__nav-item">
-            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_russia" href="#catalog-russia" title="Показать художников России"></a>
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_russia" href="#catalog-russia"
+              title="Показать художников России"></a>
           </li>
           <li class="catalog-tabs__nav-item">
-            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_belgium" href="#catalog-belgium" title="Показать художников Бельгии"></a>
+            <a class="catalog-tabs__tab-link catalog-tabs__tab-link_belgium" href="#catalog-belgium"
+              title="Показать художников Бельгии"></a>
           </li>
         </ul>
         <div id="catalog-france" class="catalog-tabs__tab">
@@ -734,7 +739,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -756,7 +761,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -778,7 +783,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -800,7 +805,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -822,7 +827,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -844,7 +849,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -866,7 +871,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -917,7 +922,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -939,7 +944,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -961,7 +966,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -983,7 +988,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1005,7 +1010,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1027,7 +1032,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1049,7 +1054,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1213,7 +1218,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1235,7 +1240,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1257,7 +1262,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1279,7 +1284,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1301,7 +1306,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1323,7 +1328,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1374,7 +1379,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1396,7 +1401,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1418,7 +1423,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1440,7 +1445,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1462,7 +1467,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1484,7 +1489,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1506,7 +1511,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1557,7 +1562,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1579,7 +1584,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1601,7 +1606,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1623,7 +1628,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1645,7 +1650,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1667,7 +1672,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1689,7 +1694,7 @@
                 <div class="accordion__empty-content empty-content">
                   <div class="empty-content__preview"></div>
                   <div class="empty-content__info">
-                    <h3 class="empty-content__title">Здесь пока пусто</h3>
+                    <b class="empty-content__title">Здесь пока пусто</b>
                     <p class="empty-content__desc">
                       А в галерее вы всегда можете найти что-то интересное для себя
                     </p>
@@ -1832,7 +1837,7 @@
           </li>
         </ul>
       </div>
-      <div class="events-slider__pagination"></div>
+      <div class="events__slider-pagination"></div>
       <button class="events__expand-btn main-btn js-expand-btn">Все события</button>
     </section>
     <section id="editions" class="editions">
@@ -1843,7 +1848,8 @@
             <fieldset class="editions-filter__fieldset js-filter-categories">
               <div class="editions-filter__header">
                 <h3 class="editions-filter__title">Категории</h3>
-                <button class="editions-filter__header-btn js-filter-header-btn" type="button" title="Раскрыть список категорий">
+                <button class="editions-filter__header-btn js-filter-header-btn" type="button"
+                  title="Раскрыть список категорий">
                   <svg class="editions-filter__header-spoiler spoiler" width="12" height="7" viewBox="0 0 12 7"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="arrow" d="M11 1L6 6L1 1" stroke="white" />
@@ -2047,30 +2053,30 @@
               </div>
             </fieldset>
           </form>
-          <div class="editions__slider">
-            <div class="editions-slider__btns slider__btns">
-              <button class="editions-slider__btn editions-slider__btn_prev slider__btn" type="button">
-                <svg class="slider__btn-svg slider__btn-svg_prev" width="30" height="30" viewBox="0 0 30 30" fill="none"
+          <div class="editions__slider editions-slider">
+            <div class="editions-slider__btns slider-btns">
+              <button class="editions-slider__btn editions-slider__btn_prev slider-btn" type="button">
+                <svg class="slider-btn-svg slider-btn-svg_prev" width="30" height="30" viewBox="0 0 30 30" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path class="slider__btn-circle"
+                  <path class="slider-btn-circle"
                     d="M15 1C22.732 1 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15C1 7.26801 7.26802 0.999999 15 1Z"
                     fill="#666" stroke="#666" stroke-width="2" />
-                  <path class="slider__btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
+                  <path class="slider-btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
                 </svg>
               </button>
-              <span class="editions-slider__pages slider__pages">1/3</span>
-              <button class="editions-slider__btn_next slider__btn slider__btn_next" type="button">
-                <svg class="slider__btn-svg slider__btn-svg_next" width="30" height="30" viewBox="0 0 30 30" fill="none"
+              <span class="editions-slider__pages slider-pages">1/3</span>
+              <button class="editions-slider__btn editions-slider__btn_next slider-btn slider-btn_next" type="button">
+                <svg class="slider-btn-svg slider-btn-svg_next" width="30" height="30" viewBox="0 0 30 30" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path class="slider__btn-circle"
+                  <path class="slider-btn-circle"
                     d="M15 1C22.732 1 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15C1 7.26801 7.26802 0.999999 15 1Z"
                     fill="#666" stroke="#666" stroke-width="2" />
-                  <path class="slider__btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
+                  <path class="slider-btn-arrow" d="M14 10L19 15L14 20" stroke="#fff" />
                 </svg>
               </button>
             </div>
-            <div class="editions-slider swiper">
-              <ul class="editions-slider__list slider__list swiper-wrapper">
+            <div class="editions-slider__swiper swiper">
+              <ul class="editions-slider-list slider-list swiper-wrapper">
                 <li class="editions-slider__item swiper-slide">
                   <article class="editions-slider__product product">
                     <figure>
@@ -2229,8 +2235,9 @@
         фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
         уникальными данными до степени совершенной неузнаваемости, из&#8209;за чего возрастает их статус бесполезности.
         Прежде
-        всего, постоянное информационно-пропагандистское&nbsp;<svg class="projects__tooltip" data-tooltip="Пример современных тенденций - современная методология разработки" aria-label="Пример современных тенденций - современная методология разработки"
-          tabindex="0" width="16"
+        всего, постоянное информационно-пропагандистское&nbsp;<svg class="projects__tooltip"
+          data-tooltip="Пример современных тенденций - современная методология разработки"
+          aria-label="Пример современных тенденций - современная методология разработки" tabindex="0" width="16"
           height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
@@ -2240,7 +2247,9 @@
             fill="black" />
         </svg> обеспечение нашей деятельности однозначно фиксирует
         необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
-        оппозиции могут быть рассмотрены&nbsp;<svg class="projects__tooltip" data-tooltip="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" aria-label="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"
+        оппозиции могут быть рассмотрены&nbsp;<svg class="projects__tooltip"
+          data-tooltip="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"
+          aria-label="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"
           tabindex="0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
@@ -2248,9 +2257,9 @@
           <path class="projects__tooltip-i"
             d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
             fill="black" />
-        </svg> исключительно в разрезе маркетинговых и финансовых&nbsp;<svg class="projects__tooltip" data-tooltip="В стремлении повысить качество" aria-label="В стремлении повысить качество"
-          tabindex="0" width="16" height="16" viewBox="0 0 16 16"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
+        </svg> исключительно в разрезе маркетинговых и финансовых&nbsp;<svg class="projects__tooltip"
+          data-tooltip="В стремлении повысить качество" aria-label="В стремлении повысить качество" tabindex="0"
+          width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
             stroke="#9D5CD0" />
@@ -2262,20 +2271,20 @@
         которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
         Подробнее: <a class="projects__link link" href="#">blanchard&#8209;art.ru/projects/about</a>
       </p>
-      <div class="projects__partners">
+      <div class="projects__partners projects-slider">
         <h3 class="projects-slider__title">Партнёры проектов:</h3>
         <div class="projects__slider">
-          <button class="projects-slider__btn projects-slider__btn_prev slider__btn">
-            <svg class="slider__btn-svg slider__btn-svg_prev" width="30" height="30" viewBox="0 0 30 30" fill="none"
+          <button class="projects-slider__btn projects-slider__btn_prev slider-btn">
+            <svg class="slider-btn-svg slider-btn-svg_prev" width="30" height="30" viewBox="0 0 30 30" fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <path class="slider__btn-circle"
+              <path class="slider-btn-circle"
                 d="M15 1C22.732 1 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15C1 7.26801 7.26802 0.999999 15 1Z"
                 fill="#ececec" stroke="#ececec" stroke-width="2" />
-              <path class="slider__btn-arrow" d="M14 10L19 15L14 20" stroke="#000" />
+              <path class="slider-btn-arrow" d="M14 10L19 15L14 20" stroke="#000" />
             </svg>
           </button>
-          <div class="projects-slider projects-slider swiper">
-            <ul class="projects-slider__list slider__list swiper-wrapper">
+          <div class="projects-slider__swiper swiper">
+            <ul class="projects-slider-list slider-list swiper-wrapper">
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
                   <img class="projects__partner-img" src="img/projects/fleelands.webp" alt="freelands foundation">
@@ -2325,44 +2334,45 @@
               </li>
             </ul>
           </div>
-          <button class="projects-slider__btn projects-slider__btn_next slider__btn slider__btn_next">
-            <svg class="slider__btn-svg slider__btn-svg_next" width="30" height="30" viewBox="0 0 30 30" fill="none"
+          <button class="projects-slider__btn projects-slider__btn_next slider-btn slider-btn_next">
+            <svg class="slider-btn-svg slider-btn-svg_next" width="30" height="30" viewBox="0 0 30 30" fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <path class="slider__btn-circle"
+              <path class="slider-btn-circle"
                 d="M15 1C22.732 1 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15C1 7.26801 7.26802 0.999999 15 1Z"
                 fill="#ececec" stroke="#ececec" stroke-width="2" />
-              <path class="slider__btn-arrow" d="M14 10L19 15L14 20" stroke="#000" />
+              <path class="slider-btn-arrow" d="M14 10L19 15L14 20" stroke="#000" />
             </svg>
           </button>
         </div>
       </div>
     </section>
     <section id="contacts" class="contacts">
-        <h2 class="contacts__title title container">Контакты</h2>
+      <h2 class="contacts__title title container">Контакты</h2>
       <div class="contacts__wrapper">
         <div class="contacts__info">
           <address class="contacts__address contacts__address_info">
-            <h3 class="contacts__address-title">Шоурум №4</h3>
+            <b class="contacts__address-title">Шоурум №4</b>
             Леонтьевский переулок, дом 5/1
           </address>
           <form class="contacts__feedback contacts-feedback js-feedback-form" action="#" method="GET">
             <h3 class="contacts-feedback__title">Заказать обратный звонок</h3>
             <div class="contacts-feedback__input-wrapper">
-            <label class="contacts-feedback__label sr-only" for="name">Введите имя</label>
-            <input class="contacts-feedback__input" type="text" name="name" id="name" placeholder="Имя*" required
-              data-validate-field="name">
+              <label class="contacts-feedback__label sr-only" for="name">Введите имя</label>
+              <input class="contacts-feedback__input" type="text" name="name" id="name" placeholder="Имя*" required
+                data-validate-field="name">
             </div>
             <div class="contacts-feedback__input-wrapper">
-            <label class="contacts-feedback__label sr-only" for="phone">Введите телефон</label>
-            <input class="contacts-feedback__input contacts-feedback__input_tel js-feedback-tel" type="tel" name="phone"
-              id="phone" placeholder="Телефон*" required data-validate-field="phone">
+              <label class="contacts-feedback__label sr-only" for="phone">Введите телефон</label>
+              <input class="contacts-feedback__input contacts-feedback__input_tel js-feedback-tel" type="tel"
+                name="phone" id="phone" placeholder="Телефон*" required data-validate-field="phone">
             </div>
             <button class="contacts-feedback__submit main-btn" type="submit">Заказать</button>
           </form>
           <div class="contacts__oneclick">
             <h3 class="contacts__oneclick-title">Связаться в один клик</h3>
             <a class="contacts__sotial-link contacts__sotial-link_whatsapp" href="#" title="Связаться через Whatsapp">
-              <svg class="contacts__sotial-svg contacts__sotial-svg_watsapp" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <svg class="contacts__sotial-svg contacts__sotial-svg_watsapp" viewBox="0 0 60 60"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M30 59.0625C46.0508 59.0625 59.0625 46.0508 59.0625 30C59.0625 13.9492 46.0508 0.9375 30 0.9375C13.9492 0.9375 0.9375 13.9492 0.9375 30C0.9375 46.0508 13.9492 59.0625 30 59.0625Z"
                   fill="#30BF39" />
@@ -2370,10 +2380,10 @@
                   d="M38.8125 32.6265C38.4375 32.439 36.4688 31.314 36.0938 31.2202C35.7188 31.0327 35.4375 31.0327 35.1563 31.4077C34.875 31.7827 34.0313 32.7202 33.8438 32.9077C33.5625 33.189 33.375 33.189 33 33.0015C32.625 32.814 31.3125 32.3452 29.8125 30.8452C28.6875 29.7202 27.8438 28.4077 27.6563 27.939C27.4688 27.564 27.6563 27.2827 27.8438 27.0952C28.0313 26.9077 28.2188 26.6265 28.5 26.439C28.7813 26.2515 28.7813 26.064 28.9688 25.7827C29.1563 25.5015 29.0625 25.314 28.9688 25.0327C28.875 24.7515 28.125 22.7827 27.8438 21.939C27.5625 21.0952 27.1875 21.2827 27 21.189C26.7188 21.189 26.5313 21.0952 26.25 21.0952C25.875 21.0952 25.4063 21.2827 25.125 21.564C24.75 21.939 23.625 22.8765 23.625 24.8452C23.625 26.814 24.9375 28.8765 25.125 29.064C25.3125 29.3452 27.75 33.6577 31.7813 35.439C35.8125 37.2202 35.8125 36.6577 36.5625 36.6577C37.3125 36.6577 39 35.7202 39.375 34.8765C39.75 33.939 39.75 33.0952 39.6563 33.0015C39.4688 33.0015 39.1875 32.9077 38.8125 32.6265ZM31.3125 42.2827C28.6875 42.2827 26.25 41.5327 24.0938 40.1265L19.0312 41.7202L20.7188 36.8452C19.125 34.5952 18.1875 31.8765 18.1875 29.064C18.1875 21.7515 24.0938 15.8452 31.4063 15.8452C38.7188 15.8452 44.5313 21.7515 44.5313 29.064C44.5313 36.3765 38.625 42.2827 31.3125 42.2827ZM31.3125 13.2202C22.5938 13.2202 15.4688 20.3452 15.4688 29.064C15.4688 31.9702 16.2187 34.7827 17.7188 37.2202L14.8125 45.7515L23.625 42.939C25.9688 44.2515 28.5938 44.9077 31.3125 44.9077C40.0313 44.9077 47.1563 37.7827 47.1563 29.064C47.1563 20.3452 40.125 13.2202 31.3125 13.2202Z"
                   fill="white" />
               </svg>
-              </svg>
             </a>
             <a class="contacts__sotial-link contacts__sotial-link_telegram" href="#" title="Связаться через Telegram">
-              <svg class="contacts__sotial-svg contacts__sotial-svg_tel" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="contacts__sotial-svg contacts__sotial-svg_tel" viewBox="0 0 60 60" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z"
                   fill="url(#paint0_linear_57972_998)" />
@@ -2383,7 +2393,7 @@
                 <defs>
                   <linearGradient id="paint0_linear_57972_998" x1="30" y1="0" x2="30" y2="59.555"
                     gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2AABEE" />
+                    <stop offset="1" stop-color="#2AABEE" />
                     <stop offset="1" stop-color="#229ED9" />
                   </linearGradient>
                 </defs>
@@ -2393,7 +2403,7 @@
         </div>
         <div class="contacts__map-wrapper">
           <address class="contacts__address contacts__address_map">
-            <h3 class="contacts__address-title">Шоурум №4</h3>
+            <b class="contacts__address-title">Шоурум №4</b>
             Леонтьевский переулок, дом 5/1
           </address>
           <div id="contacts-map" class="contacts__map contacts-map"></div>
