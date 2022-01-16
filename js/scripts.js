@@ -127,7 +127,7 @@ const gallerySwiper = new Swiper(`.gallery-slider__swiper`, {
       spaceBetween: 34,
     },
 
-    1440: {
+    1200: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       grid: {
@@ -254,7 +254,7 @@ const editionsSwiperProps = {
       spaceBetween: ``,
     },
 
-    500: {
+    501: {
 
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -267,7 +267,7 @@ const editionsSwiperProps = {
       spaceBetween: 48,
     },
 
-    1440: {
+    1200: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
@@ -294,7 +294,7 @@ for (const tooltip of tooltipElems) {
   });
 }
 
-//PROJECTS SWIPER
+// PROJECTS SWIPER
 
 const projectsSwiper = new Swiper(`.projects-slider__swiper`, {
   navigation: {
@@ -319,7 +319,7 @@ const projectsSwiper = new Swiper(`.projects-slider__swiper`, {
       spaceBetween: 50,
     },
 
-    1440: {
+    1200: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
@@ -330,21 +330,26 @@ const projectsSwiper = new Swiper(`.projects-slider__swiper`, {
 // JUSTVALIDATE & MASK
 inputmask.mask(feedbackInputTelEl);
 
-new window.JustValidate(`.js-feedback-form`, {
+const feedbackValidation = new JustValidate(`.js-feedback-form`);
 
-  colorWrong: `#d11616`,
-  messages: {
-    name: `Как вас зовут?`,
-    phone: `Укажите ваш телефон`,
+feedbackValidation.addField(`#feedback-name`, [
+  {
+    rule: `required`,
+    errorMessage: `Как вас зовут?`,
   },
+  {
+    rule: `customRegexp`,
+    value: /^[a-zA-Z]+$/,
+    errorMessage: `Имя не должно содержать чисел и спецсимволов`,
+  },
+]);
 
-  rules: {
-    phone: {
-      required: true,
-      phone: true,
-    },
+feedbackValidation.addField(`#feedback-phone`, [
+  {
+    rule: `required`,
+    errorMessage: `Укажите ваш телефон`,
   },
-});
+]);
 
 // CONTACTS MAP
 ymaps.ready(init);
