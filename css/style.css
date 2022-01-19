@@ -316,7 +316,7 @@ picture {
 
 .header__logo-link {
   min-width: 173px;
-  margin-right: 174px;
+  margin-right: Min(174px, calc((100vw / 6) - 146px));
   line-height: 0;
 }
 
@@ -410,7 +410,7 @@ picture {
 }
 
 .header-nav__item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: Min(50px, calc((100vw / 20) - 46px));
 }
 
 .header-nav__link {
@@ -512,7 +512,7 @@ picture {
 }
 
 .directions__item:not(:last-child) {
-  margin-right: 84.5px;
+  margin-right: Min(84.5px, calc((100vw / 10) - 107.5px));
 }
 
 .directions__author-list {
@@ -2417,7 +2417,7 @@ picture {
   }
 
   /* HEADER 1700 */
-  .header__logo-link {
+  /* .header__logo-link {
     margin-right: 40px;
   }
 
@@ -2427,7 +2427,7 @@ picture {
 
   .directions__item:not(:last-child) {
     margin-right: 15px;
-  }
+  } */
 
   /* GALLERY 1700*/
 
