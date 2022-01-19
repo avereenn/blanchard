@@ -1553,9 +1553,9 @@ picture {
 
 .accordion__painters-list {
   display: flex;
-  align-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
+  column-gap: 39px;
   max-height: 344px;
   width: 100%;
   padding-top: 26px;
@@ -1564,10 +1564,6 @@ picture {
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
-}
-
-.accordion__painter-item {
-  margin-right: 60px;
 }
 
 .accordion__painter-link:hover {
@@ -2743,11 +2739,6 @@ picture {
     padding-right: 0;
   }
 
-  .accordion__painter-item {
-    max-width: 208px;
-    margin-right: 65px;
-  }
-
   .painter-info_empty .painter-info__figure {
     height: 274px;
   }
@@ -2761,7 +2752,9 @@ picture {
   }
 
   .accordion__painters-list {
+    column-gap: 65px;
     padding-top: 25px;
+    padding-right: 0;
     padding-bottom: 25px;
   }
 
@@ -3075,11 +3068,8 @@ picture {
   }
 
   .accordion__painters-list {
+    column-gap: 59px;
     max-height: 350px;
-  }
-
-  .accordion__painter-item {
-    margin-right: 59px;
   }
 
   .catalog-tabs__tab-info {
@@ -3297,11 +3287,8 @@ picture {
   }
 
   .accordion__painters-list {
+    column-gap: 27px;
     max-height: 440px;
-  }
-
-  .accordion__painter-item {
-    margin-right: 16px;
   }
 
   /* EVENTS 760 */
