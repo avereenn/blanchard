@@ -203,7 +203,8 @@ expandBtnEl.addEventListener(`click`, function () {
 // EVENTS SWIPER
 const eventsSwiper = new Swiper(`.events-slider`, {
   pagination: {
-    el: `.events__slider-pagination`
+    el: `.events__slider-pagination`,
+    clickable: true,
   },
 
   slidesPerView: 1,

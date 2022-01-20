@@ -174,11 +174,13 @@ picture {
 .link {
   align-self: flex-start;
   color: var(--main-color-3);
-  transition: color .16s ease-in;
+  transition: color .16s ease-in,
+              background-color .16s ease-in;
 }
 
 .link:focus {
-  outline: var(--main-color-1) solid 2px;
+  color: #fff;
+  background-color: var(--main-color-2);
 }
 
 .link:hover {
@@ -215,6 +217,7 @@ picture {
   border-style: solid;
   border-color: transparent;
   border-radius: 100px;
+  transition: border-color .16s ease-in;
 }
 
 .main-btn:focus {
@@ -263,9 +266,6 @@ picture {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: box-shadow .16s ease-in,
-              color .16s ease-in,
-              background-color .16s ease-in;
 }
 
 .slider-btn-svg_prev {
@@ -274,6 +274,11 @@ picture {
 
 .slider-btn:focus {
   outline: 0;
+}
+
+.slider-btn-circle {
+  transition: stroke .16s ease-in,
+              fill .16s ease-in;
 }
 
 .slider-btn:focus  .slider-btn-circle {
@@ -318,6 +323,8 @@ picture {
   min-width: 173px;
   margin-right: Min(174px, calc((100vw / 6) - 146px));
   line-height: 0;
+  transition: outline .16s ease-in,
+              transform .2s ease-in;
 }
 
 .header__logo-link:focus {
@@ -325,13 +332,12 @@ picture {
   outline-offset: 7px;
 }
 
-.header__logo-img {
-  width: 100%;
-  transition: transform .2s ease-in;
+.header__logo-link:hover {
+  transform: scale(1.2);
 }
 
-.header__logo-img:hover {
-  transform: scale(1.2);
+.header__logo-img {
+  width: 100%;
 }
 
 .header__menu {
@@ -346,7 +352,7 @@ picture {
 
 .header__burger {
   display: none;
-  width: 28px;
+  width: 36px;
   height: 28px;
   padding-left: 0;
   padding-right: 0;
@@ -355,7 +361,8 @@ picture {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: color .16s ease-in;
+  transition: color .16s ease-in,
+              outline .16s ease-in;
 }
 
 .header__burger:hover {
@@ -715,6 +722,8 @@ picture {
   border: 2px solid currentColor;
   border-radius: 50%;
   cursor: pointer;
+  transition: outline .16s ease-in,
+              outline-offset .16s ease-in;
 }
 
 .search-form__submit::before,
@@ -742,6 +751,7 @@ picture {
   border-style: solid;
   border-width: 0 0 1px 0;
   cursor: pointer;
+  transition: border-color .16s ease-in;
 }
 
 .search-form:hover .search-form__input,
@@ -768,6 +778,7 @@ picture {
   font-size: 17px;
   font-weight: 600;
   line-height: 24px;
+  transition: opacity .16s ease-in;
 }
 
 .search-form__input:focus::placeholder {
@@ -919,6 +930,12 @@ picture {
   padding: 0;
 }
 
+.gallery__filter .choices[data-type*=select-one],
+.gallery__filter .choices__list--dropdown .choices__item--selectable {
+  transition: background-color .16s ease-in,
+              color .16s ease-in;
+}
+
 .gallery__filter .choices[data-type*=select-one] .choices__inner {
   padding: 12px 12px 12px 14px;
   min-height: auto;
@@ -992,13 +1009,14 @@ picture {
   position: absolute;
   bottom: 1px;
   left: 0;
-  max-width: 340px;
+  max-width: 17.7vw;
   font-weight: 600;
 }
 
 /* GALLERY SLIDER */
 .gallery__slider {
   position: relative;
+  width: 60.15vw;
   margin-left: auto;
   margin-right: -3px;
   padding-top: 0;
@@ -1007,14 +1025,13 @@ picture {
 
 .gallery-slider__swiper {
   position: relative;
-  width: 1155px;
   height: 755px;
   padding: 3px;
 }
 
 .gallery-slider__btns {
   position: absolute;
-  top: -26px;
+  top: -24px;
   left: 6px;
   display: flex;
   transform: translateY(-100%);
@@ -1029,6 +1046,7 @@ picture {
   line-height: 0;
   width: 100%;
   height: 100%;
+  transition: box-shadow .16s ease-in;
 }
 
 .gallery-slider__link:focus {
@@ -1459,7 +1477,8 @@ picture {
 }
 
 .accordion__btn-text {
-  transition: color .16s ease-in;
+  transition: color .16s ease-in,
+              background-color .16s ease-in;
 }
 
 .accordion__spoiler {
@@ -1493,6 +1512,11 @@ picture {
 
 .accordion__btn.ui-state-active .accordion__spoiler {
   transform: rotate(180deg);
+}
+
+.accordion__spoiler-circle {
+  transition: stroke .16s ease-in,
+              fill .16s ease-in;
 }
 
 .accordion__btn.ui-state-active .accordion__spoiler-circle,
@@ -1564,6 +1588,12 @@ picture {
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
+}
+
+.accordion__painter-link {
+  transition: color .16s ease-in,
+              background-color .16s ease-in,
+              border-bottom .16s ease-in;
 }
 
 .accordion__painter-link:hover {
@@ -1682,17 +1712,41 @@ picture {
 }
 
 .event__more-link {
-  align-self: flex-start;
+  position: relative;
   margin-top: auto;
   color: var(--main-color-2);
   font-size: 16px;
   line-height: 25px;
   border-bottom: 1px solid currentColor;
-  transition: color .16s ease-in;
+}
+
+.event__more-link::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -8px;
+  bottom: -5px;
+  left: -8px;
+  z-index: -1;
+  display: block;
+  background-color: transparent;
+  transition: background-color .16s ease-in;
 }
 
 .event__more-link:hover {
   color: var(--main-color-3);
+}
+
+.event__more-link:focus {
+  background-color: transparent;
+}
+
+.event__more-link:focus::before {
+  background-color: var(--main-color-2);
+}
+
+.event__more-link:active {
+  color: #333;
 }
 
 .events__expand-btn {
@@ -1983,6 +2037,7 @@ picture {
   border-style: solid;
   border-color: transparent;
   border-radius: 100px;
+  transition: border-color .16s ease-in;
 }
 
 .product__order-btn:focus {
@@ -2141,6 +2196,7 @@ picture {
   border-width: 1px;
   border-style: solid;
   border-color: #cacaca;
+  transition: border-color .16s ease-in;
 }
 
 .projects__partner-link:focus {
@@ -2220,6 +2276,7 @@ picture {
   line-height: 32px;
   border: 1px solid #333;
   border-radius: 100px;
+  transition: background-color .16s ease-in;
 }
 
 .contacts-feedback__input_tel {
@@ -2332,6 +2389,7 @@ picture {
   text-align: center;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .contacts-map [title="Определить ваше местоположение"] {
@@ -2360,7 +2418,8 @@ picture {
 
 .footer__logo-link {
   margin-right: auto;
-  transition: transform .16s ease-in;
+  transition: transform .16s ease-in,
+              outline .16s ease-in;
 }
 
 .footer__logo-link:focus {
@@ -2410,26 +2469,6 @@ picture {
   .container {
     padding-left: 80px;
     padding-right: 80px;
-  }
-
-  /* HEADER 1700 */
-  /* .header__logo-link {
-    margin-right: 40px;
-  }
-
-  .header-nav__item:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  .directions__item:not(:last-child) {
-    margin-right: 15px;
-  } */
-
-  /* GALLERY 1700*/
-
-  .gallery-slider__swiper{
-    width: 800px;
-    height: 616px;
   }
 
   /* CATALOG 1700*/
@@ -2526,6 +2565,7 @@ picture {
   }
 
   .header__log-in {
+    position: relative;
     display: inline-block;
     padding: 13px 90px 11px 86px;
     font-weight: 600;
@@ -2534,18 +2574,38 @@ picture {
     border-radius: 100px;
   }
 
+  .header__log-in:after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 100px;
+    transition: border-color .16s ease-in;
+  }
+
+  .header__log-in:focus::after {
+    border-color: var(--main-color-3);
+  }
+
   .header__log-icon {
     margin-right: 3px;
   }
 
   .header__burger {
     display: block;
+    margin-right: -10px;
     order: 1;
   }
 
   .header__burger_open {
-    text-align: center;
     z-index: 11;
+    text-align: center;
+    transform: translateX(-4px);
   }
 
   .header__burger_open .burger {
@@ -2632,7 +2692,9 @@ picture {
   .header__search-open {
     order: 3;
     transition: opacity .16s ease-out,
-                visibility .32s ease-out;
+                visibility .32s ease-out,
+                outline .16s ease-in,
+                outline-offset .16s ease-in;
   }
 
   .search-form__submit {
@@ -3370,6 +3432,7 @@ picture {
     align-self: baseline;
     width: 25px;
     height: 18px;
+    margin-right: 0;
   }
 
   .burger {
@@ -3390,10 +3453,6 @@ picture {
   .burger::after {
     width: 10px;
     transform: translateY(8px);
-  }
-
-  .header__burger_open {
-    margin-left: -4px;
   }
   
   .header__burger_open .burger::before,
@@ -3749,7 +3808,8 @@ picture {
 
   .event__text {
     margin-top: auto;
-    padding-bottom: 26px;
+    margin-bottom: 0;
+    padding-bottom: 27px;
   }
 
   .events__slider-pagination {
