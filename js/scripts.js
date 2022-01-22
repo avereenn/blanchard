@@ -287,7 +287,7 @@ window.addEventListener(`resize`, () => {
 });
 
 // PROJECTS TOOLTIPS
-const tooltipElems = document.querySelectorAll(`.projects__tooltip`);
+const tooltipElems = document.querySelectorAll(`[data-tooltip]`);
 for (const tooltip of tooltipElems) {
   const message = tooltip.dataset.tooltip;
   tippy(tooltip, {
