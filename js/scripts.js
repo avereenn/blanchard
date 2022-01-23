@@ -127,7 +127,7 @@ const gallerySwiper = new Swiper(`.gallery-slider__swiper`, {
       spaceBetween: 34,
     },
 
-    1200: {
+    1201: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       grid: {
@@ -268,7 +268,7 @@ const editionsSwiperProps = {
       spaceBetween: 48,
     },
 
-    1200: {
+    1201: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
@@ -320,7 +320,7 @@ const projectsSwiper = new Swiper(`.projects-slider__swiper`, {
       spaceBetween: 50,
     },
 
-    1200: {
+    1201: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
