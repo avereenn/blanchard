@@ -46,8 +46,8 @@
         <a class="header__logo-link" href="#">
           <img class="header__logo-img" src="img/blanchard-logo.svg" alt="Blanchard. Художественная галерея">
         </a>
-        <button class="header__burger js-burger" title="Открыть меню"><span class="burger"></span></button>
-        <div class="header__menu js-menu">
+        <button class="header__burger js-burger" aria-label="Открыть меню" aria-controls="header-menu" aria-haspopup="listbox"><span class="burger"></span></button>
+        <div id="header-menu" class="header__menu js-menu">
             <nav class="header__nav header-nav">
               <ul class="header-nav__list">
                 <li class="header-nav__item"><a class="header-nav__link anchor" href="#about-us">О нас</a></li>
@@ -69,13 +69,17 @@
               Войти
             </a>
         </div>
-        <button class="header__search-open js-search-open" type="button" title="Открыть форму поиска"></button>
+        <button class="header__search-open js-search-open" type="button" aria-label="Открыть форму поиска" aria-controls="header-search-form" aria-haspopup="dialog"></button>
       </div>
       <div class="header__bottom">
         <div class="container">
           <ul class="header__directions directions js-directions-list">
             <li class="directions__item">
-              <a class="directions__link" href="#realism">Реализм
+              <a class="directions__link"
+                href="#realism"
+                aria-haspopup="listbox"
+                aria-controls="realism"
+                aria-expanded="false">Реализм
                 <svg class="directions__spoiler spoiler" width="12" height="7" viewBox="0 0 12 7" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="arrow" d="M11 1L6 6L1 1" stroke="white" />
@@ -94,10 +98,23 @@
                 <li class="directions__author-item">
                   <a class="directions__author-link" href="#verrocchio">Верроккьо</a>
                 </li>
+                <li class="directions__author-item">
+                  <a class="directions__author-link" href="#frederick">example</a>
+                </li>
+                <li class="directions__author-item">
+                  <a class="directions__author-link" href="#leonardo">example</a>
+                </li>
+                <li class="directions__author-item">
+                  <a class="directions__author-link" href="#verrocchio">example</a>
+                </li>
               </ul>
             </li>
             <li class="directions__item">
-              <a class="directions__link" href="#impressionism">Импрессионизм
+              <a class="directions__link"
+                href="#impressionism"
+                aria-haspopup="listbox"
+                aria-controls="impressionism"
+                aria-expanded="false">Импрессионизм
                 <svg class="directions__spoiler spoiler" width="12" height="7" viewBox="0 0 12 7" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="arrow" d="M11 1L6 6L1 1" stroke="white" />
@@ -119,7 +136,11 @@
               </ul>
             </li>
             <li class="directions__item">
-              <a class="directions__link" href="#post-impressionism">Постимпрессионизм
+              <a class="directions__link"
+                href="#post-impressionism"
+                aria-haspopup="listbox"
+                aria-controls="post-impressionism"
+                aria-expanded="false">Постимпрессионизм
                 <svg class="directions__spoiler spoiler" width="12" height="7" viewBox="0 0 12 7" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="arrow" d="M11 1L6 6L1 1" stroke="white" />
@@ -141,7 +162,11 @@
               </ul>
             </li>
             <li class="directions__item">
-              <a class="directions__link" href="#avant-garde">Авангард
+              <a class="directions__link"
+                href="#avant-garde"
+                aria-haspopup="listbox"
+                aria-controls="avant-garde"
+                aria-expanded="false">Авангард
                 <svg class="directions__spoiler spoiler" width="12" height="7" viewBox="0 0 12 7" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="arrow" d="M11 1L6 6L1 1" stroke="white" />
@@ -163,7 +188,11 @@
               </ul>
             </li>
             <li class="directions__item">
-              <a class="directions__link" href="#futurism">Футуризм
+              <a class="directions__link"
+                href="#futurism"
+                aria-haspopup="listbox"
+                aria-controls="futurism"
+                aria-expanded="false">Футуризм
                 <svg class="directions__spoiler spoiler" width="12" height="7" viewBox="0 0 12 7" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="arrow" d="M11 1L6 6L1 1" stroke="white" />
@@ -185,7 +214,7 @@
               </ul>
             </li>
           </ul>
-          <form class="header__search-form search-form js-search-form" action="#" method="GET">
+          <form id="header-search-form" class="header__search-form search-form js-search-form" action="#" method="GET">
             <button class="search-form__submit" type="submit" title="Найти"></button>
             <label class="search-form__label sr-only" for="search-field">Поиск по сайту</label>
             <input class="search-form__input" type="text" name="search" id="search-field" placeholder="Поиск по сайту">
@@ -252,8 +281,8 @@
         <h2 class="gallery__title title">Галерея</h2>
         <div class="gallery__wrapper">
           <div class="gallery__filter">
-            <label for="gallery-filter" class="gallery__filter-label">Фильтр:</label>
-            <select class="gallery__filter-select js-select" name="filter" id="gallery-filter">
+            <label id="gallery-filter-label" for="gallery-filter" class="gallery__filter-label">Фильтр:</label>
+            <select id="gallery-filter" class="gallery__filter-select js-select" name="filter">
               <option value="author">Живопись</option>
               <option value="trend">Рисунок</option>
               <option value="technique">Скульптура</option>
@@ -292,6 +321,7 @@
                       <source media="(max-width: 1700px)" srcset="img/1024/gallery/images/img-1.webp">
                       <img class="gallery-slider__img" src="img/gallery/images/img-1.jpg" alt="фигура человека на разноцветном фоне">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -304,6 +334,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-2.jpg"
                         alt="абстракция из геометрических фигур">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -316,6 +347,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-3.jpg"
                         alt="женский силуэт держит в руках грабли">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -327,6 +359,7 @@
                       <source media="(max-width: 1700px)" srcset="img/1024/gallery/images/img-4.webp">
                       <img class="gallery-slider__img" src="img/gallery/images/img-4.jpg" alt="фигуры образуют силуэт человека, несущего коромысло с вёдрами">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -339,6 +372,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-5.jpg"
                         alt="люди убирают рожь в поле">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -351,6 +385,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-6.jpg"
                         alt="абстракция из геометрических фигур">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -363,6 +398,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-7.jpg"
                         alt="мужчина в фартуке держит в руке топор на фоне дров">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -374,6 +410,7 @@
                       <source media="(max-width: 1700px)" srcset="img/1024/gallery/images/img-8.webp">
                       <img class="gallery-slider__img" src="img/gallery/images/img-8.jpg" alt="мужчина стоит на фоне разноцветного поля">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -386,6 +423,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-9.jpg"
                         alt="два человеческих силуэта на фоне разноцветных холмов">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -398,6 +436,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-10.jpg"
                         alt="абстракция из геометрических фигур">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -410,6 +449,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-11.jpg"
                         alt="абстракция из геометрических фигур">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -422,6 +462,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-12.jpg"
                         alt="три женских силуэта">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -434,6 +475,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-13.jpg"
                         alt="усатый мужчина в шляпе держит ружьё, присев у дерева">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -446,6 +488,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-14.jpg"
                         alt="женщины сидят в театральном зале">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -458,6 +501,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-15.jpg"
                         alt="две сидящих девушки, одна накрыта покрывалом">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -470,6 +514,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-16.jpg"
                         alt="женщина смотрит в зеркальце, держа его в руке">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -481,6 +526,7 @@
                       <source media="(max-width: 1700px)" srcset="img/1024/gallery/images/img-17.webp">
                       <img class="gallery-slider__img" src="img/gallery/images/img-17.jpg" alt="мальчик держит поднос с фруктами и бутылью">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -493,6 +539,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-18.jpg"
                         alt="мужчина в мундире держит лошадь за узду">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -505,6 +552,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-19.jpg"
                         alt="белая фигура внутри синяя">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -517,6 +565,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-20.jpg"
                         alt="белая фигура с прямыми углами">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -529,6 +578,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-21.jpg"
                         alt="белая фигура в форме яйца с отверстиями">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -541,6 +591,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-22.jpg"
                         alt="три серых объемных фигуры и одна прозрачная как стекло">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -553,6 +604,7 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-23.jpg"
                         alt="светлая абстрактная длинная скуптура">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
                 <li class="gallery-slider__item swiper-slide">
@@ -565,10 +617,11 @@
                       <img class="gallery-slider__img" src="img/gallery/images/img-24.jpg"
                         alt="фигура человека состоящая из плоских элементов">
                     </picture>
+                    <span class="sr-only">Открыть описание картины</span>
                   </a>
                 </li>
               </ul>
-              <div class="gallery-modal js-gallery-modal">
+              <div class="gallery-modal js-gallery-modal" role="dialog" aria-modal="true">
                 <button class="gallery-modal__bg-btn js-bg-btn" aria-label="Закрыть описание изображения"></button>
                 <div class="gallery-modal__wrapper">
                   <figure class="gallery-modal__figure">
@@ -1775,20 +1828,20 @@
             <fieldset class="editions-filter__fieldset js-filter-categories">
               <div class="editions-filter__header">
                 <h3 class="editions-filter__title">Категории</h3>
-                <button class="editions-filter__header-btn js-filter-header-btn" type="button"
-                  title="Раскрыть список категорий">
+                <button class="editions-filter__header-btn js-filter-header-btn" type="button" aria-haspopup="listbox"
+                  aria-label="Раскрыть список категорий" aria-controls="editions-filter-list" aria-expanded="false">
                   <svg class="editions-filter__header-spoiler spoiler" width="12" height="7" viewBox="0 0 12 7"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="arrow" d="M11 1L6 6L1 1" stroke="white" />
                   </svg>
                 </button>
               </div>
-              <ul class="editions-filter__list js-filter-list">
+              <ul id="editions-filter-list" class="editions-filter__list js-filter-list">
                 <li class="editions-filter__item">
                   <input id="bestSellers" class="editions-filter__checkbox sr-only" type="checkbox" name="bestSellers">
                   <label class="editions-filter__label editions-filter__label_check" for="bestSellers">
                     Бестселлеры
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1803,7 +1856,7 @@
                   <input id="art" class="editions-filter__checkbox sr-only" type="checkbox" name="art">
                   <label class="editions-filter__label editions-filter__label_check" for="art">
                     Искусство
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1819,7 +1872,7 @@
                     name="architecture">
                   <label class="editions-filter__label editions-filter__label_check" for="architecture">
                     Архитектура
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1834,7 +1887,7 @@
                   <input id="design" class="editions-filter__checkbox sr-only" type="checkbox" name="design" checked>
                   <label class="editions-filter__label editions-filter__label_check" for="design">
                     Дизайн
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1849,7 +1902,7 @@
                   <input id="fashion" class="editions-filter__checkbox sr-only" type="checkbox" name="fashion">
                   <label class="editions-filter__label editions-filter__label_check" for="fashion">
                     Мода
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1864,7 +1917,7 @@
                   <input id="forKids" class="editions-filter__checkbox sr-only" type="checkbox" name="forKids">
                   <label class="editions-filter__label editions-filter__label_check" for="forKids">
                     Детям
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1879,7 +1932,7 @@
                   <input id="literature" class="editions-filter__checkbox sr-only" type="checkbox" name="literature">
                   <label class="editions-filter__label editions-filter__label_check" for="literature">
                     Художественная литература
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1894,7 +1947,7 @@
                   <input id="publicism" class="editions-filter__checkbox sr-only" type="checkbox" name="publicism">
                   <label class="editions-filter__label editions-filter__label_check" for="publicism">
                     Публицистика
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1909,7 +1962,7 @@
                   <input id="guides" class="editions-filter__checkbox sr-only" type="checkbox" name="guides">
                   <label class="editions-filter__label editions-filter__label_check" for="guides">
                     Путеводители
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1924,7 +1977,7 @@
                   <input id="philosophy" class="editions-filter__checkbox sr-only" type="checkbox" name="philosophy">
                   <label class="editions-filter__label editions-filter__label_check" for="philosophy">
                     Философия
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1939,7 +1992,7 @@
                   <input id="education" class="editions-filter__checkbox sr-only" type="checkbox" name="education">
                   <label class="editions-filter__label editions-filter__label_check" for="education">
                     Учебная литература
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1954,7 +2007,7 @@
                   <input id="press" class="editions-filter__checkbox sr-only" type="checkbox" name="press">
                   <label class="editions-filter__label editions-filter__label_check" for="press">
                     Журналы и газеты
-                    <svg class="editions-filter__close" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                    <svg class="editions-filter__close" role="presentation" width="13" height="12" viewBox="0 0 13 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
@@ -1968,14 +2021,14 @@
               </ul>
             </fieldset>
             <fieldset class="editions-filter__fieldset">
-              <h3 class="editions-filter__title editions-filter__title_price">Цена</h3>
+              <h3 id="filter-price-header" class="editions-filter__title editions-filter__title_price">Цена</h3>
               <div class="editions-filter__price">
                 <label class="editions-filter__label" for="fromPrice">От</label>
                 <input class="editions-filter__price-field" id="fromPrice" name="from-price" type="number"
-                  placeholder="50">
+                  placeholder="50" aria-describedby="filter-price-header">
                 <label class="editions-filter__label" for="toPrice">до</label>
                 <input class="editions-filter__price-field" id="toPrice" name="to-price" type="number"
-                  placeholder="25&nbsp;000">
+                  placeholder="25&nbsp;000" aria-describedby="filter-price-header">
                 <span>руб.</span>
               </div>
             </fieldset>
@@ -2176,10 +2229,10 @@
                       aria-label="В стремелении повысить качество">i</button> предпосылок. Банальные, но
         неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
         которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
-        Подробнее: <a class="projects__link link" href="#">blanchard&#8209;art.ru/projects/about</a>
+        Подробнее: <a class="projects__link link" href="#" aria-label="Blanchard. Информация о проектах">blanchard&#8209;art.ru/projects/about</a>
       </p>
       <div class="projects__partners projects-slider">
-        <h3 class="projects-slider__title">Партнёры проектов:</h3>
+        <h3 id="partners-title" class="projects-slider__title">Партнёры проектов:</h3>
         <div class="projects__slider">
           <button class="projects-slider__btn projects-slider__btn_prev slider-btn">
             <svg class="slider-btn-svg slider-btn-svg_prev" width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -2194,49 +2247,49 @@
             <ul class="projects-slider-list slider-list swiper-wrapper">
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
-                  <img class="projects__partner-img" src="img/projects/fleelands.webp" alt="freelands foundation">
+                  <img class="projects__partner-img" src="img/projects/fleelands.webp" alt="freelands foundation" aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
-                  <img class="projects__partner-img" src="img/projects/ica.webp" alt="institute for contemporary art">
+                  <img class="projects__partner-img" src="img/projects/ica.webp" alt="institute for contemporary art" aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
-                  <img class="projects__partner-img" src="img/projects/workhouse.webp" alt="workhouse arts center">
+                  <img class="projects__partner-img" src="img/projects/workhouse.webp" alt="workhouse arts center" aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
-                  <img class="projects__partner-img" src="img/projects/1849.webp" alt="1849 wine co.">
+                  <img class="projects__partner-img" src="img/projects/1849.webp" alt="1849 wine co." aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
-                  <img class="projects__partner-img" src="img/projects/hiscox.webp" alt="hiscox">
+                  <img class="projects__partner-img" src="img/projects/hiscox.webp" alt="hiscox" aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
-                  <img class="projects__partner-img" src="img/projects/camden.webp" alt="camden arts centre">
+                  <img class="projects__partner-img" src="img/projects/camden.webp" alt="camden arts centre" aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
                   <img class="projects__partner-img" src="img/projects/stassen.webp"
-                    alt="stassen premium belgium cider">
+                    alt="stassen premium belgium cider" aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
-                  <img class="projects__partner-img" src="img/projects/watts.webp" alt="watts gallery artists willage">
+                  <img class="projects__partner-img" src="img/projects/watts.webp" alt="watts gallery artists willage" aria-describedby="partners-title">
                 </a>
               </li>
               <li class="projects-slider__item swiper-slide">
                 <a href="#" class="projects__partner-link">
                   <img class="projects__partner-img" src="img/projects/esad.webp" lang="fr"
-                    alt="école supérieure d'art et de design de valenciennes">
+                    alt="école supérieure d'art et de design de valenciennes" aria-describedby="partners-title">
                 </a>
               </li>
             </ul>
@@ -2264,12 +2317,12 @@
           <form class="contacts__feedback contacts-feedback js-feedback-form" action="#" method="GET">
             <h3 class="contacts-feedback__title">Заказать обратный звонок</h3>
             <div class="contacts-feedback__input-wrapper">
-              <label class="contacts-feedback__label sr-only" for="name">Введите имя</label>
+              <label class="contacts-feedback__label sr-only" for="feedback-name">Введите имя</label>
               <input class="contacts-feedback__input" type="text" name="name" id="feedback-name" placeholder="Имя*" required
-                data-validate-field="name">
+                data-validate-field="name" >
             </div>
             <div class="contacts-feedback__input-wrapper">
-              <label class="contacts-feedback__label sr-only" for="phone">Введите телефон</label>
+              <label class="contacts-feedback__label sr-only" for="feedback-phone">Введите телефон</label>
               <input class="contacts-feedback__input contacts-feedback__input_tel js-feedback-tel" type="tel"
                 name="phone" id="feedback-phone" placeholder="Телефон*" required data-validate-field="phone">
             </div>

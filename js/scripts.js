@@ -26,8 +26,18 @@ directionsListEl.addEventListener(`click`, function (event) {
   if (!event.target.classList.contains(`directions__link`)) return;
 
   event.preventDefault();
+  const currentLinkEl = event.target;
+  const linkElems = this.querySelectorAll(`.directions__link`);
   const targetItemEl = event.target.closest(`.directions__item`);
   const itemElems = this.querySelectorAll(`.directions__item`);
+
+  currentLinkEl.ariaExpanded = (currentLinkEl.ariaExpanded === `true`) ? `false` : `true`;
+
+  linkElems.forEach(link => {
+    if(!(link === currentLinkEl)) {
+      link.ariaExpanded = `false`;
+    }
+  });
 
   itemElems.forEach(item => {
     if (item === targetItemEl && !item.classList.contains(`directions__item_active`)) {
@@ -36,13 +46,17 @@ directionsListEl.addEventListener(`click`, function (event) {
     }
 
     item.classList.remove(`directions__item_active`);
-  })
+  });
 });
 
 window.addEventListener(`click`, (event) => {
   if (!event.target.closest(`.directions__item`)) {
     document.querySelectorAll(`.directions__item`).forEach(item => {
       item.classList.remove(`directions__item_active`);
+    });
+
+    document.querySelectorAll(`.directions__link`).forEach(link => {
+      link.ariaExpanded = `false`;
     });
   }
 });
@@ -56,7 +70,7 @@ directionsAuthorListElems.forEach(list => {
 
 function toggleNavMenu() {
   burgerBtnEl.classList.contains(`header__burger_open`) ?
-    burgerBtnEl.title = `Открыть меню` : burgerBtnEl.title = `Закрыть меню`;
+    burgerBtnEl.ariaLabel = `Открыть меню` : burgerBtnEl.ariaLabel = `Закрыть меню`;
   burgerBtnEl.classList.toggle(`header__burger_open`);
   menuEl.classList.toggle(`header__menu_open`);
 }
@@ -72,7 +86,7 @@ menuEl.addEventListener(`click`, event => {
 // HEADER SEARCH OPEN
 searchOpenBtnEl.addEventListener(`click`, function () {
   this.classList.contains(`header__search-open_active`) ? 
-    this.title = `Открыть форму поиска` : this.title = `Закрыть форму поиска`;
+    this.ariaLabel = `Открыть форму поиска` : this.ariaLabel = `Закрыть форму поиска`;
   this.classList.toggle(`header__search-open_active`);
   searchFormEl.classList.toggle(`search-form_show`);
 });
@@ -85,7 +99,7 @@ window.addEventListener(`click`, event => {
   )
     return;
   
-  searchOpenBtnEl.title = `Открыть форму поиска`;
+  searchOpenBtnEl.ariaLabel = `Открыть форму поиска`;
   searchOpenBtnEl.classList.remove(`header__search-open_active`);
   searchFormEl.classList.remove(`search-form_show`);
 });
@@ -95,6 +109,7 @@ new Choices(selectEl, {
   searchEnabled: false,
   itemSelectText: ``,
   shouldSort: false,
+  labelId: `gallery-filter-label`,
 });
 
 // GALLERY SWIPER
@@ -135,7 +150,12 @@ const gallerySwiper = new Swiper(`.gallery-slider__swiper`, {
       },
       spaceBetween: 50,
     },
-  }
+  },
+
+  a11y: {
+    prevSlideMessage: `Предыдущий слайд`,
+    nextSlideMessage: `Следующий слайд`,
+  },
 });
 
 // GALLERY MODAL
@@ -193,7 +213,6 @@ catalogTabsEl.addEventListener(`click`, function (event) {
   });
 });
 
-
 //Обработчик кнопки "Все события"
 expandBtnEl.addEventListener(`click`, function () {
   eventsListEl.classList.add(`events__list_show`);
@@ -215,13 +234,19 @@ const eventsSwiper = new Swiper(`.events-slider`, {
       enabled: false,
       spaceBetween: ``,
     }
-  }
+  },
+
+  a11y: {
+    paginationBulletMessage: `Перейти к слайду {{index}}`,
+  },
 });
 
 // EDITIONS FILTER
 filterHeaderBtnEl.addEventListener(`click`, function () {
   filterCategoriesEl.classList.contains(`editions-filter__fieldset_show`) ?
-    this.title = `Раскрыть список категорий` : this.title = `Свернуть список категорий`;
+    this.ariaLabel = `Раскрыть список категорий` : this.ariaLabel = `Свернуть список категорий`;
+
+  this.ariaExpanded = (this.ariaExpanded === `true`) ? `false` : `true`;
 
   filterCategoriesEl.classList.toggle(`editions-filter__fieldset_show`);
 });
@@ -229,12 +254,9 @@ filterHeaderBtnEl.addEventListener(`click`, function () {
 filterCategoriesEl.addEventListener(`change`, (event) => {
   if (!event.target.classList.contains(`editions-filter__checkbox`)) return;
 
-  if (event.target.checked) {
-    event.target.closest(`.editions-filter__item`).classList.add(`editions-filter__item_active`);
-    return;
-  }
-
-  event.target.closest(`.editions-filter__item`).classList.remove(`editions-filter__item_active`);
+  event.target.checked ?
+    event.target.closest(`.editions-filter__item`).classList.add(`editions-filter__item_active`) :
+    event.target.closest(`.editions-filter__item`).classList.remove(`editions-filter__item_active`);
 });
 
 //EDITIONS SWIPER
@@ -273,7 +295,12 @@ const editionsSwiperProps = {
       slidesPerGroup: 3,
       spaceBetween: 50,
     }
-  }
+  },
+
+  a11y: {
+    prevSlideMessage: `Предыдущий слайд`,
+    nextSlideMessage: `Следующий слайд`,
+  },
 };
 
 const editionsSwiper = new Swiper(`.editions-slider__swiper`, editionsSwiperProps);
@@ -325,7 +352,12 @@ const projectsSwiper = new Swiper(`.projects-slider__swiper`, {
       slidesPerGroup: 3,
       spaceBetween: 50,
     },
-  }
+  },
+
+  a11y: {
+    prevSlideMessage: `Предыдущий слайд`,
+    nextSlideMessage: `Следующий слайд`,
+  },
 });
 
 // JUSTVALIDATE & MASK
@@ -340,8 +372,8 @@ feedbackValidation.addField(`#feedback-name`, [
   },
   {
     rule: `customRegexp`,
-    value: /^[a-zA-Z]+$/,
-    errorMessage: `Имя не должно содержать чисел и спецсимволов`,
+    value: /^[a-zA-Zа-яА-ЯёЁ]+$/,
+    errorMessage: `Числа и спецсимволы недопустимы`,
   },
 ]);
 
@@ -437,7 +469,7 @@ function init() {
 //jQuery
 
 $(`document`).ready(function () {
-  // плавные пепеходы по якорям
+  // плавные переходы по якорям
   function onScrollSmoothLinkClick(event) {
     event.preventDefault();
 

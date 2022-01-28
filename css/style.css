@@ -551,11 +551,6 @@ picture {
   margin-bottom: 20px;
 }
 
-/* отступ у последнего элемента для демонстрации simplebar */
-.directions__author-item:last-child {
-  margin-bottom: 20px;
-}
-
 .directions__author-link:hover,
 .directions__author-link:focus {
   outline: var(--main-color-2) solid 2px;
@@ -3910,6 +3905,10 @@ picture {
     margin-right: 0;
   }
 
+  .editions-filter__checkbox {
+    visibility: hidden;
+  }
+
   .editions-filter__label_check {
     position: absolute;
     width: 100%;
@@ -3941,6 +3940,11 @@ picture {
     position: relative;
     visibility: visible;
     opacity: 1;
+  }
+
+  .editions-filter__fieldset_show .editions-filter__checkbox,
+  .editions-filter__checkbox:checked {
+    visibility: visible;
   }
 
   .editions-filter__checkbox:checked + .editions-filter__label .editions-filter__close {
