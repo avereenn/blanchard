@@ -34,7 +34,7 @@ directionsListEl.addEventListener(`click`, function (event) {
   currentLinkEl.ariaExpanded = (currentLinkEl.ariaExpanded === `true`) ? `false` : `true`;
 
   linkElems.forEach(link => {
-    if(!(link === currentLinkEl)) {
+    if (!(link === currentLinkEl)) {
       link.ariaExpanded = `false`;
     }
   });
@@ -63,7 +63,10 @@ window.addEventListener(`click`, (event) => {
 
 // HEADER SELECTS SIMPLEBAR
 directionsAuthorListElems.forEach(list => {
-  new SimpleBar(list);
+  new SimpleBar(list, {
+    autoHide: false,
+    scrollbarMaxSize: 28,
+  });
 });
 
 // HEADER BURGER
@@ -85,7 +88,7 @@ menuEl.addEventListener(`click`, event => {
 
 // HEADER SEARCH OPEN
 searchOpenBtnEl.addEventListener(`click`, function () {
-  this.classList.contains(`header__search-open_active`) ? 
+  this.classList.contains(`header__search-open_active`) ?
     this.ariaLabel = `Открыть форму поиска` : this.ariaLabel = `Закрыть форму поиска`;
   this.classList.toggle(`header__search-open_active`);
   searchFormEl.classList.toggle(`search-form_show`);
@@ -98,7 +101,7 @@ window.addEventListener(`click`, event => {
     event.target === searchOpenBtnEl
   )
     return;
-  
+
   searchOpenBtnEl.ariaLabel = `Открыть форму поиска`;
   searchOpenBtnEl.classList.remove(`header__search-open_active`);
   searchFormEl.classList.remove(`search-form_show`);
@@ -389,7 +392,7 @@ ymaps.ready(init);
 
 function init() {
   const contactsMap = new ymaps.Map(`contacts-map`, {
-    center: [55.758468, 37.601088],// [55.76031149432346, 37.63817938120783],
+    center: [55.758468, 37.601088],
     zoom: 14.25,
     controls: [],
   });
