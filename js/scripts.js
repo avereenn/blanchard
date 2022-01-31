@@ -112,7 +112,6 @@ new Choices(selectEl, {
   searchEnabled: false,
   itemSelectText: ``,
   shouldSort: false,
-  labelId: `gallery-filter-label`,
 });
 
 // GALLERY SWIPER
