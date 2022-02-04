@@ -173,14 +173,14 @@ gallerySliderListEl.addEventListener(`click`, event => {
   document.body.classList.add(`hold`);
   galleryModalImgEl.src = src;
 
-  //переводим фокус на фон модального окна, с задержкой анимации свойства visibility
-  setTimeout(() => document.querySelector(`.js-bg-btn`).focus(), 160);
+  // переводим фокус на кнопку "закрыть" модального окна
+  setTimeout(() => document.querySelector(`.gallery-modal__close`).focus(), 160);
 });
 
 galleryModalEl.addEventListener(`click`, function (event) {
   if (
-    !event.target.matches(`.gallery-modal__bg-btn`) &&
-    !event.target.matches(`.gallery-modal__close`)
+    !event.target.classList.contains(`gallery-modal`) &&
+    !event.target.classList.contains(`gallery-modal__close`)
   )
     return;
 
