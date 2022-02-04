@@ -172,8 +172,8 @@ gallerySliderListEl.addEventListener(`click`, event => {
   document.body.classList.add(`hold`);
   galleryModalImgEl.src = src;
 
-  // переводим фокус на кнопку "закрыть" модального окна
-  setTimeout(() => document.querySelector(`.gallery-modal__close`).focus(), 160);
+  // переводим фокус на кнопку "закрыть" модального окна с задержкой анимации visibility
+  setTimeout(() => galleryModalClose.focus(), 160);
 });
 
 galleryModalEl.addEventListener(`click`, function (event) {
@@ -215,7 +215,7 @@ catalogTabsEl.addEventListener(`click`, function (event) {
   });
 });
 
-//Обработчик кнопки "Все события"
+// Обработчик кнопки "Все события"
 expandBtnEl.addEventListener(`click`, function () {
   eventsListEl.classList.add(`events__list_show`);
   this.hidden = true;
@@ -261,7 +261,7 @@ filterCategoriesEl.addEventListener(`change`, (event) => {
     event.target.closest(`.editions-filter__item`).classList.remove(`editions-filter__item_active`);
 });
 
-//EDITIONS SWIPER
+// EDITIONS SWIPER
 const editionsSwiperProps = {
   pagination: {
     el: `.editions-slider__pages`,
@@ -468,7 +468,7 @@ function init() {
   });
 }
 
-//jQuery
+// jQuery
 
 $(`document`).ready(function () {
   // плавные переходы по якорям
