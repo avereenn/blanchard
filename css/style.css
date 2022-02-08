@@ -1020,6 +1020,7 @@ picture {
   position: relative;
   width: 60.15vw;
   height: 765px;
+  max-width: 1155px;
   margin-left: auto;
   margin-right: -3px;
   padding-top: 0;
