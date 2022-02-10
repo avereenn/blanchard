@@ -280,7 +280,7 @@ const editionsSwiperProps = {
     },
 
     501: {
-
+      enabled: true,
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
@@ -306,14 +306,6 @@ const editionsSwiperProps = {
 };
 
 const editionsSwiper = new Swiper(`.editions-slider__swiper`, editionsSwiperProps);
-
-window.addEventListener(`resize`, () => {
-  const clientWidth = document.documentElement.clientWidth;
-
-  (clientWidth <= 500) ?
-    editionsSwiper.destroy(true, true) :
-    new Swiper(`.editions-slider__swiper`, editionsSwiperProps);
-});
 
 // PROJECTS TOOLTIPS
 const tooltipElems = document.querySelectorAll(`[data-tooltip]`);

@@ -3893,6 +3893,10 @@ picture {
     height: 683px;
   }
 
+  .events__list_show {
+    justify-content: flex-start;
+  }
+
   .event {
     min-height: auto;
   }
